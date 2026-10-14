@@ -339,6 +339,56 @@ $$
 
 **Attenzione:** i coefficienti si leggono direttamente nella colonna aggiunta **quando la parte sinistra è diventata l'identità**, non da una qualsiasi matrice a scalini. Poiché i vettori di partenza sono una **base**, questa combinazione lineare è **unica**.
 
+**Precisazione importante — Criterio di appartenenza allo spazio generato.** Se $U=\mathrm{Span}(u_1,\ldots,u_r)$ e $A$ ha per colonne i vettori $u_1,\ldots,u_r$, allora un vettore $v$ **appartiene a $U$ se e solo se** la matrice $A$ e la matrice aumentata $(A\mid v)$ hanno **lo stesso rango**:
+
+$$
+\boxed{v\in U\iff \mathrm{rg}(A)=\mathrm{rg}(A\mid v)}.
+$$
+
+Questo criterio verifica **se esistono coefficienti** tali che $A\lambda=v$. Se il rango aumenta aggiungendo $v$, allora $v$ **non** appartiene allo spazio generato. Per **trovare i coefficienti**, bisogna invece risolvere il sistema (come nell'Esempio 65).
+
+**Esempio — Conclusione dell'Esercizio 13 (pp. 101–103).** In $\mathbb{R}^4$ siano
+
+$$
+u_1=(2,3,1,-1),\quad
+u_2=(2,1,1,1),\quad
+u_3=(0,2,0,-2).
+$$
+
+Poiché $u_3=u_1-u_2$, una **base** di $U=\mathrm{Span}(u_1,u_2,u_3)$ è $\{u_1,u_2\}$ e la matrice $A=(u_1\mid u_2)$ ha rango $2$.
+
+Per stabilire quando $v=(k,k,k-2,0)$ appartiene a $U$, aggiungiamo $v$ come terza colonna:
+
+$$
+(A\mid v)=
+\begin{pmatrix}
+2&2&k\\
+3&1&k\\
+1&1&k-2\\
+-1&1&0
+\end{pmatrix}.
+$$
+
+La riduzione per righe porta a:
+
+$$
+\begin{pmatrix}
+2&2&k\\
+0&-2&-\frac{k}{2}\\
+0&0&\frac{k}{2}-2\\
+0&0&0
+\end{pmatrix}.
+$$
+
+Il rango della matrice aumentata resta $2$ **solo se** $\frac{k}{2}-2=0$, cioè **$k=4$**. Pertanto:
+
+$$
+\boxed{v\in U\iff k=4}.
+$$
+
+In quel caso, $v=(4,4,2,0)=u_1+u_2$.
+
+
 
 
 ## 4.6 — Esercizi ricapitolativi (p. 101)

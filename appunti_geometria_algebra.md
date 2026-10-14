@@ -108,25 +108,25 @@ Un insieme è un **sistema di generatori** di $V$ se il suo span coincide con $V
 
 Per esempio, dati due vettori $v_1$ e $v_2$:
 
-$
+$$
 \mathrm{Span}(v_1,v_2)
 =\{\lambda_1v_1+\lambda_2v_2\mid \lambda_1,\lambda_2\in\mathbb{R}\}.
-$
+$$
 
 I coefficienti $\lambda_1$ e $\lambda_2$ possono assumere **qualsiasi valore reale**.
 
 **Esempio in $\mathbb{R}^2$.** Prendiamo $v_1=(1,0)$ e $v_2=(0,1)$. Ogni combinazione lineare è
 
-$
+$$
 \lambda_1(1,0)+\lambda_2(0,1)
 =(\lambda_1,\lambda_2).
-$
+$$
 
 Poiché $\lambda_1$ e $\lambda_2$ possono essere qualsiasi numero reale, si ottiene ogni vettore del piano:
 
-$
+$$
 \boxed{\mathrm{Span}(v_1,v_2)=\mathbb{R}^2}.
-$
+$$
 
 ### Interpretazione geometrica
 
@@ -140,12 +140,12 @@ $
 
 **Collegamento con le matrici.** Se $A$ ha per colonne i vettori $v_1,\ldots,v_k$, allora
 
-$
+$$
 v\in\mathrm{Span}(v_1,\ldots,v_k)
 \quad\Longleftrightarrow\quad
 A\underline{\lambda}=v
 \ \text{ammette almeno una soluzione}.
-$
+$$
 
 I coefficienti cercati sono le componenti del vettore colonna $\underline{\lambda}$.
 

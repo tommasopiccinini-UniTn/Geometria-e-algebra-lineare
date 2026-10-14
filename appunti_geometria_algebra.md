@@ -75,6 +75,20 @@ $$0\cdot v=\mathbf{0}\in U.$$
 
 **Conclusione:** un sottospazio vettoriale reale ha **un solo elemento (lo zero) oppure infiniti elementi**. Non può avere un numero finito di elementi maggiore di uno.
 
+#### Spazio delle soluzioni di un sistema lineare omogeneo
+
+Un **sistema lineare omogeneo** è un sistema in cui tutti i termini noti sono uguali a zero, e si scrive in forma matriciale $Bx=\mathbf{0}$.
+
+Lo **spazio delle soluzioni** è l'insieme di **tutti i vettori $x$ che soddisfano contemporaneamente le equazioni** del sistema:
+
+$$
+U=\{x\in\mathbb{R}^n\mid Bx=\mathbf{0}\}.
+$$
+
+Questo insieme è sempre un **sottospazio vettoriale di $\mathbb{R}^n$**: contiene il vettore nullo ed è chiuso rispetto alla somma e al prodotto per uno scalare.
+
+**Da ricordare:** lo stesso sottospazio può essere descritto tramite **generatori** (come Span di alcuni vettori) oppure tramite **equazioni omogenee** che i suoi vettori devono soddisfare.
+
 ### 4.3.2 — Generatori (p. 92)
 
 Lo **spazio generato** da $v_1,\ldots,v_k$ contiene tutte le loro combinazioni lineari:

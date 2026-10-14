@@ -33,9 +33,9 @@ In particolare:
 
 Una **combinazione lineare** dei vettori $v_1,\ldots,v_k$ è
 
-$
+$$
 v=\lambda_1v_1+\cdots+\lambda_kv_k.
-$
+$$
 
 I numeri $\lambda_i$ sono i **coefficienti** o **scalari** (informalmente, i «pesi»).
 
@@ -43,13 +43,13 @@ I numeri $\lambda_i$ sono i **coefficienti** o **scalari** (informalmente, i «p
 
 Disponiamo i vettori **nelle colonne** di una matrice:
 
-$
+$$
 A=[v_1\mid v_2\mid\cdots\mid v_k].
-$
+$$
 
 Raccogliamo i coefficienti nel **vettore colonna**:
 
-$
+$$
 \underline{\lambda}=
 \begin{pmatrix}
 \lambda_1\\
@@ -57,7 +57,7 @@ $
 \vdots\\
 \lambda_k
 \end{pmatrix}.
-$
+$$
 
 In questo modo, la combinazione lineare diventa $A\underline{\lambda}=v$.
 
@@ -69,9 +69,9 @@ In questo modo, la combinazione lineare diventa $A\underline{\lambda}=v$.
 
 Un sottoinsieme non vuoto $U\subseteq V$ è un **sottospazio vettoriale** se è chiuso per somma e prodotto per scalare. In modo equivalente, per ogni $u_1,u_2\in U$ e $\lambda_1,\lambda_2\in\mathbb R$,
 
-$
+$$
 \lambda_1u_1+\lambda_2u_2\in U.
-$
+$$
 
 Ogni sottospazio deve contenere il **vettore nullo**.
 
@@ -79,10 +79,10 @@ Ogni sottospazio deve contenere il **vettore nullo**.
 
 Lo **spazio generato** da $v_1,\ldots,v_k$ contiene tutte le loro combinazioni lineari:
 
-$
+$$
 \operatorname{Span}(v_1,\ldots,v_k)=
 \{\lambda_1v_1+\cdots+\lambda_kv_k:\lambda_i\in\mathbb R\}.
-$
+$$
 
 Un insieme è un **sistema di generatori** di $V$ se il suo span coincide con $V$.
 
@@ -95,11 +95,11 @@ Per vettori in $\mathbb R^n$, scritti nelle colonne di $A$:
 
 Consideriamo la combinazione lineare che dà il **vettore nullo**:
 
-$
+$$
 \lambda_1v_1+\cdots+\lambda_kv_k=0
 \qquad\Longleftrightarrow\qquad
 A\underline{\lambda}=0.
-$
+$$
 
 - **Linearmente indipendenti:** l'unica soluzione è $\lambda_1=\cdots=\lambda_k=0$.
 - **Linearmente dipendenti:** esiste una soluzione con coefficienti **non tutti nulli**.
@@ -110,9 +110,9 @@ Se un insieme è dipendente, almeno uno dei suoi vettori è combinazione lineare
 
 **Esempio:**
 
-$
+$$
 v_1=(1,0),\quad v_2=(0,1),\quad v_3=(1,1).
-$
+$$
 
 Siccome $v_1+v_2-v_3=0$, con pesi $1,1,-1$ non tutti nulli, i tre vettori sono **dipendenti**.
 
@@ -120,9 +120,9 @@ Siccome $v_1+v_2-v_3=0$, con pesi $1,1,-1$ non tutti nulli, i tre vettori sono *
 
 Se $A$ ha come colonne i **$k$ vettori** che stiamo studiando, allora
 
-$
+$$
 \boxed{\text{vettori indipendenti}\iff\operatorname{rg}(A)=k}.
-$
+$$
 
 Se il rango è minore del numero delle colonne, i vettori sono dipendenti.
 
@@ -135,17 +135,17 @@ Se il rango è minore del numero delle colonne, i vettori sono dipendenti.
 
 **Esempio 61–62 della dispensa:**
 
-$
+$$
 v_1=(1,2,-1,0),\quad
 v_2=(0,1,1,3),\quad
 v_3=(-1,0,3,6).
-$
+$$
 
 La matrice ha rango 2, inferiore alle 3 colonne. I vettori sono dipendenti e
 
-$
+$$
 v_3=-v_1+2v_2.
-$
+$$
 
 ## 4.5 — Basi (p. 99)
 

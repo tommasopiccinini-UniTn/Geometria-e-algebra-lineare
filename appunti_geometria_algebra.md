@@ -7,7 +7,9 @@
 
 ## 4.1 — Spazi vettoriali reali (p. 86)
 
-Uno **spazio vettoriale reale** è un insieme \(V\) con due operazioni: la somma di vettori e il prodotto di un vettore per uno scalare reale. Valgono le otto proprietà della Definizione 37 (commutatività e associatività della somma, vettore nullo, opposto, proprietà del prodotto per uno scalare e distributività).
+**Definizione:** Uno spazio vettoriale è un insieme dotato delle operazioni di somma e di prodotto di un elemento per uno scalare.
+
+In uno **spazio vettoriale reale** gli scalari sono numeri reali. Le operazioni devono soddisfare le otto proprietà della Definizione 37 (commutatività e associatività della somma, vettore nullo, opposto, proprietà del prodotto per uno scalare e distributività).
 
 Esempi della dispensa: vettori geometrici, \(\mathbb R^n\), matrici \(M_{m\times n}(\mathbb R)\), polinomi.
 

@@ -547,6 +547,13 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 
 
 
+### Esercizio 14 — Testo e svolgimento manoscritto (Samsung Notes)
+
+![Esercizio 14 — testo originale e svolgimento manoscritto completo](immagini/Esercizio_14.png)
+
+*Immagine estratta dal file Samsung Notes: comprende il testo dell'esercizio e tutti i passaggi dello svolgimento manoscritto.*
+
+
 ---
 
 ## Appunti personali e chiarimenti successivi

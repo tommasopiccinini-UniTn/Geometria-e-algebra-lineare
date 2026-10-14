@@ -96,7 +96,7 @@ $$
 Lo **spazio generato** da $v_1,\ldots,v_k$ contiene tutte le loro combinazioni lineari:
 
 $$
-\operatorname{Span}(v_1,\ldots,v_k)=
+\mathrm{Span}(v_1,\ldots,v_k)=
 \{\lambda_1v_1+\cdots+\lambda_kv_k:\lambda_i\in\mathbb R\}.
 $$
 
@@ -105,7 +105,7 @@ Un insieme è un **sistema di generatori** di $V$ se il suo span coincide con $V
 Per vettori in $\mathbb R^n$, scritti nelle colonne di $A$:
 
 - $v$ appartiene allo spazio generato se il sistema $A\underline{\lambda}=v$ è **compatibile**.
-- I vettori generano **tutto $\mathbb R^n$** se e solo se $\operatorname{rg}(A)=n$, dove $n$ è il numero delle **righe**.
+- I vettori generano **tutto $\mathbb R^n$** se e solo se $\mathrm{rg}(A)=n$, dove $n$ è il numero delle **righe**.
 
 ## 4.4 — Insiemi linearmente dipendenti e indipendenti (p. 95)
 
@@ -137,7 +137,7 @@ Siccome $v_1+v_2-v_3=0$, con pesi $1,1,-1$ non tutti nulli, i tre vettori sono *
 Se $A$ ha come colonne i **$k$ vettori** che stiamo studiando, allora
 
 $$
-\boxed{\text{vettori indipendenti}\iff\operatorname{rg}(A)=k}.
+\boxed{\text{vettori indipendenti}\iff\mathrm{rg}(A)=k}.
 $$
 
 Se il rango è minore del numero delle colonne, i vettori sono dipendenti.

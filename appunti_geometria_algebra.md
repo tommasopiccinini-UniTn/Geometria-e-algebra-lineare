@@ -393,7 +393,145 @@ In quel caso, $v=(4,4,2,0)=u_1+u_2$.
 
 ## 4.6 — Esercizi ricapitolativi (p. 101)
 
-*Spazio riservato agli esercizi e alle correzioni che decideremo di aggiungere.*
+### Esercizio 13 — Sottospazio generato e appartenenza di un vettore
+
+*Trascrizione ordinata dello svolgimento fornito negli appunti manoscritti.*
+
+**Testo.** In $\mathbb{R}^4$ sono dati:
+
+$$
+u_1=(2,3,1,-1),\quad u_2=(2,1,1,1),\quad u_3=(0,2,0,-2).
+$$
+
+1. Trovare una **base** del sottospazio $U=\mathrm{Span}(u_1,u_2,u_3)$.
+2. Stabilire per quali valori reali di $k$ il vettore $v=(k,k,k-2,0)$ **appartiene a $U$**.
+
+#### Punto 1 — Trovare una base
+
+Disponiamo i vettori nelle colonne:
+
+$$
+A=\begin{pmatrix}
+2&2&0\\
+3&1&2\\
+1&1&0\\
+-1&1&-2
+\end{pmatrix}.
+$$
+
+Scambiando la prima e la terza riga e applicando Gauss:
+
+$$
+\begin{pmatrix}
+1&1&0\\
+3&1&2\\
+2&2&0\\
+-1&1&-2
+\end{pmatrix}
+\longrightarrow
+\begin{pmatrix}
+1&1&0\\
+0&-2&2\\
+0&0&0\\
+0&2&-2
+\end{pmatrix}
+\longrightarrow
+\begin{pmatrix}
+1&1&0\\
+0&-2&2\\
+0&0&0\\
+0&0&0
+\end{pmatrix}.
+$$
+
+Normalizziamo il secondo pivot ed eliminiamo l'elemento sopra di esso:
+
+$$
+\begin{pmatrix}
+1&1&0\\
+0&-2&2\\
+0&0&0\\
+0&0&0
+\end{pmatrix}
+\longrightarrow
+\begin{pmatrix}
+1&1&0\\
+0&1&-1\\
+0&0&0\\
+0&0&0
+\end{pmatrix}
+\longrightarrow
+\begin{pmatrix}
+1&0&1\\
+0&1&-1\\
+0&0&0\\
+0&0&0
+\end{pmatrix}.
+$$
+
+I pivot sono nelle **prime due colonne**, quindi scegliamo i corrispondenti **vettori originali**:
+
+$$
+\boxed{B=\{u_1,u_2\}}.
+$$
+
+Infatti $u_3=u_1-u_2$: il terzo vettore è ridondante e $\mathrm{rg}(A)=2$.
+
+#### Punto 2 — Verificare se il vettore appartiene a $U$
+
+Aggiungiamo il vettore $v=(k,k,k-2,0)$ come **ultima colonna**:
+
+$$
+(A\mid v)=\begin{pmatrix}
+2&2&0&k\\
+3&1&2&k\\
+1&1&0&k-2\\
+-1&1&-2&0
+\end{pmatrix}.
+$$
+
+Con lo scambio tra la prima e la terza riga, seguito dall'eliminazione:
+
+$$
+\begin{pmatrix}
+1&1&0&k-2\\
+3&1&2&k\\
+2&2&0&k\\
+-1&1&-2&0
+\end{pmatrix}
+\longrightarrow
+\begin{pmatrix}
+1&1&0&k-2\\
+0&-2&2&6-2k\\
+0&0&0&4-k\\
+0&2&-2&k-2
+\end{pmatrix}
+\longrightarrow
+\begin{pmatrix}
+1&1&0&k-2\\
+0&-2&2&6-2k\\
+0&0&0&4-k\\
+0&0&0&4-k
+\end{pmatrix}.
+$$
+
+**Conclusione.** Il vettore appartiene allo spazio generato esattamente quando l'aggiunta della sua colonna **non aumenta il rango**:
+
+$$
+v\in U \iff \mathrm{rg}(A)=\mathrm{rg}(A\mid v).
+$$
+
+Qui $\mathrm{rg}(A)=2$; la matrice aumentata ha ancora rango $2$ soltanto quando $4-k=0$. Dunque:
+
+$$
+\boxed{v\in U\iff k=4}.
+$$
+
+Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
+
+**Da ricordare:** per verificare l'appartenenza allo spazio generato basta confrontare i ranghi; per ricavare i coefficienti della combinazione lineare si risolve il sistema $(A\mid v)$.
+
+
 
 ---
 

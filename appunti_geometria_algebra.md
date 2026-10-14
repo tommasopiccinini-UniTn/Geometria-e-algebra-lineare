@@ -73,7 +73,14 @@ $$
 \lambda_1u_1+\lambda_2u_2\in U.
 $$
 
-Ogni sottospazio deve contenere il **vettore nullo**.
+Ogni sottospazio deve contenere il **vettore nullo** di $V$, indicato con $0_V$. Questo vale per ogni sottospazio $U\subseteq V$, ma **non** per un sottoinsieme qualsiasi di $V$.
+
+**Numero di elementi di un sottospazio vettoriale reale.** Un sottospazio $U$ può avere:
+
+- **Un solo elemento:** in questo caso è necessariamente il vettore nullo, quindi $U=\{0_V\}$. Questo insieme è detto **sottospazio nullo**.
+- **Infiniti elementi:** se $U$ contiene almeno un vettore non nullo $v$, per la chiusura rispetto al prodotto per uno scalare contiene anche tutti i vettori $\lambda v$, al variare di $\lambda\in\mathbb{R}$; essi sono infiniti e distinti.
+
+**Conclusione:** un sottospazio vettoriale reale ha **un solo elemento (lo zero) oppure infiniti elementi**. Non può avere un numero finito di elementi maggiore di uno.
 
 ### 4.3.2 — Generatori (p. 92)
 

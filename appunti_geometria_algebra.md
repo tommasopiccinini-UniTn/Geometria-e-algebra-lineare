@@ -102,6 +102,54 @@ $$
 
 Un insieme è un **sistema di generatori** di $V$ se il suo span coincide con $V$.
 
+### Significato dello Span
+
+**Span** significa **spazio generato**: è l'insieme di **tutti** i vettori ottenibili facendo combinazioni lineari dei vettori di partenza, non soltanto l'insieme dei vettori iniziali.
+
+Per esempio, dati due vettori $v_1$ e $v_2$:
+
+$
+\mathrm{Span}(v_1,v_2)
+=\{\lambda_1v_1+\lambda_2v_2\mid \lambda_1,\lambda_2\in\mathbb{R}\}.
+$
+
+I coefficienti $\lambda_1$ e $\lambda_2$ possono assumere **qualsiasi valore reale**.
+
+**Esempio in $\mathbb{R}^2$.** Prendiamo $v_1=(1,0)$ e $v_2=(0,1)$. Ogni combinazione lineare è
+
+$
+\lambda_1(1,0)+\lambda_2(0,1)
+=(\lambda_1,\lambda_2).
+$
+
+Poiché $\lambda_1$ e $\lambda_2$ possono essere qualsiasi numero reale, si ottiene ogni vettore del piano:
+
+$
+\boxed{\mathrm{Span}(v_1,v_2)=\mathbb{R}^2}.
+$
+
+### Interpretazione geometrica
+
+**1. Un solo vettore non nullo:** il suo Span è la **retta passante per l'origine** nella direzione del vettore.
+
+![Schema: lo Span di un vettore non nullo è una retta passante per l'origine](immagini/span_retta.svg)
+
+**2. Due vettori linearmente indipendenti in $\mathbb{R}^2$:** il loro Span è **l'intero piano $\mathbb{R}^2$**.
+
+![Schema: due vettori indipendenti generano tutto il piano](immagini/span_piano.svg)
+
+**Collegamento con le matrici.** Se $A$ ha per colonne i vettori $v_1,\ldots,v_k$, allora
+
+$
+v\in\mathrm{Span}(v_1,\ldots,v_k)
+\quad\Longleftrightarrow\quad
+A\underline{\lambda}=v
+\ \text{ammette almeno una soluzione}.
+$
+
+I coefficienti cercati sono le componenti del vettore colonna $\underline{\lambda}$.
+
+
 Per vettori in $\mathbb R^n$, scritti nelle colonne di $A$:
 
 - $v$ appartiene allo spazio generato se il sistema $A\underline{\lambda}=v$ è **compatibile**.

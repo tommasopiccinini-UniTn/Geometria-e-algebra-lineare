@@ -208,19 +208,42 @@ Se il rango è minore del numero delle colonne, i vettori sono dipendenti.
 
 Consideriamo i vettori di $\mathbb{R}^4$:
 
-$$v_1=(1,2,-1,0),\quad v_2=(0,1,1,3),\quad v_3=(-1,0,3,6).$$
+$$
+v_1=(1,2,-1,0),\quad v_2=(0,1,1,3),\quad v_3=(-1,0,3,6).
+$$
 
 Per verificare l'indipendenza, disponiamo i vettori **nelle colonne** della matrice:
 
-$$A=\begin{pmatrix} 1&0&-1\\ 2&1&0\\ -1&1&3\\ 0&3&6 \end{pmatrix}.$$
+$$
+A=\begin{pmatrix}
+1&0&-1\\
+2&1&0\\
+-1&1&3\\
+0&3&6
+\end{pmatrix}.
+$$
 
 Applicando le operazioni $E_{21}(-2)$ ed $E_{31}(1)$ indicate nella dispensa:
 
-$$\begin{pmatrix} 1&0&-1\\ 0&1&2\\ 0&1&2\\ 0&3&6 \end{pmatrix}.$$
+$$
+\begin{pmatrix}
+1&0&-1\\
+0&1&2\\
+0&1&2\\
+0&3&6
+\end{pmatrix}.
+$$
 
 Dopo le operazioni indicate $E_{32}(1)$ ed $E_{42}(-3)$, **la dispensa riporta** la matrice a scalini:
 
-$$\begin{pmatrix} 1&0&-1\\ 0&-1&2\\ 0&0&0\\ 0&0&0 \end{pmatrix}.$$
+$$
+\begin{pmatrix}
+1&0&-1\\
+0&-1&2\\
+0&0&0\\
+0&0&0
+\end{pmatrix}.
+$$
 
 **Conclusione:** $\mathrm{rg}(A)=2<3$, quindi i tre vettori sono **linearmente dipendenti**. La terza colonna è priva di pivot: $v_3$ è combinazione lineare di $v_1$ e $v_2$.
 
@@ -228,15 +251,31 @@ $$\begin{pmatrix} 1&0&-1\\ 0&-1&2\\ 0&0&0\\ 0&0&0 \end{pmatrix}.$$
 
 L'Esempio 62 prosegue la riduzione dell'Esempio 61. La **matrice iniziale riportata nella dispensa** è:
 
-$$\begin{pmatrix} 1&0&-1\\ 0&-1&-2\\ 0&0&0\\ 0&0&0 \end{pmatrix}.$$
+$$
+\begin{pmatrix}
+1&0&-1\\
+0&-1&-2\\
+0&0&0\\
+0&0&0
+\end{pmatrix}.
+$$
 
 Con $D_2(-1)$, ossia moltiplicando la seconda riga per $-1$, si ottiene:
 
-$$\begin{pmatrix} 1&0&-1\\ 0&1&2\\ 0&0&0\\ 0&0&0 \end{pmatrix}.$$
+$$
+\begin{pmatrix}
+1&0&-1\\
+0&1&2\\
+0&0&0\\
+0&0&0
+\end{pmatrix}.
+$$
 
 **Conclusione:** dalla terza colonna della forma ridotta si leggono i coefficienti $-1$ e $2$:
 
-$$\boxed{v_3=-v_1+2v_2}.$$
+$$
+\boxed{v_3=-v_1+2v_2}.
+$$
 
 **Nota sui segni della dispensa.** Tra le matrici a scalini stampate negli Esempi 61 e 62 ci sono **refusi nella seconda riga**. Le matrici qui sopra sono state **trascritte come nell'originale**, senza correggerle. Effettuando correttamente Gauss, la seconda riga è $(0,1,2)$; la conclusione $v_3=-v_1+2v_2$ resta corretta.
 

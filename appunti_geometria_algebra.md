@@ -212,7 +212,7 @@ $$
 v_1=(1,2,-1,0),\quad v_2=(0,1,1,3),\quad v_3=(-1,0,3,6).
 $$
 
-Per verificare l'indipendenza, disponiamo i vettori **nelle colonne** della matrice:
+Disponiamo i vettori **nelle colonne** della matrice:
 
 $$
 A=\begin{pmatrix}
@@ -223,7 +223,7 @@ A=\begin{pmatrix}
 \end{pmatrix}.
 $$
 
-Applicando le operazioni $E_{21}(-2)$ ed $E_{31}(1)$ indicate nella dispensa:
+Applichiamo $E_{21}(-2)$ ($R_2\leftarrow R_2-2R_1$) ed $E_{31}(1)$ ($R_3\leftarrow R_3+R_1$):
 
 $$
 \begin{pmatrix}
@@ -234,33 +234,7 @@ $$
 \end{pmatrix}.
 $$
 
-Dopo le operazioni indicate $E_{32}(1)$ ed $E_{42}(-3)$, **la dispensa riporta** la matrice a scalini:
-
-$$
-\begin{pmatrix}
-1&0&-1\\
-0&-1&2\\
-0&0&0\\
-0&0&0
-\end{pmatrix}.
-$$
-
-**Conclusione:** $\mathrm{rg}(A)=2<3$, quindi i tre vettori sono **linearmente dipendenti**. La terza colonna è priva di pivot: $v_3$ è combinazione lineare di $v_1$ e $v_2$.
-
-#### Esempio 62 — Ricavare la relazione tra i vettori (pp. 98–99)
-
-L'Esempio 62 prosegue la riduzione dell'Esempio 61. La **matrice iniziale riportata nella dispensa** è:
-
-$$
-\begin{pmatrix}
-1&0&-1\\
-0&-1&-2\\
-0&0&0\\
-0&0&0
-\end{pmatrix}.
-$$
-
-Con $D_2(-1)$, ossia moltiplicando la seconda riga per $-1$, si ottiene:
+Poi applichiamo $E_{32}(-1)$ ($R_3\leftarrow R_3-R_2$) ed $E_{42}(-3)$ ($R_4\leftarrow R_4-3R_2$):
 
 $$
 \begin{pmatrix}
@@ -271,13 +245,39 @@ $$
 \end{pmatrix}.
 $$
 
-**Conclusione:** dalla terza colonna della forma ridotta si leggono i coefficienti $-1$ e $2$:
+**Conclusione:** $\mathrm{rg}(A)=2<3$, dunque i tre vettori sono **linearmente dipendenti**. La terza colonna non contiene un pivot, quindi $v_3$ è una combinazione lineare di $v_1$ e $v_2$.
+
+#### Esempio 62 — Relazione tra i vettori (continuazione dell'Esempio 61, pp. 98–99)
+
+Ripartiamo dalla matrice dei vettori originali:
+
+$$
+A=\begin{pmatrix}
+1&0&-1\\
+2&1&0\\
+-1&1&3\\
+0&3&6
+\end{pmatrix}.
+$$
+
+La riduzione dell'Esempio 61 ha già prodotto la **forma ridotta per righe**:
+
+$$
+R=\begin{pmatrix}
+1&0&-1\\
+0&1&2\\
+0&0&0\\
+0&0&0
+\end{pmatrix}.
+$$
+
+Non sono necessarie altre operazioni: le prime due colonne contengono i pivot e la **terza colonna** è $-1$ volta la prima più $2$ volte la seconda. Le operazioni elementari di riga **conservano le relazioni di dipendenza fra le colonne**, quindi la stessa relazione vale per i vettori originali:
 
 $$
 \boxed{v_3=-v_1+2v_2}.
 $$
 
-**Nota sui segni della dispensa.** Tra le matrici a scalini stampate negli Esempi 61 e 62 ci sono **refusi nella seconda riga**. Le matrici qui sopra sono state **trascritte come nell'originale**, senza correggerle. Effettuando correttamente Gauss, la seconda riga è $(0,1,2)$; la conclusione $v_3=-v_1+2v_2$ resta corretta.
+**Verifica:** $-(1,2,-1,0)+2(0,1,1,3)=(-1,0,3,6)=v_3$.
 
 ## 4.5 — Basi (p. 99)
 

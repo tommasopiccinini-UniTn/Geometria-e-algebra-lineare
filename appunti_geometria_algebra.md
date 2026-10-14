@@ -296,6 +296,51 @@ La **base canonica** è formata dai vettori con un solo 1 e tutte le altre compo
 
 Ogni vettore dello spazio si esprime **in maniera unica** come combinazione lineare dei vettori di una base.
 
+### Esempio 65 — Ricavare i coefficienti di un vettore rispetto a una base (p. 100)
+
+**Metodo:** per esprimere un vettore $v$ come combinazione lineare della base $B=\{v_1,\ldots,v_n\}$ di $\mathbb{R}^n$:
+
+1. Disponiamo i vettori della base **nelle colonne** di $A$.
+2. Aggiungiamo **a destra** la colonna del vettore $v$, formando la matrice aumentata $(A\mid v)$.
+3. Riduciamo la matrice **per righe fino alla forma ridotta**, in cui le prime $n$ colonne diventano la matrice identità $I_n$.
+4. Leggiamo i **coefficienti cercati nell'ultima colonna**: se essa contiene $\lambda_1,\ldots,\lambda_n$, allora $v=\lambda_1v_1+\cdots+\lambda_nv_n$.
+
+**Esempio della dispensa.** Consideriamo la base dell'Esempio 64:
+
+$$
+v_1=(1,1,0),\quad v_2=(1,0,1),\quad v_3=(0,1,1)
+$$
+
+e il vettore $v=(4,3,2)$. Aggiungiamo $v$ come **quarta colonna**:
+
+$$
+(A\mid v)=\begin{pmatrix}
+1&1&0&4\\
+1&0&1&3\\
+0&1&1&2
+\end{pmatrix}.
+$$
+
+Riducendo completamente per righe si ottiene:
+
+$$
+\begin{pmatrix}
+1&0&0&\frac{5}{2}\\
+0&1&0&\frac{3}{2}\\
+0&0&1&\frac{1}{2}
+\end{pmatrix}.
+$$
+
+Le prime tre colonne sono l'identità; **la quarta contiene i coefficienti della combinazione lineare**:
+
+$$
+\boxed{v=\frac{5}{2}v_1+\frac{3}{2}v_2+\frac{1}{2}v_3}.
+$$
+
+**Attenzione:** i coefficienti si leggono direttamente nella colonna aggiunta **quando la parte sinistra è diventata l'identità**, non da una qualsiasi matrice a scalini. Poiché i vettori di partenza sono una **base**, questa combinazione lineare è **unica**.
+
+
+
 ## 4.6 — Esercizi ricapitolativi (p. 101)
 
 *Spazio riservato agli esercizi e alle correzioni che decideremo di aggiungere.*

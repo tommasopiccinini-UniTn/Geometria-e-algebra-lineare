@@ -13,6 +13,22 @@ In uno **spazio vettoriale reale** gli scalari sono numeri reali. Le operazioni 
 
 Esempi della dispensa: vettori geometrici, \(\mathbb R^n\), matrici \(M_{m\times n}(\mathbb R)\), polinomi.
 
+### Che cosa si intende per «vettore»?
+
+Il termine **vettore**, nel suo significato più generale, indica **un elemento di uno spazio vettoriale**. Non va confuso con alcuni suoi casi particolari:
+
+- **Vettore geometrico:** una classe di equivalenza di segmenti orientati.
+- **Vettore riga:** una matrice formata da una sola riga.
+- **Vettore colonna:** una matrice formata da una sola colonna.
+
+**Attenzione:** questi oggetti non sono sinonimi. La nozione più generale è quella di *vettore come elemento di uno spazio vettoriale*; gli altri sono esempi particolari.
+
+In particolare:
+
+- L'insieme \(V^3\) dei **vettori geometrici**, introdotto nel Capitolo 1, è uno spazio vettoriale.
+- L'insieme \(M_{m\times n}(\mathbb R)\) delle **matrici \(m\times n\) a coefficienti reali** è anch'esso uno spazio vettoriale.
+
+
 ## 4.2 — Combinazioni lineari (p. 88)
 
 Una **combinazione lineare** dei vettori \(v_1,\ldots,v_k\) è

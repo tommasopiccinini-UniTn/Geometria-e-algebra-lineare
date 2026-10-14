@@ -33,9 +33,7 @@ In particolare:
 
 Una **combinazione lineare** dei vettori $v_1,\ldots,v_k$ è
 
-$$
-v=\lambda_1v_1+\cdots+\lambda_kv_k.
-$$
+$$v=\lambda_1v_1+\cdots+\lambda_kv_k.$$
 
 I numeri $\lambda_i$ sono i **coefficienti** o **scalari** (informalmente, i «pesi»).
 
@@ -43,21 +41,11 @@ I numeri $\lambda_i$ sono i **coefficienti** o **scalari** (informalmente, i «p
 
 Disponiamo i vettori **nelle colonne** di una matrice:
 
-$$
-A=[v_1\mid v_2\mid\cdots\mid v_k].
-$$
+$$A=[v_1\mid v_2\mid\cdots\mid v_k].$$
 
 Raccogliamo i coefficienti nel **vettore colonna**:
 
-$$
-\underline{\lambda}=
-\begin{pmatrix}
-\lambda_1\\
-\lambda_2\\
-\vdots\\
-\lambda_k
-\end{pmatrix}.
-$$
+$$\underline{\lambda}= \begin{pmatrix} \lambda_1\\ \lambda_2\\ \vdots\\ \lambda_k \end{pmatrix}.$$
 
 In questo modo, la combinazione lineare diventa $A\underline{\lambda}=v$.
 
@@ -69,17 +57,13 @@ In questo modo, la combinazione lineare diventa $A\underline{\lambda}=v$.
 
 Un sottoinsieme non vuoto $U\subseteq V$ è un **sottospazio vettoriale** se è chiuso per somma e prodotto per scalare. In modo equivalente, per ogni $u_1,u_2\in U$ e $\lambda_1,\lambda_2\in\mathbb R$,
 
-$$
-\lambda_1u_1+\lambda_2u_2\in U.
-$$
+$$\lambda_1u_1+\lambda_2u_2\in U.$$
 
 Ogni sottospazio deve contenere il **vettore nullo** di $V$, indicato con $0_V$. Questo vale per ogni sottospazio $U\subseteq V$, ma **non** per un sottoinsieme qualsiasi di $V$.
 
 **Test del vettore nullo (condizione necessaria).** Se $U\subseteq\mathbb{R}^n$ **non contiene il vettore nullo**, allora **non è un sottospazio vettoriale**. Infatti, se $U$ è un sottospazio e $v\in U$, per la chiusura rispetto al prodotto per uno scalare deve valere
 
-$$
-0\cdot v=\mathbf{0}\in U.
-$$
+$$0\cdot v=\mathbf{0}\in U.$$
 
 **Attenzione:** contenere il vettore nullo è **necessario, ma non sufficiente** per essere un sottospazio. Se $\mathbf{0}\in U$, bisogna comunque verificare anche la **chiusura rispetto alla somma** e la **chiusura rispetto al prodotto per uno scalare**.
 
@@ -95,10 +79,7 @@ $$
 
 Lo **spazio generato** da $v_1,\ldots,v_k$ contiene tutte le loro combinazioni lineari:
 
-$$
-\mathrm{Span}(v_1,\ldots,v_k)=
-\{\lambda_1v_1+\cdots+\lambda_kv_k:\lambda_i\in\mathbb R\}.
-$$
+$$\mathrm{Span}(v_1,\ldots,v_k)= \{\lambda_1v_1+\cdots+\lambda_kv_k:\lambda_i\in\mathbb R\}.$$
 
 Un insieme è un **sistema di generatori** di $V$ se il suo span coincide con $V$.
 
@@ -108,25 +89,17 @@ Un insieme è un **sistema di generatori** di $V$ se il suo span coincide con $V
 
 Per esempio, dati due vettori $v_1$ e $v_2$:
 
-$$
-\mathrm{Span}(v_1,v_2)
-=\{\lambda_1v_1+\lambda_2v_2\mid \lambda_1,\lambda_2\in\mathbb{R}\}.
-$$
+$$\mathrm{Span}(v_1,v_2) =\{\lambda_1v_1+\lambda_2v_2\mid \lambda_1,\lambda_2\in\mathbb{R}\}.$$
 
 I coefficienti $\lambda_1$ e $\lambda_2$ possono assumere **qualsiasi valore reale**.
 
 **Esempio in $\mathbb{R}^2$.** Prendiamo $v_1=(1,0)$ e $v_2=(0,1)$. Ogni combinazione lineare è
 
-$$
-\lambda_1(1,0)+\lambda_2(0,1)
-=(\lambda_1,\lambda_2).
-$$
+$$\lambda_1(1,0)+\lambda_2(0,1) =(\lambda_1,\lambda_2).$$
 
 Poiché $\lambda_1$ e $\lambda_2$ possono essere qualsiasi numero reale, si ottiene ogni vettore del piano:
 
-$$
-\boxed{\mathrm{Span}(v_1,v_2)=\mathbb{R}^2}.
-$$
+$$\boxed{\mathrm{Span}(v_1,v_2)=\mathbb{R}^2}.$$
 
 ### Interpretazione geometrica
 
@@ -140,12 +113,7 @@ $$
 
 **Collegamento con le matrici.** Se $A$ ha per colonne i vettori $v_1,\ldots,v_k$, allora
 
-$$
-v\in\mathrm{Span}(v_1,\ldots,v_k)
-\quad\Longleftrightarrow\quad
-A\underline{\lambda}=v
-\ \text{ammette almeno una soluzione}.
-$$
+$$v\in\mathrm{Span}(v_1,\ldots,v_k) \quad\Longleftrightarrow\quad A\underline{\lambda}=v \ \text{ammette almeno una soluzione}.$$
 
 I coefficienti cercati sono le componenti del vettore colonna $\underline{\lambda}$.
 
@@ -159,11 +127,7 @@ Per vettori in $\mathbb R^n$, scritti nelle colonne di $A$:
 
 Consideriamo la combinazione lineare che dà il **vettore nullo**:
 
-$$
-\lambda_1v_1+\cdots+\lambda_kv_k=0
-\qquad\Longleftrightarrow\qquad
-A\underline{\lambda}=0.
-$$
+$$\lambda_1v_1+\cdots+\lambda_kv_k=0 \qquad\Longleftrightarrow\qquad A\underline{\lambda}=0.$$
 
 - **Linearmente indipendenti:** l'unica soluzione è $\lambda_1=\cdots=\lambda_k=0$.
 - **Linearmente dipendenti:** esiste una soluzione con coefficienti **non tutti nulli**.
@@ -181,9 +145,7 @@ Più in generale, **qualsiasi insieme di vettori che contiene il vettore nullo �
 
 **Esempio:**
 
-$$
-v_1=(1,0),\quad v_2=(0,1),\quad v_3=(1,1).
-$$
+$$v_1=(1,0),\quad v_2=(0,1),\quad v_3=(1,1).$$
 
 Siccome $v_1+v_2-v_3=0$, con pesi $1,1,-1$ non tutti nulli, i tre vettori sono **dipendenti**.
 
@@ -191,119 +153,37 @@ Siccome $v_1+v_2-v_3=0$, con pesi $1,1,-1$ non tutti nulli, i tre vettori sono *
 
 **Obiettivo:** verificare, usando la definizione di indipendenza lineare, che le seguenti tre matrici di $M_2(\mathbb{R})$ (matrici $2\times 2$ a coefficienti reali) sono **linearmente indipendenti**:
 
-$$
-A_1=\begin{pmatrix}
-1 & 1\\
-0 & 0
-\end{pmatrix},
-\qquad
-A_2=\begin{pmatrix}
-0 & 1\\
--1 & 2
-\end{pmatrix},
-\qquad
-A_3=\begin{pmatrix}
-3 & 0\\
-1 & 0
-\end{pmatrix}.
-$$
+$$A_1=\begin{pmatrix} 1 & 1\\ 0 & 0 \end{pmatrix}, \qquad A_2=\begin{pmatrix} 0 & 1\\ -1 & 2 \end{pmatrix}, \qquad A_3=\begin{pmatrix} 3 & 0\\ 1 & 0 \end{pmatrix}.$$
 
 **1. Impostiamo la combinazione lineare uguale alla matrice nulla.**
 
-$$
-\lambda_1 A_1+\lambda_2 A_2+\lambda_3 A_3=
-\begin{pmatrix}
-0 & 0\\
-0 & 0
-\end{pmatrix}.
-$$
+$$\lambda_1 A_1+\lambda_2 A_2+\lambda_3 A_3= \begin{pmatrix} 0 & 0\\ 0 & 0 \end{pmatrix}.$$
 
 Sostituiamo le tre matrici:
 
-$$
-\lambda_1\begin{pmatrix}
-1 & 1\\
-0 & 0
-\end{pmatrix}
-+
-\lambda_2\begin{pmatrix}
-0 & 1\\
--1 & 2
-\end{pmatrix}
-+
-\lambda_3\begin{pmatrix}
-3 & 0\\
-1 & 0
-\end{pmatrix}
-=
-\begin{pmatrix}
-0 & 0\\
-0 & 0
-\end{pmatrix}.
-$$
+$$\lambda_1\begin{pmatrix} 1 & 1\\ 0 & 0 \end{pmatrix} + \lambda_2\begin{pmatrix} 0 & 1\\ -1 & 2 \end{pmatrix} + \lambda_3\begin{pmatrix} 3 & 0\\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0\\ 0 & 0 \end{pmatrix}.$$
 
 **2. Moltiplichiamo ogni matrice per il suo coefficiente e sommiamo posizione per posizione.**
 
-$$
-\begin{pmatrix}
-\lambda_1 & \lambda_1\\
-0 & 0
-\end{pmatrix}
-+
-\begin{pmatrix}
-0 & \lambda_2\\
--\lambda_2 & 2\lambda_2
-\end{pmatrix}
-+
-\begin{pmatrix}
-3\lambda_3 & 0\\
-\lambda_3 & 0
-\end{pmatrix}
-=
-\begin{pmatrix}
-0 & 0\\
-0 & 0
-\end{pmatrix}.
-$$
+$$\begin{pmatrix} \lambda_1 & \lambda_1\\ 0 & 0 \end{pmatrix} + \begin{pmatrix} 0 & \lambda_2\\ -\lambda_2 & 2\lambda_2 \end{pmatrix} + \begin{pmatrix} 3\lambda_3 & 0\\ \lambda_3 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0\\ 0 & 0 \end{pmatrix}.$$
 
 Quindi:
 
-$$
-\begin{pmatrix}
-\lambda_1+3\lambda_3 & \lambda_1+\lambda_2\\
--\lambda_2+\lambda_3 & 2\lambda_2
-\end{pmatrix}
-=
-\begin{pmatrix}
-0 & 0\\
-0 & 0
-\end{pmatrix}.
-$$
+$$\begin{pmatrix} \lambda_1+3\lambda_3 & \lambda_1+\lambda_2\\ -\lambda_2+\lambda_3 & 2\lambda_2 \end{pmatrix} = \begin{pmatrix} 0 & 0\\ 0 & 0 \end{pmatrix}.$$
 
 **3. Uguagliamo gli elementi che occupano la stessa posizione.** Otteniamo il sistema omogeneo:
 
-$$
-\begin{cases}
-\lambda_1+3\lambda_3=0\\
-\lambda_1+\lambda_2=0\\
--\lambda_2+\lambda_3=0\\
-2\lambda_2=0
-\end{cases}
-$$
+$$\begin{cases} \lambda_1+3\lambda_3=0\\ \lambda_1+\lambda_2=0\\ -\lambda_2+\lambda_3=0\\ 2\lambda_2=0 \end{cases}$$
 
 **4. Risolviamo il sistema.** Dall'ultima equazione si ottiene $\lambda_2=0$. Sostituendolo nella seconda e nella terza:
 
-$$
-\lambda_1=0,\qquad \lambda_3=0.
-$$
+$$\lambda_1=0,\qquad \lambda_3=0.$$
 
 Anche la prima equazione è quindi verificata.
 
 **Conclusione:** l'unica combinazione lineare che produce la matrice nulla ha **tutti i coefficienti uguali a zero**:
 
-$$
-\boxed{\lambda_1=\lambda_2=\lambda_3=0}.
-$$
+$$\boxed{\lambda_1=\lambda_2=\lambda_3=0}.$$
 
 Perciò **$A_1$, $A_2$ e $A_3$ sono linearmente indipendenti**.
 
@@ -313,9 +193,7 @@ Perciò **$A_1$, $A_2$ e $A_3$ sono linearmente indipendenti**.
 
 Se $A$ ha come colonne i **$k$ vettori** che stiamo studiando, allora
 
-$$
-\boxed{\text{vettori indipendenti}\iff\mathrm{rg}(A)=k}.
-$$
+$$\boxed{\text{vettori indipendenti}\iff\mathrm{rg}(A)=k}.$$
 
 Se il rango è minore del numero delle colonne, i vettori sono dipendenti.
 
@@ -330,42 +208,19 @@ Se il rango è minore del numero delle colonne, i vettori sono dipendenti.
 
 Consideriamo i vettori di $\mathbb{R}^4$:
 
-$$
-v_1=(1,2,-1,0),\quad v_2=(0,1,1,3),\quad v_3=(-1,0,3,6).
-$$
+$$v_1=(1,2,-1,0),\quad v_2=(0,1,1,3),\quad v_3=(-1,0,3,6).$$
 
 Per verificare l'indipendenza, disponiamo i vettori **nelle colonne** della matrice:
 
-$$
-A=\begin{pmatrix}
-1&0&-1\\
-2&1&0\\
--1&1&3\\
-0&3&6
-\end{pmatrix}.
-$$
+$$A=\begin{pmatrix} 1&0&-1\\ 2&1&0\\ -1&1&3\\ 0&3&6 \end{pmatrix}.$$
 
 Applicando le operazioni $E_{21}(-2)$ ed $E_{31}(1)$ indicate nella dispensa:
 
-$$
-\begin{pmatrix}
-1&0&-1\\
-0&1&2\\
-0&1&2\\
-0&3&6
-\end{pmatrix}.
-$$
+$$\begin{pmatrix} 1&0&-1\\ 0&1&2\\ 0&1&2\\ 0&3&6 \end{pmatrix}.$$
 
 Dopo le operazioni indicate $E_{32}(1)$ ed $E_{42}(-3)$, **la dispensa riporta** la matrice a scalini:
 
-$$
-\begin{pmatrix}
-1&0&-1\\
-0&-1&2\\
-0&0&0\\
-0&0&0
-\end{pmatrix}.
-$$
+$$\begin{pmatrix} 1&0&-1\\ 0&-1&2\\ 0&0&0\\ 0&0&0 \end{pmatrix}.$$
 
 **Conclusione:** $\mathrm{rg}(A)=2<3$, quindi i tre vettori sono **linearmente dipendenti**. La terza colonna è priva di pivot: $v_3$ è combinazione lineare di $v_1$ e $v_2$.
 
@@ -373,31 +228,15 @@ $$
 
 L'Esempio 62 prosegue la riduzione dell'Esempio 61. La **matrice iniziale riportata nella dispensa** è:
 
-$$
-\begin{pmatrix}
-1&0&-1\\
-0&-1&-2\\
-0&0&0\\
-0&0&0
-\end{pmatrix}.
-$$
+$$\begin{pmatrix} 1&0&-1\\ 0&-1&-2\\ 0&0&0\\ 0&0&0 \end{pmatrix}.$$
 
 Con $D_2(-1)$, ossia moltiplicando la seconda riga per $-1$, si ottiene:
 
-$$
-\begin{pmatrix}
-1&0&-1\\
-0&1&2\\
-0&0&0\\
-0&0&0
-\end{pmatrix}.
-$$
+$$\begin{pmatrix} 1&0&-1\\ 0&1&2\\ 0&0&0\\ 0&0&0 \end{pmatrix}.$$
 
 **Conclusione:** dalla terza colonna della forma ridotta si leggono i coefficienti $-1$ e $2$:
 
-$$
-\boxed{v_3=-v_1+2v_2}.
-$$
+$$\boxed{v_3=-v_1+2v_2}.$$
 
 **Nota sui segni della dispensa.** Tra le matrici a scalini stampate negli Esempi 61 e 62 ci sono **refusi nella seconda riga**. Le matrici qui sopra sono state **trascritte come nell'originale**, senza correggerle. Effettuando correttamente Gauss, la seconda riga è $(0,1,2)$; la conclusione $v_3=-v_1+2v_2$ resta corretta.
 

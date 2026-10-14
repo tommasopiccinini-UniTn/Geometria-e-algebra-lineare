@@ -77,9 +77,9 @@ Ogni sottospazio deve contenere il **vettore nullo** di $V$, indicato con $0_V$.
 
 **Test del vettore nullo (condizione necessaria).** Se $U\subseteq\mathbb{R}^n$ **non contiene il vettore nullo**, allora **non è un sottospazio vettoriale**. Infatti, se $U$ è un sottospazio e $v\in U$, per la chiusura rispetto al prodotto per uno scalare deve valere
 
-$
+$$
 0\cdot v=\mathbf{0}\in U.
-$
+$$
 
 **Attenzione:** contenere il vettore nullo è **necessario, ma non sufficiente** per essere un sottospazio. Se $\mathbf{0}\in U$, bisogna comunque verificare anche la **chiusura rispetto alla somma** e la **chiusura rispetto al prodotto per uno scalare**.
 

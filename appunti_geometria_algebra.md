@@ -180,6 +180,128 @@ $$
 
 Siccome $v_1+v_2-v_3=0$, con pesi $1,1,-1$ non tutti nulli, i tre vettori sono **dipendenti**.
 
+### Esempio 60 — Indipendenza lineare di matrici (dispensa, p. 96)
+
+**Obiettivo:** verificare, usando la definizione di indipendenza lineare, che le seguenti tre matrici di $M_2(\mathbb{R})$ (matrici $2\times 2$ a coefficienti reali) sono **linearmente indipendenti**:
+
+$$
+A_1=\begin{pmatrix}
+1 & 1\\
+0 & 0
+\end{pmatrix},
+\qquad
+A_2=\begin{pmatrix}
+0 & 1\\
+-1 & 2
+\end{pmatrix},
+\qquad
+A_3=\begin{pmatrix}
+3 & 0\\
+1 & 0
+\end{pmatrix}.
+$$
+
+**1. Impostiamo la combinazione lineare uguale alla matrice nulla.**
+
+$$
+\lambda_1 A_1+\lambda_2 A_2+\lambda_3 A_3=
+\begin{pmatrix}
+0 & 0\\
+0 & 0
+\end{pmatrix}.
+$$
+
+Sostituiamo le tre matrici:
+
+$$
+\lambda_1\begin{pmatrix}
+1 & 1\\
+0 & 0
+\end{pmatrix}
++
+\lambda_2\begin{pmatrix}
+0 & 1\\
+-1 & 2
+\end{pmatrix}
++
+\lambda_3\begin{pmatrix}
+3 & 0\\
+1 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0\\
+0 & 0
+\end{pmatrix}.
+$$
+
+**2. Moltiplichiamo ogni matrice per il suo coefficiente e sommiamo posizione per posizione.**
+
+$$
+\begin{pmatrix}
+\lambda_1 & \lambda_1\\
+0 & 0
+\end{pmatrix}
++
+\begin{pmatrix}
+0 & \lambda_2\\
+-\lambda_2 & 2\lambda_2
+\end{pmatrix}
++
+\begin{pmatrix}
+3\lambda_3 & 0\\
+\lambda_3 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0\\
+0 & 0
+\end{pmatrix}.
+$$
+
+Quindi:
+
+$$
+\begin{pmatrix}
+\lambda_1+3\lambda_3 & \lambda_1+\lambda_2\\
+-\lambda_2+\lambda_3 & 2\lambda_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0\\
+0 & 0
+\end{pmatrix}.
+$$
+
+**3. Uguagliamo gli elementi che occupano la stessa posizione.** Otteniamo il sistema omogeneo:
+
+$$
+\begin{cases}
+\lambda_1+3\lambda_3=0\\
+\lambda_1+\lambda_2=0\\
+-\lambda_2+\lambda_3=0\\
+2\lambda_2=0
+\end{cases}
+$$
+
+**4. Risolviamo il sistema.** Dall'ultima equazione si ottiene $\lambda_2=0$. Sostituendolo nella seconda e nella terza:
+
+$$
+\lambda_1=0,\qquad \lambda_3=0.
+$$
+
+Anche la prima equazione è quindi verificata.
+
+**Conclusione:** l'unica combinazione lineare che produce la matrice nulla ha **tutti i coefficienti uguali a zero**:
+
+$$
+\boxed{\lambda_1=\lambda_2=\lambda_3=0}.
+$$
+
+Perciò **$A_1$, $A_2$ e $A_3$ sono linearmente indipendenti**.
+
+**Da ricordare:** per verificare l'indipendenza di matrici si usa lo stesso procedimento usato per i vettori: si impone una combinazione lineare uguale allo **zero dello spazio** (qui la matrice nulla) e si cercano i coefficienti.
+
 ### 4.4.1 — Indipendenza lineare e rango (pp. 97–98)
 
 Se $A$ ha come colonne i **$k$ vettori** che stiamo studiando, allora

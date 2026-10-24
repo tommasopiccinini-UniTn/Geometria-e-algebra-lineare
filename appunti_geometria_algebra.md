@@ -127,31 +127,25 @@ Per dimostrare che un insieme non vuoto $U$ **è** un sottospazio, si verifica c
 
 **1. Matrici $2\times2$ con traccia nulla: è un sottospazio.** La **traccia** di una matrice quadrata è la somma degli elementi sulla diagonale principale:
 
-$$
-\mathrm{tr}\begin{pmatrix}a&b\\c&d\end{pmatrix}=a+d.
-$$
+$$\mathrm{tr}\begin{pmatrix}a&b\\c&d\end{pmatrix}=a+d.$$
 
 Consideriamo il sottoinsieme
 
-$$
-U=\{A\in M_2(\mathbb R):\mathrm{tr}(A)=0\}
-=\left\{\begin{pmatrix}a&b\\c&-a\end{pmatrix}:a,b,c\in\mathbb R\right\}.
-$$
+$$U=\{A\in M_2(\mathbb R)\mid\mathrm{tr}(A)=0\}.$$
+
+In altre parole, le sue matrici hanno necessariamente la forma
+
+$$U=\bigl\{\begin{pmatrix}a&b\\c&-a\end{pmatrix}:a,b,c\in\mathbb R\bigr\}.$$
 
 La matrice nulla appartiene a $U$. Inoltre, se $A,B\in U$, allora
 
-$$
-\mathrm{tr}(\lambda A+\mu B)
-=\lambda\mathrm{tr}(A)+\mu\mathrm{tr}(B)=0.
-$$
+$$\mathrm{tr}(\lambda A+\mu B)=\lambda\mathrm{tr}(A)+\mu\mathrm{tr}(B)=0.$$
 
 Quindi **$U$ è chiuso** rispetto alle combinazioni lineari. *Approfondimento:* ogni sua matrice è combinazione lineare di
 
-$$
-\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
-\begin{pmatrix}0&1\\0&0\end{pmatrix},\qquad
-\begin{pmatrix}0&0\\1&0\end{pmatrix}.
-$$
+$$B_1=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\quad B_2=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad B_3=\begin{pmatrix}0&0\\1&0\end{pmatrix}.$$
+
+Precisamente, $\begin{pmatrix}a&b\\c&-a\end{pmatrix}=aB_1+bB_2+cB_3$.
 
 **2. Matrici invertibili: non è un sottospazio.** L'insieme delle matrici invertibili in $M_2(\mathbb R)$ **non contiene la matrice nulla** (che non è invertibile): fallisce il test del vettore nullo.
 

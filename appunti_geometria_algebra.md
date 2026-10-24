@@ -290,6 +290,85 @@ Per vettori in $\mathbb R^n$, scritti nelle colonne di $A$:
 - $v$ appartiene allo spazio generato se il sistema $A\underline{\lambda}=v$ è **compatibile**.
 - I vettori generano **tutto $\mathbb R^n$** se e solo se $\mathrm{rg}(A)=n$, dove $n$ è il numero delle **righe**.
 
+### Altri esempi di spazi vettoriali: matrici, polinomi e funzioni (lezioni, pp. 11–13)
+
+**Spazio delle matrici** $M_{m\times n}(\mathbb R)$: i vettori sono *matrici*; la somma e il prodotto per scalare si effettuano componente per componente. Il vettore nullo è la matrice nulla.
+
+**Spazio dei polinomi** $\mathbb R[x]$: contiene tutti i polinomi reali in $x$, di grado arbitrario, con le operazioni usuali. **Non è finitamente generato.** Dimostriamolo: scelti comunque un numero finito di polinomi $p_1,\ldots,p_k$, sia $M$ il massimo dei loro gradi. Tutte le combinazioni lineari di questi polinomi hanno grado **al più $M$**, quindi non si può ottenere il polinomio $x^{M+1}$. Pertanto nessuna famiglia finita genera tutto $\mathbb R[x]$.
+
+**Polinomi di grado al più $d$:** l'insieme
+
+$$
+\mathbb R[x]_{\le d}
+=\{a_0+a_1x+\cdots+a_dx^d:a_0,\ldots,a_d\in\mathbb R\}
+$$
+
+è un **sottospazio** di $\mathbb R[x]$ ed è **finitamente generato** dall'insieme $\{1,x,\ldots,x^d\}$.
+
+**Spazio delle funzioni continue** $C(\mathbb R)$: contiene le funzioni continue $f:\mathbb R\to\mathbb R$. Le operazioni sono definite **punto per punto**:
+
+$$
+(f+g)(x)=f(x)+g(x),\qquad
+(\lambda f)(x)=\lambda f(x).
+$$
+
+La somma e il prodotto per scalare di funzioni continue sono ancora continui.
+
+### Spazio delle righe e spazio delle colonne (lezione, p. 9; dispensa, §6.3)
+
+Data una matrice $A$ con **$m$ righe e $n$ colonne**, le sue righe sono vettori $r_1,\ldots,r_m\in\mathbb R^n$, mentre le sue colonne sono vettori $c_1,\ldots,c_n\in\mathbb R^m$.
+
+**Definizione — spazio delle righe:**
+
+$$
+R(A)=\mathrm{Span}(r_1,\ldots,r_m)\subseteq\mathbb R^n.
+$$
+
+**Definizione — spazio delle colonne:**
+
+$$
+C(A)=\mathrm{Span}(c_1,\ldots,c_n)\subseteq\mathbb R^m.
+$$
+
+**Interpretazione:** $R(A)$ raccoglie *tutte le combinazioni lineari delle righe*, mentre $C(A)$ raccoglie *tutte le combinazioni lineari delle colonne*. Se $m\ne n$, appartengono perfino a spazi ambienti diversi: i vettori riga hanno $n$ componenti, quelli colonna ne hanno $m$.
+
+**Esempio concreto.** Consideriamo
+
+$$
+A=\begin{pmatrix}
+1&2&3\\
+0&1&1\\
+1&3&4
+\end{pmatrix}.
+$$
+
+La terza **riga** è la somma delle prime due, cioè $r_3=r_1+r_2$. Quindi:
+
+$$
+R(A)=\mathrm{Span}((1,2,3),(0,1,1)).
+$$
+
+Anche la terza **colonna** è la somma delle prime due, cioè $c_3=c_1+c_2$. Quindi:
+
+$$
+C(A)=\mathrm{Span}((1,0,1),(2,1,3)).
+$$
+
+In entrambi i casi i due vettori scelti sono indipendenti. Pertanto questi spazi hanno dimensione $2$ e $\mathrm{rg}(A)=2$.
+
+**Come trovare una base con Gauss** (*approfondimento operativo rispetto alle sole definizioni della p. 9*):
+
+1. Per lo **spazio delle righe**, si riduce $A$ per righe: le **righe non nulle** della forma a scalini costituiscono una base di $R(A)$. Le operazioni elementari sulle righe preservano infatti lo Span delle righe.
+2. Per lo **spazio delle colonne**, si riduce $A$ per individuare **le posizioni delle colonne con pivot**, ma si scelgono le colonne corrispondenti della **matrice originale $A$**, non quelle della matrice ridotta.
+3. La dimensione di ciascuno dei due spazi è uguale al rango:
+
+$$
+\dim R(A)=\dim C(A)=\mathrm{rg}(A).
+$$
+
+**Attenzione:** le operazioni di Gauss possono **modificare lo spazio delle colonne come insieme**, anche se ne preservano il rango e le relazioni di dipendenza. Ecco perché, per una base di $C(A)$, si torna alle colonne **originali**.
+
+
 ## 4.4 — Insiemi linearmente dipendenti e indipendenti (p. 95)
 
 Consideriamo la combinazione lineare che dà il **vettore nullo**:

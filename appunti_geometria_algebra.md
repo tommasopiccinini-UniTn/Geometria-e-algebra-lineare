@@ -13,6 +13,23 @@ In uno **spazio vettoriale reale** gli scalari sono numeri reali. Le operazioni 
 
 Esempi della dispensa: vettori geometrici, $\mathbb R^n$, matrici $M_{m\times n}(\mathbb R)$, polinomi.
 
+### Definizione completa e otto proprietà di uno spazio vettoriale reale (lezione, p. 1)
+
+Uno **spazio vettoriale reale** è un insieme non vuoto $V$, i cui elementi sono chiamati **vettori**, su cui sono definite le operazioni di **somma** $v+w\in V$ e **prodotto per uno scalare** $\lambda v\in V$ per $\lambda\in\mathbb R$.
+
+Per ogni $u,v,w\in V$ e ogni $\lambda,\mu\in\mathbb R$ devono valere **tutti e otto** gli assiomi:
+
+1. **Commutatività della somma:** $v+w=w+v$.
+2. **Associatività della somma:** $(u+v)+w=u+(v+w)$.
+3. **Esistenza del vettore nullo:** esiste $0_V\in V$ tale che $v+0_V=v$.
+4. **Esistenza dell'opposto:** per ogni $v$ esiste $-v\in V$ tale che $v+(-v)=0_V$.
+5. **Associatività del prodotto per scalare:** $\lambda(\mu v)=(\lambda\mu)v$.
+6. **Unità del prodotto per scalare:** $1v=v$.
+7. **Distributività rispetto agli scalari:** $(\lambda+\mu)v=\lambda v+\mu v$.
+8. **Distributività rispetto ai vettori:** $\lambda(v+w)=\lambda v+\lambda w$.
+
+Queste sono le proprietà che **definiscono** lo spazio vettoriale. Il vettore nullo dipende dallo spazio: ennupla nulla in $\mathbb R^n$, matrice nulla nello spazio delle matrici, polinomio nullo nello spazio dei polinomi.
+
 ### Che cosa si intende per «vettore»?
 
 Il termine **vettore**, nel suo significato più generale, indica **un elemento di uno spazio vettoriale**. Non va confuso con alcuni suoi casi particolari:
@@ -29,6 +46,25 @@ In particolare:
 - L'insieme $M_{m\times n}(\mathbb R)$ delle **matrici $m\times n$ a coefficienti reali** è anch'esso uno spazio vettoriale.
 
 
+### Operazioni sulle ennuple di $\mathbb R^n$ (lezione, p. 2)
+
+Una **ennupla** è un vettore $v=(v_1,\ldots,v_n)$ con $n$ componenti reali. Se $w=(w_1,\ldots,w_n)$, le operazioni si fanno **componente per componente**:
+
+$$
+v+w=(v_1+w_1,\ldots,v_n+w_n),\qquad
+\lambda v=(\lambda v_1,\ldots,\lambda v_n).
+$$
+
+Il vettore nullo è $(0,\ldots,0)$ e l'opposto di $v$ è $(-v_1,\ldots,-v_n)$.
+
+**Esempio della lezione:** se $v=(1,1,1)$, $w=(2,3,4)$ e scegliamo i coefficienti $2$ e $-1$, allora
+
+$$
+2v-w=2(1,1,1)-(2,3,4)=(0,-1,-2).
+$$
+
+Queste operazioni soddisfano gli otto assiomi, quindi $\mathbb R^n$ è uno spazio vettoriale reale.
+
 ## 4.2 — Combinazioni lineari (p. 88)
 
 Una **combinazione lineare** dei vettori $v_1,\ldots,v_k$ è
@@ -36,6 +72,12 @@ Una **combinazione lineare** dei vettori $v_1,\ldots,v_k$ è
 $$v=\lambda_1v_1+\cdots+\lambda_kv_k.$$
 
 I numeri $\lambda_i$ sono i **coefficienti** o **scalari** (informalmente, i «pesi»).
+
+### Come funzionano le combinazioni lineari (lezioni, pp. 2–3)
+
+Una combinazione lineare **produce un vettore** (non un insieme di vettori): si moltiplica ciascuno dei $k$ vettori iniziali per un coefficiente, poi si somma tutto. Se i vettori sono in $\mathbb R^n$, anche il risultato è in $\mathbb R^n$.
+
+**Attenzione ai due numeri:** $k$ è il **numero di vettori da combinare**, mentre $n$ è il **numero di componenti per vettore**.
 
 ### 4.2.1 — Forma matriciale (p. 89)
 
@@ -50,6 +92,10 @@ $$\underline{\lambda}= \begin{pmatrix} \lambda_1\\ \lambda_2\\ \vdots\\ \lambda_
 In questo modo, la combinazione lineare diventa $A\underline{\lambda}=v$.
 
 **Chiarimento discusso:** $\underline{\lambda}$ non contiene i vettori originali: contiene soltanto i pesi. Se $A$ ha quattro colonne, $\underline{\lambda}$ ha quattro coefficienti.
+
+**Dimensioni della forma matriciale.** Se si combinano $k$ vettori di $\mathbb R^n$, disponendoli nelle colonne si ottiene $A\in M_{n\times k}(\mathbb R)$: **$n$ righe (componenti) e $k$ colonne (vettori)**. Il vettore dei coefficienti $\underline{\lambda}$ ha dimensione $k\times1$ e $A\underline{\lambda}$ ha dimensione $n\times1$.
+
+**Esempio:** tre vettori in $\mathbb R^5$ danno una matrice **$5\times3$** e richiedono **tre** coefficienti $\lambda_1,\lambda_2,\lambda_3$.
 
 ## 4.3 — Sottospazi vettoriali e generatori (p. 89)
 

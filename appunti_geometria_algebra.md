@@ -534,6 +534,34 @@ Una **base** di uno spazio vettoriale è un insieme di vettori che:
 
 Una base permette dunque di generare tutto lo spazio **senza vettori ridondanti**.
 
+### Unicità dei coefficienti rispetto a una base (lezioni, pp. 19–20)
+
+**Proposizione.** Se $B=\{b_1,\ldots,b_r\}$ è una **base** di uno spazio vettoriale $V$, ogni vettore $v\in V$ può essere scritto **in uno e un solo modo** come combinazione lineare:
+
+$$
+v=\lambda_1b_1+\cdots+\lambda_rb_r.
+$$
+
+**Dimostrazione, passo per passo.**
+
+1. **Esistenza:** poiché $B$ è un sistema di generatori di $V$, ogni $v\in V$ si può esprimere come combinazione lineare dei $b_i$.
+2. **Unicità:** supponiamo che ci siano due combinazioni diverse che producono lo stesso vettore:
+
+$$
+v=\lambda_1b_1+\cdots+\lambda_rb_r
+=\mu_1b_1+\cdots+\mu_rb_r.
+$$
+
+3. Sottraendo le due espressioni otteniamo il vettore nullo:
+
+$$
+0_V=(\lambda_1-\mu_1)b_1+\cdots+(\lambda_r-\mu_r)b_r.
+$$
+
+4. Siccome i vettori di $B$ sono **linearmente indipendenti**, l'unica combinazione che produce $0_V$ ha tutti i coefficienti nulli: $\lambda_i-\mu_i=0$ per ogni $i$. Dunque **$\lambda_i=\mu_i$**.
+
+**Da ricordare:** il fatto di **generare** garantisce che i coefficienti *esistano*, mentre l'**indipendenza** garantisce che siano *unici*. Se i generatori sono dipendenti, possono esistere più modi di scrivere lo stesso vettore.
+
 ### 4.5.1 — Basi di $\mathbb R^n$
 
 Per essere una base di $\mathbb R^n$, un insieme deve avere $n$ vettori e la matrice corrispondente deve avere rango $n$.
@@ -541,6 +569,55 @@ Per essere una base di $\mathbb R^n$, un insieme deve avere $n$ vettori e la mat
 La **base canonica** è formata dai vettori con un solo 1 e tutte le altre componenti uguali a 0.
 
 Ogni vettore dello spazio si esprime **in maniera unica** come combinazione lineare dei vettori di una base.
+
+### Criterio del rango per riconoscere una base (lezioni, pp. 21–22)
+
+Se $v_1,\ldots,v_k\in\mathbb R^n$ e $A=[v_1\mid\cdots\mid v_k]$, abbiamo tre criteri da distinguere:
+
+- **Generare tutto $\mathbb R^n$:** $\mathrm{rg}(A)=n$ (**numero di righe**).
+- **Essere linearmente indipendenti:** $\mathrm{rg}(A)=k$ (**numero di colonne**).
+- **Formare una base di $\mathbb R^n$:** devono valere entrambe le condizioni, ossia **$k=n$ e $\mathrm{rg}(A)=n$**.
+
+$$
+\boxed{\{v_1,\ldots,v_n\}\text{ è una base di }\mathbb R^n
+\iff \mathrm{rg}([v_1\mid\cdots\mid v_n])=n.}
+$$
+
+Se $k<n$, il rango non può arrivare a $n$ e quindi i vettori non possono generare tutto $\mathbb R^n$. Se $k>n$, il rango non può arrivare a $k$ e quindi i vettori non possono essere tutti indipendenti.
+
+### Esempi di basi in spazi diversi da $\mathbb R^n$ (lezioni, pp. 20–21)
+
+**1. Base canonica di $\mathbb R^n$.** È $\{e_1,\ldots,e_n\}$, dove $e_i$ ha un $1$ nella posizione $i$ e tutti gli altri coefficienti nulli. Ogni $v=(v_1,\ldots,v_n)$ si scrive in modo unico come $v=v_1e_1+\cdots+v_ne_n$.
+
+**2. Base delle matrici $2\times2$.** Nello spazio $M_2(\mathbb R)$ i seguenti **quattro vettori** (che qui sono matrici) formano una base:
+
+$$
+E_{11}=\begin{pmatrix}1&0\\0&0\end{pmatrix},\quad
+E_{12}=\begin{pmatrix}0&1\\0&0\end{pmatrix},\quad
+E_{21}=\begin{pmatrix}0&0\\1&0\end{pmatrix},\quad
+E_{22}=\begin{pmatrix}0&0\\0&1\end{pmatrix}.
+$$
+
+Ogni matrice $A$ può essere scritta **univocamente** come
+
+$$
+A=\begin{pmatrix}a&b\\c&d\end{pmatrix}
+=aE_{11}+bE_{12}+cE_{21}+dE_{22}.
+$$
+
+**Attenzione:** una matrice $2\times2$ ha **quattro coefficienti**, quindi la base di tutto $M_2(\mathbb R)$ contiene **quattro** elementi.
+
+**3. Base dei polinomi di grado al più $d$.** Per lo spazio $\mathbb R[x]_{\le d}$ una base è
+
+$$
+\{1,x,x^2,\ldots,x^d\}.
+$$
+
+Ogni polinomio $p(x)=a_0+a_1x+\cdots+a_dx^d$ si scrive in modo unico tramite questi **$d+1$** polinomi.
+
+**4. Base dello spazio dei vettori geometrici $V^3$.** I tre versori degli assi perpendicolari $\mathbf i,\mathbf j,\mathbf k$ formano una base: ogni vettore geometrico $v$ si scrive in modo unico come $v=v_1\mathbf i+v_2\mathbf j+v_3\mathbf k$.
+
+**Conclusione comune:** una base genera **tutto** lo spazio, senza vettori **ridondanti**. Le basi non sono riservate alle ennuple: possono essere costituite anche da matrici, polinomi o vettori geometrici.
 
 ### Esempio 65 — Ricavare i coefficienti di un vettore rispetto a una base (p. 100)
 

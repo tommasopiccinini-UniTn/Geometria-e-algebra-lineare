@@ -121,6 +121,46 @@ $$0\cdot v=\mathbf{0}\in U.$$
 
 **Conclusione:** un sottospazio vettoriale reale ha **un solo elemento (lo zero) oppure infiniti elementi**. Non può avere un numero finito di elementi maggiore di uno.
 
+#### Esempi e controesempi di sottospazi con matrici e polinomi (lezioni, pp. 5 e 13–14)
+
+Per dimostrare che un insieme non vuoto $U$ **è** un sottospazio, si verifica che per ogni $u,v\in U$ e ogni $\lambda,\mu\in\mathbb R$ anche $\lambda u+\mu v$ vi appartiene. Per dimostrare che **non lo è**, basta trovare una condizione necessaria che fallisce.
+
+**1. Matrici $2\times2$ con traccia nulla: è un sottospazio.** La **traccia** di una matrice quadrata è la somma degli elementi sulla diagonale principale:
+
+$$
+\mathrm{tr}\begin{pmatrix}a&b\\c&d\end{pmatrix}=a+d.
+$$
+
+Consideriamo il sottoinsieme
+
+$$
+U=\{A\in M_2(\mathbb R):\mathrm{tr}(A)=0\}
+=\left\{\begin{pmatrix}a&b\\c&-a\end{pmatrix}:a,b,c\in\mathbb R\right\}.
+$$
+
+La matrice nulla appartiene a $U$. Inoltre, se $A,B\in U$, allora
+
+$$
+\mathrm{tr}(\lambda A+\mu B)
+=\lambda\mathrm{tr}(A)+\mu\mathrm{tr}(B)=0.
+$$
+
+Quindi **$U$ è chiuso** rispetto alle combinazioni lineari. *Approfondimento:* ogni sua matrice è combinazione lineare di
+
+$$
+\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
+\begin{pmatrix}0&1\\0&0\end{pmatrix},\qquad
+\begin{pmatrix}0&0\\1&0\end{pmatrix}.
+$$
+
+**2. Matrici invertibili: non è un sottospazio.** L'insieme delle matrici invertibili in $M_2(\mathbb R)$ **non contiene la matrice nulla** (che non è invertibile): fallisce il test del vettore nullo.
+
+**3. Polinomi che si annullano in $1$: è un sottospazio.** Consideriamo $U=\{p(x)\in\mathbb R[x]:p(1)=0\}$. Contiene il polinomio nullo. Se $p(1)=q(1)=0$, allora $(\lambda p+\mu q)(1)=\lambda p(1)+\mu q(1)=0$, quindi è **chiuso**. *Approfondimento:* sono esattamente i polinomi divisibili per $x-1$.
+
+**4. Polinomi di grado esattamente $d$: non è un sottospazio.** Il polinomio nullo **non** ha grado esattamente $d$. Inoltre, per ogni $d\ge0$, $p(x)=x^d$ e $q(x)=-x^d$ hanno grado $d$, ma $p+q=0$ non lo ha: la chiusura per somma fallisce.
+
+**Da distinguere:** «grado **esattamente** $d$» non definisce un sottospazio; «grado **al più** $d$» definisce invece un sottospazio.
+
 #### Spazio delle soluzioni di un sistema lineare omogeneo
 
 Un **sistema lineare omogeneo** è un sistema in cui tutti i termini noti sono uguali a zero, e si scrive in forma matriciale $Bx=\mathbf{0}$.
@@ -134,6 +174,73 @@ $$
 Questo insieme è sempre un **sottospazio vettoriale di $\mathbb{R}^n$**: contiene il vettore nullo ed è chiuso rispetto alla somma e al prodotto per uno scalare.
 
 **Da ricordare:** lo stesso sottospazio può essere descritto tramite **generatori** (come Span di alcuni vettori) oppure tramite **equazioni omogenee** che i suoi vettori devono soddisfare.
+
+#### Procedimento completo: dallo Span a un sistema omogeneo (lezioni, pp. 10–11)
+
+**Che cosa chiede l'esercizio?** Partendo da $U=\mathrm{Span}(v_1,\ldots,v_k)\subseteq\mathbb R^n$, bisogna **trovare equazioni** nelle coordinate di un vettore generico $x$ che individuino *tutti e soli* i vettori appartenenti a $U$; non si sta cercando una singola soluzione.
+
+1. Disponiamo i **generatori nelle colonne** di $A=[v_1\mid\cdots\mid v_k]$ e aggiungiamo il vettore generico $x$ come **ultima colonna**, formando $(A\mid x)$.
+2. La condizione $x\in U$ equivale alla compatibilità del sistema $A\underline{\lambda}=x$, in cui le incognite $\lambda_i$ sono i **coefficienti della combinazione lineare**.
+3. Applichiamo Gauss alla matrice aumentata **per intero**, compresa l'ultima colonna.
+4. Per il teorema di **Rouché–Capelli**, richiediamo $\mathrm{rg}(A)=\mathrm{rg}(A\mid x)$. Quando una riga ha **tutti zeri nella parte relativa ad $A$**, dobbiamo porre **uguale a zero** anche l'espressione dell'ultima colonna: otteniamo così le **equazioni omogenee cercate**. È sufficiente la **forma a scalini**, senza riduzione all'indietro.
+
+**Esempio effettivamente svolto nelle lezioni.** Consideriamo
+
+$$
+v_1=(-1,1,0,-3),\qquad v_2=(1,-1,2,1),\qquad
+U=\mathrm{Span}(v_1,v_2)\subseteq\mathbb R^4.
+$$
+
+Se $x=(x,y,z,w)$ è un vettore **generico**:
+
+$$
+(A\mid x)=\left(\begin{array}{cc|c}
+-1&1&x\\
+1&-1&y\\
+0&2&z\\
+-3&1&w
+\end{array}\right).
+$$
+
+Eseguiamo $R_2\leftarrow R_2+R_1$ e $R_4\leftarrow R_4-3R_1$:
+
+$$
+\left(\begin{array}{cc|c}
+-1&1&x\\
+0&0&x+y\\
+0&2&z\\
+0&-2&w-3x
+\end{array}\right).
+$$
+
+Scambiamo la seconda e la terza riga, poi eseguiamo $R_4\leftarrow R_4+R_2$:
+
+$$
+\left(\begin{array}{cc|c}
+-1&1&x\\
+0&2&z\\
+0&0&x+y\\
+0&0&z+w-3x
+\end{array}\right).
+$$
+
+La parte $A$ ha rango $2$. L'ultima colonna **non deve aumentare il rango**, dunque occorre imporre
+
+$$
+\boxed{\begin{cases}
+x+y=0,\\
+z+w-3x=0.
+\end{cases}}
+$$
+
+Quindi abbiamo ottenuto **una descrizione tramite equazioni dello stesso sottospazio**:
+
+$$
+U=\mathrm{Span}(v_1,v_2)
+=\{(x,y,z,w)\in\mathbb R^4:x+y=0,\ z+w-3x=0\}.
+$$
+
+**Non confondere:** $\lambda_1,\lambda_2$ sono i coefficienti *usati per generare* i vettori; $x,y,z,w$ sono le **coordinate** di un vettore generico, che devono rispettare le equazioni. Sistemi scritti in forme diverse vanno ugualmente bene se hanno **esattamente lo stesso insieme delle soluzioni**.
 
 ### 4.3.2 — Generatori (p. 92)
 

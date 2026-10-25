@@ -42,11 +42,11 @@
 
 ---
 
-<a id="indice-cap3-1"></a>
+<a name="indice-cap3-1"></a>
 
 ## 3.1 — Matrici e operazioni (pp. 62–67)
 
-<a id="indice-cap3-2"></a>
+<a name="indice-cap3-2"></a>
 
 ### 3.1.1 — Notazione e tipi di matrici
 
@@ -132,7 +132,7 @@ $$
 
 **Attenzione all'ordine:** nella trasposta di un prodotto, l'ordine dei fattori si **inverte**.
 
-<a id="indice-cap3-3"></a>
+<a name="indice-cap3-3"></a>
 
 ### 3.1.2 — Somma, opposto e prodotto per uno scalare (pp. 64–65)
 
@@ -194,7 +194,7 @@ $$
 
 **Collegamento al Capitolo 4:** l'insieme delle matrici $M_{m\times n}(\mathbb R)$ è uno **spazio vettoriale** proprio perché somma e prodotto per scalari soddisfano gli assiomi richiesti.
 
-<a id="indice-cap3-4"></a>
+<a name="indice-cap3-4"></a>
 
 ### 3.1.3 — Prodotto righe per colonne (pp. 65–67)
 
@@ -216,7 +216,7 @@ $$
 
 L'elemento $(i,k)$ è il prodotto scalare della **riga $i$** della prima matrice con la **colonna $k$** della seconda.
 
-<a id="indice-cap3-5"></a>
+<a name="indice-cap3-5"></a>
 
 #### Procedura operativa
 
@@ -250,7 +250,7 @@ $$
 
 **Nota sul testo:** nell'Esempio 30 stampato sono riportati, in alcuni passaggi, coefficienti incompatibili con le matrici iniziali. Qui il prodotto è stato ricalcolato usando esattamente $A$ e $B$ come mostrate. Il prodotto $BA$ **non è definito**: le dimensioni interne sarebbero $3$ e $2$.
 
-<a id="indice-cap3-6"></a>
+<a name="indice-cap3-6"></a>
 
 #### Proprietà del prodotto di matrici
 
@@ -277,7 +277,7 @@ $$
 
 **Attenzione:** l'identità a sinistra è di ordine $m$, quella a destra è di ordine $n$.
 
-<a id="indice-cap3-7"></a>
+<a name="indice-cap3-7"></a>
 
 #### Il prodotto non è commutativo
 
@@ -301,7 +301,7 @@ AB=\begin{pmatrix}2&1\\-2&-1\end{pmatrix},\qquad
 BA=\begin{pmatrix}1&7\\0&0\end{pmatrix}.
 $$
 
-<a id="indice-cap3-8"></a>
+<a name="indice-cap3-8"></a>
 
 #### Un prodotto nullo non significa un fattore nullo
 
@@ -317,11 +317,11 @@ $$
 
 **Errore frequente:** non si può applicare alle matrici la regola numerica «$ab=0$ implica $a=0$ oppure $b=0$».
 
-<a id="indice-cap3-9"></a>
+<a name="indice-cap3-9"></a>
 
 ## 3.2 — Invertibilità delle matrici quadrate (pp. 68–75)
 
-<a id="indice-cap3-10"></a>
+<a name="indice-cap3-10"></a>
 
 ### 3.2.1 — Diagonale, inverse, esempi (pp. 68–70)
 
@@ -382,7 +382,7 @@ $$
 
 Non scrivere $(AB)^{-1}=A^{-1}B^{-1}$: in generale è falso perché le matrici **non commutano**.
 
-<a id="indice-cap3-11"></a>
+<a name="indice-cap3-11"></a>
 
 ### 3.2.2 — Matrici delle operazioni elementari (pp. 70–72)
 
@@ -436,7 +436,7 @@ $$
 
 **Collegamento concettuale:** Gauss non «cambia arbitrariamente» la matrice: a ogni passo moltiplica a sinistra per una matrice invertibile. Per questo il rango non cambia.
 
-<a id="indice-cap3-12"></a>
+<a name="indice-cap3-12"></a>
 
 ### 3.2.3 — Teorema: rango e invertibilità (pp. 72–73)
 
@@ -462,7 +462,7 @@ $$
 - Una matrice con due righe uguali, proporzionali oppure una riga nulla **non può avere rango $n$**.
 - Non è necessario calcolare tutta l'inversa per decidere se esiste: è sufficiente verificare i pivot.
 
-<a id="indice-cap3-13"></a>
+<a name="indice-cap3-13"></a>
 
 ### 3.2.4 — Calcolo dell'inversa con Gauss–Jordan (pp. 73–75)
 
@@ -479,7 +479,7 @@ Poi si applicano **le stesse operazioni elementari a entrambe le metà**.
 
 **Perché il metodo funziona?** Le operazioni applicate equivalgono alla moltiplicazione a sinistra per $P$. Quando $PA=I_n$, si ha $P=A^{-1}$; applicando le stesse operazioni a $I_n$, la metà destra diventa appunto $PI_n=P$.
 
-<a id="indice-cap3-14"></a>
+<a name="indice-cap3-14"></a>
 
 #### Esempio 40 della dispensa — Inversa di una $2\times2$ (pp. 73–74)
 
@@ -541,7 +541,7 @@ AA^{-1}
 =\begin{pmatrix}1&0\\0&1\end{pmatrix}.
 $$
 
-<a id="indice-cap3-15"></a>
+<a name="indice-cap3-15"></a>
 
 #### Esempio 41 della dispensa — Una $3\times3$ (p. 74)
 
@@ -569,7 +569,7 @@ $$
 
 **Controllo consigliato:** moltiplicare la prima riga di $A$ per le tre colonne di $A^{-1}$: si ottiene $(1,0,0)$.
 
-<a id="indice-cap3-16"></a>
+<a name="indice-cap3-16"></a>
 
 #### Esempio 42 della dispensa — Matrice non invertibile (p. 75)
 
@@ -583,11 +583,11 @@ $$
 
 Nella riduzione la terza riga della parte $A$ diventa nulla; restano quindi **due pivot**, perciò $\operatorname{rg}(A)=2<3$. La matrice non è invertibile e il metodo non può produrre $(I_3\mid A^{-1})$.
 
-<a id="indice-cap3-17"></a>
+<a name="indice-cap3-17"></a>
 
 ## 3.3 — Sistemi lineari e invertibilità (pp. 75–79)
 
-<a id="indice-cap3-18"></a>
+<a name="indice-cap3-18"></a>
 
 ### 3.3.1 — Scrittura matriciale di un sistema
 
@@ -622,7 +622,7 @@ $$
 
 **Non confondere:** $A$ è la matrice dei coefficienti, $\mathbf x$ è la colonna delle incognite e $\mathbf b$ è la colonna dei termini noti.
 
-<a id="indice-cap3-19"></a>
+<a name="indice-cap3-19"></a>
 
 ### 3.3.2 — Sistemi omogenei, nucleo e nullità (pp. 76–77)
 
@@ -664,7 +664,7 @@ dove $n$ è il **numero di colonne di $A$**.
 
 **Esempio:** se $A$ ha $4$ colonne e rango $2$, allora $\operatorname{null}(A)=4-2=2$: il sistema omogeneo ha due parametri liberi.
 
-<a id="indice-cap3-20"></a>
+<a name="indice-cap3-20"></a>
 
 ### 3.3.3 — Soluzioni di un sistema compatibile non omogeneo (pp. 77–79)
 
@@ -700,7 +700,7 @@ $$
 
 **Da ricordare:** per un sistema non omogeneo compatibile, le soluzioni sono **una soluzione particolare più tutte le soluzioni dell'omogeneo associato**. Non è in generale un sottospazio, perché non contiene necessariamente lo zero.
 
-<a id="indice-cap3-21"></a>
+<a name="indice-cap3-21"></a>
 
 #### Esempio 43 della dispensa (p. 78)
 
@@ -750,7 +750,7 @@ N(A)=\operatorname{Span}\bigl(
 \bigr).
 $$
 
-<a id="indice-cap3-22"></a>
+<a name="indice-cap3-22"></a>
 
 ### 3.3.4 — Sistema quadrato con matrice invertibile (p. 79)
 
@@ -776,7 +776,7 @@ $$
 
 **Attenzione:** il prodotto è $A^{-1}\mathbf b$ e **non** $\mathbf bA^{-1}$; quest'ultimo non è normalmente neppure definito per le dimensioni.
 
-<a id="indice-cap3-23"></a>
+<a name="indice-cap3-23"></a>
 
 #### Esempio 44 della dispensa (p. 79)
 
@@ -834,11 +834,11 @@ $$
 
 Sono modi diversi di riconoscere la medesima proprietà.
 
-<a id="indice-cap3-24"></a>
+<a name="indice-cap3-24"></a>
 
 ## 3.4 — Esercizi ricapitolativi (pp. 80–85)
 
-<a id="indice-cap3-25"></a>
+<a name="indice-cap3-25"></a>
 
 ### Esercizio 11 della dispensa — Matrice dipendente da $k$ (pp. 80–83)
 
@@ -898,7 +898,7 @@ $$
 
 **Che cosa insegna l'esercizio:** se una matrice dipende da $k$, prima si studia il **rango al variare di $k$**, poi si calcola l'inversa solo per i valori ammessi.
 
-<a id="indice-cap3-26"></a>
+<a name="indice-cap3-26"></a>
 
 ### Esercizio 12 della dispensa — Invertibilità, inversa e sistema (pp. 80–84)
 
@@ -985,7 +985,7 @@ $$
 
 **Controllo:** $1-1+1=1$; $2-3=-1$; $1-4+1=-2$.
 
-<a id="indice-cap3-27"></a>
+<a name="indice-cap3-27"></a>
 
 ### Esercizio aggiuntivo — Una matrice quadrata senza inversa
 
@@ -1009,7 +1009,7 @@ $$
 
 **Non serve proseguire** con la ricerca di $A^{-1}$: il criterio del rango ha già risolto la domanda.
 
-<a id="indice-cap3-28"></a>
+<a name="indice-cap3-28"></a>
 
 ### Domande di teoria per l'esame (p. 85)
 
@@ -1024,7 +1024,7 @@ $$
 9. Qual è la relazione tra rango e nullità?
 10. Come si descrivono tutte le soluzioni di un sistema compatibile non omogeneo?
 
-<a id="indice-cap3-29"></a>
+<a name="indice-cap3-29"></a>
 
 ## Schema finale per gli esercizi
 
@@ -1038,7 +1038,7 @@ $$
 | Risolvere $A\mathbf x=\mathbf b$ | Compatibilità; se $A$ invertibile, soluzione unica | Gauss oppure $A^{-1}\mathbf b$ |
 | Descrivere tutte le soluzioni | Trovare una soluzione particolare e il nucleo | $\mathbf x_0+N(A)$ |
 
-<a id="indice-cap3-30"></a>
+<a name="indice-cap3-30"></a>
 
 ## Formulario essenziale
 

@@ -172,13 +172,13 @@ La **proiezione ortogonale** di $\mathbf v$ su un vettore non nullo $\mathbf w$ 
 **Proposizione 1.** Se $\mathbf e$ è un versore:
 
 $$
-\operatorname{proj}_{\mathbf e}(\mathbf v)=(\mathbf v\cdot\mathbf e)\mathbf e.
+\mathrm{proj}_{\mathbf e}(\mathbf v)=(\mathbf v\cdot\mathbf e)\mathbf e.
 $$
 
 Per un vettore generico $\mathbf w\ne\mathbf 0$:
 
 $$
-\boxed{\operatorname{proj}_{\mathbf w}(\mathbf v)
+\boxed{\mathrm{proj}_{\mathbf w}(\mathbf v)
 =\frac{\mathbf v\cdot\mathbf w}{|\mathbf w|^2}\mathbf w}.
 $$
 
@@ -187,10 +187,10 @@ $$
 **Esempio guidato:** $\mathbf v=(3,2,0)$ e $\mathbf w=(1,0,0)$. Poiché $\mathbf v\cdot\mathbf w=3$ e $|\mathbf w|^2=1$,
 
 $$
-\operatorname{proj}_{\mathbf w}(\mathbf v)=3(1,0,0)=(3,0,0).
+\mathrm{proj}_{\mathbf w}(\mathbf v)=3(1,0,0)=(3,0,0).
 $$
 
-Il vettore **perpendicolare** a $\mathbf w$ che resta dopo la proiezione è $\mathbf v-\operatorname{proj}_{\mathbf w}(\mathbf v)=(0,2,0)$.
+Il vettore **perpendicolare** a $\mathbf w$ che resta dopo la proiezione è $\mathbf v-\mathrm{proj}_{\mathbf w}(\mathbf v)=(0,2,0)$.
 
 <a name="indice-cap1-9"></a>
 
@@ -987,7 +987,7 @@ $$
 **Proiezione ortogonale** di $\mathbf v$ su $\mathbf w$, con $\mathbf w\ne\mathbf 0$:
 
 $$
-\operatorname{proj}_{\mathbf w}(\mathbf v)
+\mathrm{proj}_{\mathbf w}(\mathbf v)
 =\frac{\mathbf v\cdot\mathbf w}{|\mathbf w|^2}\,\mathbf w
 $$
 

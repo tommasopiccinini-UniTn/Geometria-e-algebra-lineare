@@ -1,7 +1,7 @@
-# Appunti di Geometria e Algebra Lineare
+# Capitolo 4 — Spazi vettoriali
 
 **Dispensa:** *Geometria e Algebra Lineare*, Elisa Postinghel  
-**Capitolo iniziale:** 4 — Spazi vettoriali (pp. 86–107 del PDF, numerazione stampata)
+**Capitolo:** 4 — Spazi vettoriali (pp. 86–107 del PDF, numerazione stampata)
 
 > Documento incrementale. Qui aggiungeremo spiegazioni, esempi e chiarimenti su richiesta, mantenendo sempre lo stesso nome.
 
@@ -47,7 +47,7 @@
 
 ---
 
-<a id="indice-cap4-1"></a>
+<a name="indice-cap4-1"></a>
 
 ## 4.1 — Spazi vettoriali reali (p. 86)
 
@@ -57,7 +57,7 @@ In uno **spazio vettoriale reale** gli scalari sono numeri reali. Le operazioni 
 
 Esempi della dispensa: vettori geometrici, $\mathbb R^n$, matrici $M_{m\times n}(\mathbb R)$, polinomi.
 
-<a id="indice-cap4-2"></a>
+<a name="indice-cap4-2"></a>
 
 ### Definizione completa e otto proprietà di uno spazio vettoriale reale (lezione, p. 1)
 
@@ -76,7 +76,7 @@ Per ogni $u,v,w\in V$ e ogni $\lambda,\mu\in\mathbb R$ devono valere **tutti e o
 
 Queste sono le proprietà che **definiscono** lo spazio vettoriale. Il vettore nullo dipende dallo spazio: ennupla nulla in $\mathbb R^n$, matrice nulla nello spazio delle matrici, polinomio nullo nello spazio dei polinomi.
 
-<a id="indice-cap4-3"></a>
+<a name="indice-cap4-3"></a>
 
 ### Che cosa si intende per «vettore»?
 
@@ -94,7 +94,7 @@ In particolare:
 - L'insieme $M_{m\times n}(\mathbb R)$ delle **matrici $m\times n$ a coefficienti reali** è anch'esso uno spazio vettoriale.
 
 
-<a id="indice-cap4-4"></a>
+<a name="indice-cap4-4"></a>
 
 ### Operazioni sulle ennuple di $\mathbb R^n$ (lezione, p. 2)
 
@@ -115,7 +115,7 @@ $$
 
 Queste operazioni soddisfano gli otto assiomi, quindi $\mathbb R^n$ è uno spazio vettoriale reale.
 
-<a id="indice-cap4-5"></a>
+<a name="indice-cap4-5"></a>
 
 ## 4.2 — Combinazioni lineari (p. 88)
 
@@ -127,7 +127,7 @@ $$
 
 I numeri $\lambda_i$ sono i **coefficienti** o **scalari** (informalmente, i «pesi»).
 
-<a id="indice-cap4-6"></a>
+<a name="indice-cap4-6"></a>
 
 ### Come funzionano le combinazioni lineari (lezioni, pp. 2–3)
 
@@ -135,7 +135,7 @@ Una combinazione lineare **produce un vettore** (non un insieme di vettori): si 
 
 **Attenzione ai due numeri:** $k$ è il **numero di vettori da combinare**, mentre $n$ è il **numero di componenti per vettore**.
 
-<a id="indice-cap4-7"></a>
+<a name="indice-cap4-7"></a>
 
 ### 4.2.1 — Forma matriciale (p. 89)
 
@@ -148,7 +148,7 @@ $$
 Raccogliamo i coefficienti nel **vettore colonna**:
 
 $$
-\underline{\lambda}= \begin{pmatrix} \lambda_1\cr \lambda_2\cr \vdots\cr \lambda_k \end{pmatrix}.
+\underline{\lambda}= \begin{pmatrix} \lambda_1\\ \lambda_2\\ \vdots\\ \lambda_k \end{pmatrix}.
 $$
 
 In questo modo, la combinazione lineare diventa $A\underline{\lambda}=v$.
@@ -159,11 +159,11 @@ In questo modo, la combinazione lineare diventa $A\underline{\lambda}=v$.
 
 **Esempio:** tre vettori in $\mathbb R^5$ danno una matrice **$5\times3$** e richiedono **tre** coefficienti $\lambda_1,\lambda_2,\lambda_3$.
 
-<a id="indice-cap4-8"></a>
+<a name="indice-cap4-8"></a>
 
 ## 4.3 — Sottospazi vettoriali e generatori (p. 89)
 
-<a id="indice-cap4-9"></a>
+<a name="indice-cap4-9"></a>
 
 ### 4.3.1 — Sottospazi vettoriali
 
@@ -191,7 +191,7 @@ $$
 
 **Conclusione:** un sottospazio vettoriale reale ha **un solo elemento (lo zero) oppure infiniti elementi**. Non può avere un numero finito di elementi maggiore di uno.
 
-<a id="indice-cap4-10"></a>
+<a name="indice-cap4-10"></a>
 
 #### Esempi e controesempi di sottospazi con matrici e polinomi (lezioni, pp. 5 e 13–14)
 
@@ -201,7 +201,7 @@ Per dimostrare che un insieme non vuoto $U$ **è** un sottospazio, si verifica c
 
 $$
 \mathrm{tr}\begin{pmatrix}
-a&b\cr
+a&b\\
 c&d
 \end{pmatrix}=a+d.
 $$
@@ -212,7 +212,7 @@ In altre parole, **le matrici di $U$ sono esattamente quelle della forma**:
 
 $$
 A=\begin{pmatrix}
-a&b\cr
+a&b\\
 c&-a
 \end{pmatrix},
 \qquad a,b,c\in\mathbb R.
@@ -248,7 +248,7 @@ $$
 
 **Da distinguere:** «grado **esattamente** $d$» non definisce un sottospazio; «grado **al più** $d$» definisce invece un sottospazio.
 
-<a id="indice-cap4-11"></a>
+<a name="indice-cap4-11"></a>
 
 #### Spazio delle soluzioni di un sistema lineare omogeneo
 
@@ -264,7 +264,7 @@ Questo insieme è sempre un **sottospazio vettoriale di $\mathbb{R}^n$**: contie
 
 **Da ricordare:** lo stesso sottospazio può essere descritto tramite **generatori** (come Span di alcuni vettori) oppure tramite **equazioni omogenee** che i suoi vettori devono soddisfare.
 
-<a id="indice-cap4-12"></a>
+<a name="indice-cap4-12"></a>
 
 #### Procedimento completo: dallo Span a un sistema omogeneo (lezioni, pp. 10–11)
 
@@ -286,9 +286,9 @@ Se $x=(x,y,z,w)$ è un vettore **generico**:
 
 $$
 (A\mid x)=\left(\begin{array}{cc|c}
--1&1&x\cr
-1&-1&y\cr
-0&2&z\cr
+-1&1&x\\
+1&-1&y\\
+0&2&z\\
 -3&1&w
 \end{array}\right).
 $$
@@ -297,9 +297,9 @@ Eseguiamo $R_2\leftarrow R_2+R_1$ e $R_4\leftarrow R_4-3R_1$:
 
 $$
 \left(\begin{array}{cc|c}
--1&1&x\cr
-0&0&x+y\cr
-0&2&z\cr
+-1&1&x\\
+0&0&x+y\\
+0&2&z\\
 0&-2&w-3x
 \end{array}\right).
 $$
@@ -308,9 +308,9 @@ Scambiamo la seconda e la terza riga, poi eseguiamo $R_4\leftarrow R_4+R_2$:
 
 $$
 \left(\begin{array}{cc|c}
--1&1&x\cr
-0&2&z\cr
-0&0&x+y\cr
+-1&1&x\\
+0&2&z\\
+0&0&x+y\\
 0&0&z+w-3x
 \end{array}\right).
 $$
@@ -319,7 +319,7 @@ La parte $A$ ha rango $2$. L'ultima colonna **non deve aumentare il rango**, dun
 
 $$
 \boxed{\begin{cases}
-x+y=0,\cr
+x+y=0,\\
 z+w-3x=0.
 \end{cases}}
 $$
@@ -333,7 +333,7 @@ $$
 
 **Non confondere:** $\lambda_1,\lambda_2$ sono i coefficienti *usati per generare* i vettori; $x,y,z,w$ sono le **coordinate** di un vettore generico, che devono rispettare le equazioni. Sistemi scritti in forme diverse vanno ugualmente bene se hanno **esattamente lo stesso insieme delle soluzioni**.
 
-<a id="indice-cap4-13"></a>
+<a name="indice-cap4-13"></a>
 
 ### 4.3.2 — Generatori (p. 92)
 
@@ -345,7 +345,7 @@ $$
 
 Un insieme è un **sistema di generatori** di $V$ se il suo span coincide con $V$.
 
-<a id="indice-cap4-14"></a>
+<a name="indice-cap4-14"></a>
 
 ### Significato dello Span
 
@@ -371,7 +371,7 @@ $$
 \boxed{\mathrm{Span}(v_1,v_2)=\mathbb{R}^2}.
 $$
 
-<a id="indice-cap4-15"></a>
+<a name="indice-cap4-15"></a>
 
 ### Interpretazione geometrica
 
@@ -397,7 +397,7 @@ Per vettori in $\mathbb R^n$, scritti nelle colonne di $A$:
 - $v$ appartiene allo spazio generato se il sistema $A\underline{\lambda}=v$ è **compatibile**.
 - I vettori generano **tutto $\mathbb R^n$** se e solo se $\mathrm{rg}(A)=n$, dove $n$ è il numero delle **righe**.
 
-<a id="indice-cap4-16"></a>
+<a name="indice-cap4-16"></a>
 
 ### Altri esempi di spazi vettoriali: matrici, polinomi e funzioni (lezioni, pp. 11–13)
 
@@ -423,7 +423,7 @@ $$
 
 La somma e il prodotto per scalare di funzioni continue sono ancora continui.
 
-<a id="indice-cap4-17"></a>
+<a name="indice-cap4-17"></a>
 
 ### Spazio delle righe e spazio delle colonne (lezione, p. 9; dispensa, §6.3)
 
@@ -447,8 +447,8 @@ $$
 
 $$
 A=\begin{pmatrix}
-1&2&3\cr
-0&1&1\cr
+1&2&3\\
+0&1&1\\
 1&3&4
 \end{pmatrix}.
 $$
@@ -480,7 +480,7 @@ $$
 **Attenzione:** le operazioni di Gauss possono **modificare lo spazio delle colonne come insieme**, anche se ne preservano il rango e le relazioni di dipendenza. Ecco perché, per una base di $C(A)$, si torna alle colonne **originali**.
 
 
-<a id="indice-cap4-18"></a>
+<a name="indice-cap4-18"></a>
 
 ## 4.4 — Insiemi linearmente dipendenti e indipendenti (p. 95)
 
@@ -512,44 +512,44 @@ $$
 
 Siccome $v_1+v_2-v_3=0$, con pesi $1,1,-1$ non tutti nulli, i tre vettori sono **dipendenti**.
 
-<a id="indice-cap4-19"></a>
+<a name="indice-cap4-19"></a>
 
 ### Esempio 60 — Indipendenza lineare di matrici (dispensa, p. 96)
 
 **Obiettivo:** verificare, usando la definizione di indipendenza lineare, che le seguenti tre matrici di $M_2(\mathbb{R})$ (matrici $2\times 2$ a coefficienti reali) sono **linearmente indipendenti**:
 
 $$
-A_1=\begin{pmatrix} 1 & 1\cr 0 & 0 \end{pmatrix}, \qquad A_2=\begin{pmatrix} 0 & 1\cr -1 & 2 \end{pmatrix}, \qquad A_3=\begin{pmatrix} 3 & 0\cr 1 & 0 \end{pmatrix}.
+A_1=\begin{pmatrix} 1 & 1\\ 0 & 0 \end{pmatrix}, \qquad A_2=\begin{pmatrix} 0 & 1\\ -1 & 2 \end{pmatrix}, \qquad A_3=\begin{pmatrix} 3 & 0\\ 1 & 0 \end{pmatrix}.
 $$
 
 **1. Impostiamo la combinazione lineare uguale alla matrice nulla.**
 
 $$
-\lambda_1 A_1+\lambda_2 A_2+\lambda_3 A_3= \begin{pmatrix} 0 & 0\cr 0 & 0 \end{pmatrix}.
+\lambda_1 A_1+\lambda_2 A_2+\lambda_3 A_3= \begin{pmatrix} 0 & 0\\ 0 & 0 \end{pmatrix}.
 $$
 
 Sostituiamo le tre matrici:
 
 $$
-\lambda_1\begin{pmatrix} 1 & 1\cr 0 & 0 \end{pmatrix} + \lambda_2\begin{pmatrix} 0 & 1\cr -1 & 2 \end{pmatrix} + \lambda_3\begin{pmatrix} 3 & 0\cr 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0\cr 0 & 0 \end{pmatrix}.
+\lambda_1\begin{pmatrix} 1 & 1\\ 0 & 0 \end{pmatrix} + \lambda_2\begin{pmatrix} 0 & 1\\ -1 & 2 \end{pmatrix} + \lambda_3\begin{pmatrix} 3 & 0\\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0\\ 0 & 0 \end{pmatrix}.
 $$
 
 **2. Moltiplichiamo ogni matrice per il suo coefficiente e sommiamo posizione per posizione.**
 
 $$
-\begin{pmatrix} \lambda_1 & \lambda_1\cr 0 & 0 \end{pmatrix} + \begin{pmatrix} 0 & \lambda_2\cr -\lambda_2 & 2\lambda_2 \end{pmatrix} + \begin{pmatrix} 3\lambda_3 & 0\cr \lambda_3 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0\cr 0 & 0 \end{pmatrix}.
+\begin{pmatrix} \lambda_1 & \lambda_1\\ 0 & 0 \end{pmatrix} + \begin{pmatrix} 0 & \lambda_2\\ -\lambda_2 & 2\lambda_2 \end{pmatrix} + \begin{pmatrix} 3\lambda_3 & 0\\ \lambda_3 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0\\ 0 & 0 \end{pmatrix}.
 $$
 
 Quindi:
 
 $$
-\begin{pmatrix} \lambda_1+3\lambda_3 & \lambda_1+\lambda_2\cr -\lambda_2+\lambda_3 & 2\lambda_2 \end{pmatrix} = \begin{pmatrix} 0 & 0\cr 0 & 0 \end{pmatrix}.
+\begin{pmatrix} \lambda_1+3\lambda_3 & \lambda_1+\lambda_2\\ -\lambda_2+\lambda_3 & 2\lambda_2 \end{pmatrix} = \begin{pmatrix} 0 & 0\\ 0 & 0 \end{pmatrix}.
 $$
 
 **3. Uguagliamo gli elementi che occupano la stessa posizione.** Otteniamo il sistema omogeneo:
 
 $$
-\begin{cases} \lambda_1+3\lambda_3=0\cr \lambda_1+\lambda_2=0\cr -\lambda_2+\lambda_3=0\cr 2\lambda_2=0 \end{cases}
+\begin{cases} \lambda_1+3\lambda_3=0\\ \lambda_1+\lambda_2=0\\ -\lambda_2+\lambda_3=0\\ 2\lambda_2=0 \end{cases}
 $$
 
 **4. Risolviamo il sistema.** Dall'ultima equazione si ottiene $\lambda_2=0$. Sostituendolo nella seconda e nella terza:
@@ -570,7 +570,7 @@ Perciò **$A_1$, $A_2$ e $A_3$ sono linearmente indipendenti**.
 
 **Da ricordare:** per verificare l'indipendenza di matrici si usa lo stesso procedimento usato per i vettori: si impone una combinazione lineare uguale allo **zero dello spazio** (qui la matrice nulla) e si cercano i coefficienti.
 
-<a id="indice-cap4-20"></a>
+<a name="indice-cap4-20"></a>
 
 ### 4.4.1 — Indipendenza lineare e rango (pp. 97–98)
 
@@ -589,7 +589,7 @@ Se il rango è minore del numero delle colonne, i vettori sono dipendenti.
 
 **Colonne con pivot:** quando riduciamo $A$ con Gauss, le posizioni dei pivot ci indicano quali colonne della **matrice originale** formano un insieme indipendente. Una colonna senza pivot corrisponde a un vettore che si può ricavare come combinazione lineare dei vettori nelle colonne con pivot.
 
-<a id="indice-cap4-21"></a>
+<a name="indice-cap4-21"></a>
 
 #### Esempio 61 — Dipendenza lineare e rango (p. 98)
 
@@ -603,9 +603,9 @@ Disponiamo i vettori **nelle colonne** della matrice:
 
 $$
 A=\begin{pmatrix}
-1&0&-1\cr
-2&1&0\cr
--1&1&3\cr
+1&0&-1\\
+2&1&0\\
+-1&1&3\\
 0&3&6
 \end{pmatrix}.
 $$
@@ -614,9 +614,9 @@ Applichiamo $E_{21}(-2)$ ($R_2\leftarrow R_2-2R_1$) ed $E_{31}(1)$ ($R_3\leftarr
 
 $$
 \begin{pmatrix}
-1&0&-1\cr
-0&1&2\cr
-0&1&2\cr
+1&0&-1\\
+0&1&2\\
+0&1&2\\
 0&3&6
 \end{pmatrix}.
 $$
@@ -625,16 +625,16 @@ Poi applichiamo $E_{32}(-1)$ ($R_3\leftarrow R_3-R_2$) ed $E_{42}(-3)$ ($R_4\lef
 
 $$
 \begin{pmatrix}
-1&0&-1\cr
-0&1&2\cr
-0&0&0\cr
+1&0&-1\\
+0&1&2\\
+0&0&0\\
 0&0&0
 \end{pmatrix}.
 $$
 
 **Conclusione:** $\mathrm{rg}(A)=2<3$, dunque i tre vettori sono **linearmente dipendenti**. La terza colonna non contiene un pivot, quindi $v_3$ è una combinazione lineare di $v_1$ e $v_2$.
 
-<a id="indice-cap4-22"></a>
+<a name="indice-cap4-22"></a>
 
 #### Esempio 62 — Relazione tra i vettori (continuazione dell'Esempio 61, pp. 98–99)
 
@@ -642,9 +642,9 @@ Ripartiamo dalla matrice dei vettori originali:
 
 $$
 A=\begin{pmatrix}
-1&0&-1\cr
-2&1&0\cr
--1&1&3\cr
+1&0&-1\\
+2&1&0\\
+-1&1&3\\
 0&3&6
 \end{pmatrix}.
 $$
@@ -653,9 +653,9 @@ La riduzione dell'Esempio 61 ha già prodotto la **forma ridotta per righe**:
 
 $$
 R=\begin{pmatrix}
-1&0&-1\cr
-0&1&2\cr
-0&0&0\cr
+1&0&-1\\
+0&1&2\\
+0&0&0\\
 0&0&0
 \end{pmatrix}.
 $$
@@ -668,7 +668,7 @@ $$
 
 **Verifica:** $-(1,2,-1,0)+2(0,1,1,3)=(-1,0,3,6)=v_3$.
 
-<a id="indice-cap4-23"></a>
+<a name="indice-cap4-23"></a>
 
 ## 4.5 — Basi (p. 99)
 
@@ -679,7 +679,7 @@ Una **base** di uno spazio vettoriale è un insieme di vettori che:
 
 Una base permette dunque di generare tutto lo spazio **senza vettori ridondanti**.
 
-<a id="indice-cap4-24"></a>
+<a name="indice-cap4-24"></a>
 
 ### Unicità dei coefficienti rispetto a una base (lezioni, pp. 19–20)
 
@@ -709,7 +709,7 @@ $$
 
 **Da ricordare:** il fatto di **generare** garantisce che i coefficienti *esistano*, mentre l'**indipendenza** garantisce che siano *unici*. Se i generatori sono dipendenti, possono esistere più modi di scrivere lo stesso vettore.
 
-<a id="indice-cap4-25"></a>
+<a name="indice-cap4-25"></a>
 
 ### 4.5.1 — Basi di $\mathbb R^n$
 
@@ -719,7 +719,7 @@ La **base canonica** è formata dai vettori con un solo 1 e tutte le altre compo
 
 Ogni vettore dello spazio si esprime **in maniera unica** come combinazione lineare dei vettori di una base.
 
-<a id="indice-cap4-26"></a>
+<a name="indice-cap4-26"></a>
 
 ### Criterio del rango per riconoscere una base (lezioni, pp. 21–22)
 
@@ -736,7 +736,7 @@ $$
 
 Se $k<n$, il rango non può arrivare a $n$ e quindi i vettori non possono generare tutto $\mathbb R^n$. Se $k>n$, il rango non può arrivare a $k$ e quindi i vettori non possono essere tutti indipendenti.
 
-<a id="indice-cap4-27"></a>
+<a name="indice-cap4-27"></a>
 
 ### Esempi di basi in spazi diversi da $\mathbb R^n$ (lezioni, pp. 20–21)
 
@@ -754,7 +754,7 @@ $$
 Ogni matrice $A$ può essere scritta **univocamente** come
 
 $$
-A=\begin{pmatrix}a&b\crc&d\end{pmatrix}
+A=\begin{pmatrix}a&b\\c&d\end{pmatrix}
 =aE_{11}+bE_{12}+cE_{21}+dE_{22}.
 $$
 
@@ -772,7 +772,7 @@ Ogni polinomio $p(x)=a_0+a_1x+\cdots+a_dx^d$ si scrive in modo unico tramite que
 
 **Conclusione comune:** una base genera **tutto** lo spazio, senza vettori **ridondanti**. Le basi non sono riservate alle ennuple: possono essere costituite anche da matrici, polinomi o vettori geometrici.
 
-<a id="indice-cap4-28"></a>
+<a name="indice-cap4-28"></a>
 
 ### Esempio 65 — Ricavare i coefficienti di un vettore rispetto a una base (p. 100)
 
@@ -793,8 +793,8 @@ e il vettore $v=(4,3,2)$. Aggiungiamo $v$ come **quarta colonna**:
 
 $$
 (A\mid v)=\begin{pmatrix}
-1&1&0&4\cr
-1&0&1&3\cr
+1&1&0&4\\
+1&0&1&3\\
 0&1&1&2
 \end{pmatrix}.
 $$
@@ -803,8 +803,8 @@ Riducendo completamente per righe si ottiene:
 
 $$
 \begin{pmatrix}
-1&0&0&\frac{5}{2}\cr
-0&1&0&\frac{3}{2}\cr
+1&0&0&\frac{5}{2}\\
+0&1&0&\frac{3}{2}\\
 0&0&1&\frac{1}{2}
 \end{pmatrix}.
 $$
@@ -840,9 +840,9 @@ Per stabilire quando $v=(k,k,k-2,0)$ appartiene a $U$, aggiungiamo $v$ come terz
 $$
 (A\mid v)=
 \begin{pmatrix}
-2&2&k\cr
-3&1&k\cr
-1&1&k-2\cr
+2&2&k\\
+3&1&k\\
+1&1&k-2\\
 -1&1&0
 \end{pmatrix}.
 $$
@@ -851,9 +851,9 @@ La riduzione per righe porta a:
 
 $$
 \begin{pmatrix}
-2&2&k\cr
-0&-2&-\frac{k}{2}\cr
-0&0&\frac{k}{2}-2\cr
+2&2&k\\
+0&-2&-\frac{k}{2}\\
+0&0&\frac{k}{2}-2\\
 0&0&0
 \end{pmatrix}.
 $$
@@ -869,11 +869,11 @@ In quel caso, $v=(4,4,2,0)=u_1+u_2$.
 
 
 
-<a id="indice-cap4-29"></a>
+<a name="indice-cap4-29"></a>
 
 ## 4.6 — Esercizi ricapitolativi (p. 101)
 
-<a id="indice-cap4-30"></a>
+<a name="indice-cap4-30"></a>
 
 ### Esercizio 13 — Sottospazio generato e appartenenza di un vettore
 
@@ -888,7 +888,7 @@ $$
 1. Trovare una **base** del sottospazio $U=\mathrm{Span}(u_1,u_2,u_3)$.
 2. Stabilire per quali valori reali di $k$ il vettore $v=(k,k,k-2,0)$ **appartiene a $U$**.
 
-<a id="indice-cap4-31"></a>
+<a name="indice-cap4-31"></a>
 
 #### Punto 1 — Trovare una base
 
@@ -896,9 +896,9 @@ Disponiamo i vettori nelle colonne:
 
 $$
 A=\begin{pmatrix}
-2&2&0\cr
-3&1&2\cr
-1&1&0\cr
+2&2&0\\
+3&1&2\\
+1&1&0\\
 -1&1&-2
 \end{pmatrix}.
 $$
@@ -907,23 +907,23 @@ Scambiando la prima e la terza riga e applicando Gauss:
 
 $$
 \begin{pmatrix}
-1&1&0\cr
-3&1&2\cr
-2&2&0\cr
+1&1&0\\
+3&1&2\\
+2&2&0\\
 -1&1&-2
 \end{pmatrix}
 \longrightarrow
 \begin{pmatrix}
-1&1&0\cr
-0&-2&2\cr
-0&0&0\cr
+1&1&0\\
+0&-2&2\\
+0&0&0\\
 0&2&-2
 \end{pmatrix}
 \longrightarrow
 \begin{pmatrix}
-1&1&0\cr
-0&-2&2\cr
-0&0&0\cr
+1&1&0\\
+0&-2&2\\
+0&0&0\\
 0&0&0
 \end{pmatrix}.
 $$
@@ -932,23 +932,23 @@ Normalizziamo il secondo pivot ed eliminiamo l'elemento sopra di esso:
 
 $$
 \begin{pmatrix}
-1&1&0\cr
-0&-2&2\cr
-0&0&0\cr
+1&1&0\\
+0&-2&2\\
+0&0&0\\
 0&0&0
 \end{pmatrix}
 \longrightarrow
 \begin{pmatrix}
-1&1&0\cr
-0&1&-1\cr
-0&0&0\cr
+1&1&0\\
+0&1&-1\\
+0&0&0\\
 0&0&0
 \end{pmatrix}
 \longrightarrow
 \begin{pmatrix}
-1&0&1\cr
-0&1&-1\cr
-0&0&0\cr
+1&0&1\\
+0&1&-1\\
+0&0&0\\
 0&0&0
 \end{pmatrix}.
 $$
@@ -961,7 +961,7 @@ $$
 
 Infatti $u_3=u_1-u_2$: il terzo vettore è ridondante e $\mathrm{rg}(A)=2$.
 
-<a id="indice-cap4-32"></a>
+<a name="indice-cap4-32"></a>
 
 #### Punto 2 — Verificare se il vettore appartiene a $U$
 
@@ -969,9 +969,9 @@ Aggiungiamo il vettore $v=(k,k,k-2,0)$ come **ultima colonna**:
 
 $$
 (A\mid v)=\begin{pmatrix}
-2&2&0&k\cr
-3&1&2&k\cr
-1&1&0&k-2\cr
+2&2&0&k\\
+3&1&2&k\\
+1&1&0&k-2\\
 -1&1&-2&0
 \end{pmatrix}.
 $$
@@ -980,23 +980,23 @@ Con lo scambio tra la prima e la terza riga, seguito dall'eliminazione:
 
 $$
 \begin{pmatrix}
-1&1&0&k-2\cr
-3&1&2&k\cr
-2&2&0&k\cr
+1&1&0&k-2\\
+3&1&2&k\\
+2&2&0&k\\
 -1&1&-2&0
 \end{pmatrix}
 \longrightarrow
 \begin{pmatrix}
-1&1&0&k-2\cr
-0&-2&2&6-2k\cr
-0&0&0&4-k\cr
+1&1&0&k-2\\
+0&-2&2&6-2k\\
+0&0&0&4-k\\
 0&2&-2&k-2
 \end{pmatrix}
 \longrightarrow
 \begin{pmatrix}
-1&1&0&k-2\cr
-0&-2&2&6-2k\cr
-0&0&0&4-k\cr
+1&1&0&k-2\\
+0&-2&2&6-2k\\
+0&0&0&4-k\\
 0&0&0&4-k
 \end{pmatrix}.
 $$
@@ -1019,7 +1019,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 
 
 
-<a id="indice-cap4-33"></a>
+<a name="indice-cap4-33"></a>
 
 ### Esercizio 14 — Testo e svolgimento manoscritto (Samsung Notes)
 
@@ -1028,7 +1028,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 *Immagine estratta dal file Samsung Notes: comprende il testo dell'esercizio e tutti i passaggi dello svolgimento manoscritto.*
 
 
-<a id="indice-cap4-34"></a>
+<a name="indice-cap4-34"></a>
 
 ### Esercizio 15 — Testo e svolgimento manoscritto
 
@@ -1037,7 +1037,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 *Immagine ritagliata dal PDF degli esercizi: comprende il testo dell'Esercizio 15 e lo svolgimento fino alla conclusione del punto 2.*
 
 
-<a id="indice-cap4-35"></a>
+<a name="indice-cap4-35"></a>
 
 ### Esercizio 16 — Testo e svolgimento manoscritto
 
@@ -1045,7 +1045,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 
 *Immagine ritagliata dal PDF degli esercizi: contiene il testo e lo svolgimento dei punti 1 e 2, inclusi i casi per il parametro $k$.*
 
-<a id="indice-cap4-36"></a>
+<a name="indice-cap4-36"></a>
 
 ### Esercizio 17 — Testo e svolgimento manoscritto
 
@@ -1056,7 +1056,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 
 ---
 
-<a id="indice-cap4-37"></a>
+<a name="indice-cap4-37"></a>
 
 ## Appunti personali e chiarimenti successivi
 

@@ -966,17 +966,47 @@ $$
 
 ## Formulario essenziale
 
+**Vettore individuato da due punti** $A$ e $B$:
+
 $$
-\begin{aligned}
-\overrightarrow{AB}&=B-A,\\
-|\mathbf v|&=\sqrt{v_1^2+v_2^2+v_3^2},\\
-\mathbf v\cdot\mathbf w&=v_1w_1+v_2w_2+v_3w_3,\\
-\operatorname{proj}_{\mathbf w}(\mathbf v)&=
-\frac{\mathbf v\cdot\mathbf w}{|\mathbf w|^2}\mathbf w\quad(\mathbf w\ne0),\\
-r&:\ Q=A+t\mathbf v,\\
-\pi&:\ Q=A+t\mathbf v+s\mathbf w,\\
-d(P,\pi)&=\frac{|ax_P+by_P+cz_P+d|}{\sqrt{a^2+b^2+c^2}}.
-\end{aligned}
+\overrightarrow{AB}=B-A
+$$
+
+**Modulo di un vettore** $\mathbf v=(v_1,v_2,v_3)$:
+
+$$
+|\mathbf v|=\sqrt{v_1^2+v_2^2+v_3^2}
+$$
+
+**Prodotto scalare** tra $\mathbf v=(v_1,v_2,v_3)$ e $\mathbf w=(w_1,w_2,w_3)$:
+
+$$
+\mathbf v\cdot\mathbf w=v_1w_1+v_2w_2+v_3w_3
+$$
+
+**Proiezione ortogonale** di $\mathbf v$ su $\mathbf w$, con $\mathbf w\ne\mathbf 0$:
+
+$$
+\operatorname{proj}_{\mathbf w}(\mathbf v)
+=\frac{\mathbf v\cdot\mathbf w}{|\mathbf w|^2}\,\mathbf w
+$$
+
+**Equazione parametrica di una retta** passante per $A$ e con vettore direzionale $\mathbf v$:
+
+$$
+r:\quad Q=A+t\mathbf v
+$$
+
+**Equazione parametrica di un piano** passante per $A$ e con vettori direzionali non proporzionali $\mathbf v$ e $\mathbf w$:
+
+$$
+\pi:\quad Q=A+t\mathbf v+s\mathbf w
+$$
+
+**Distanza punto–piano**, per $P=(x_P,y_P,z_P)$ e $\pi:ax+by+cz+d=0$:
+
+$$
+d(P,\pi)=\frac{|ax_P+by_P+cz_P+d|}{\sqrt{a^2+b^2+c^2}}
 $$
 
 **Collegamento al Capitolo 2:** le condizioni di intersezione e il passaggio da cartesiane a parametriche diventano **sistemi lineari**; le tecniche di Gauss e il teorema di Rouché–Capelli permetteranno di risolverli in modo sistematico.

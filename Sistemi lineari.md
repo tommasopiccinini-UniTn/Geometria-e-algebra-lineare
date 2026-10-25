@@ -7,7 +7,39 @@
 
 > Struttura e numerazione seguono la dispensa. Le spiegazioni «Approfondimento», le verifiche e gli schemi sono aggiunti per rendere espliciti i passaggi che negli esercizi si sottintendono.
 
+## Indice
+
+- [2.1 — Sistemi lineari (pp. 42–46)](#indice-cap2-1)
+  - [2.1.1 — Equazioni, sistemi e soluzioni](#indice-cap2-2)
+  - [2.1.2 — Le matrici associate a un sistema (pp. 43–44)](#indice-cap2-3)
+  - [2.1.3 — Operazioni elementari (pp. 44–46)](#indice-cap2-4)
+- [2.2 — Matrici a scalini e algoritmo di Gauss–Jordan (pp. 47–50)](#indice-cap2-5)
+  - [2.2.1 — Forma a scalini, pivot e rango](#indice-cap2-6)
+  - [2.2.2 — Eliminazione in avanti (p. 48)](#indice-cap2-7)
+  - [2.2.3 — Forma ridotta per righe e riduzione all'indietro](#indice-cap2-8)
+  - [2.2.4 — Come evitare errori con Gauss](#indice-cap2-9)
+- [2.3 — Teorema di Rouché–Capelli e risoluzione (pp. 50–55)](#indice-cap2-10)
+  - [2.3.1 — Enunciato e significato del teorema](#indice-cap2-11)
+  - [2.3.2 — Esempio 21: sistema con soluzione unica (pp. 51–52)](#indice-cap2-12)
+  - [2.3.3 — Esempio 22: infinite soluzioni e parametri (pp. 53–54)](#indice-cap2-13)
+  - [2.3.4 — Esempio 23: sistema incompatibile (pp. 53–54)](#indice-cap2-14)
+  - [2.3.5 — Scegliere e scrivere le variabili libere](#indice-cap2-15)
+  - [2.3.6 — Sistemi omogenei: un caso speciale](#indice-cap2-16)
+  - [2.3.7 — Applicazione alla geometria (pp. 54–55)](#indice-cap2-17)
+- [2.4 — Esercizi ricapitolativi (pp. 56–61)](#indice-cap2-18)
+  - [Esercizio guidato — Sistema dipendente da un parametro](#indice-cap2-19)
+  - [Esercizio guidato — Verifica di compatibilità immediata](#indice-cap2-20)
+  - [Procedura completa da usare agli esercizi](#indice-cap2-21)
+  - [Domande di ripasso per la teoria (p. 61)](#indice-cap2-22)
+- [Formulario e collegamenti](#indice-cap2-23)
+
+---
+
+<a id="indice-cap2-1"></a>
+
 ## 2.1 — Sistemi lineari (pp. 42–46)
+
+<a id="indice-cap2-2"></a>
 
 ### 2.1.1 — Equazioni, sistemi e soluzioni
 
@@ -57,6 +89,8 @@ $$
 **Definizione 17 — Sistemi equivalenti.** Due sistemi nelle stesse incognite sono equivalenti se hanno **esattamente lo stesso insieme delle soluzioni**.
 
 **Approfondimento — Equivalenti non significa identici.** Le equazioni possono avere coefficienti diversi, ma descrivere le stesse soluzioni. Per esempio $x+y=2$ e $2x+2y=4$ sono equivalenti come singole equazioni.
+
+<a id="indice-cap2-3"></a>
 
 ### 2.1.2 — Le matrici associate a un sistema (pp. 43–44)
 
@@ -109,6 +143,8 @@ A=\begin{pmatrix}1&1\\1&-1\end{pmatrix},
 $$
 
 **Da ricordare:** nella matrice completa la colonna finale contiene i **termini noti**, non nuove incognite. Se hai $3$ incognite, $A$ ha $3$ colonne anche se $(A\mid\mathbf b)$ ne ha $4$.
+
+<a id="indice-cap2-4"></a>
 
 ### 2.1.3 — Operazioni elementari (pp. 44–46)
 
@@ -163,7 +199,11 @@ da cui $x_1=1$ e $x_2=1$.
 
 **Definizione 18.** Se una matrice si ottiene da un'altra con un numero finito di operazioni elementari, si parla di **modificazione per righe**.
 
+<a id="indice-cap2-5"></a>
+
 ## 2.2 — Matrici a scalini e algoritmo di Gauss–Jordan (pp. 47–50)
+
+<a id="indice-cap2-6"></a>
 
 ### 2.2.1 — Forma a scalini, pivot e rango
 
@@ -202,6 +242,8 @@ $$
 $$
 
 **Approfondimento — Pivot e variabili.** Se stiamo riducendo $(A\mid\mathbf b)$, i pivot **nelle prime $n$ colonne** individuano le incognite principali. Le colonne di $A$ senza pivot corrispondono a variabili libere, purché il sistema sia compatibile. Un pivot nella colonna dei termini noti segnala incompatibilità.
+
+<a id="indice-cap2-7"></a>
 
 ### 2.2.2 — Eliminazione in avanti (p. 48)
 
@@ -245,6 +287,8 @@ $$
 
 Quindi $\boxed{\operatorname{rg}(A)=2}$, perché ci sono due righe non nulle e due pivot.
 
+<a id="indice-cap2-8"></a>
+
 ### 2.2.3 — Forma ridotta per righe e riduzione all'indietro
 
 **Definizione 21.** Una matrice a scalini è **ridotta per righe** se:
@@ -273,6 +317,8 @@ I pivot sono entrambi $1$ e unici non nulli nelle rispettive colonne.
 - **Forma a scalini:** zeri sotto i pivot, utili per leggere il rango e applicare la sostituzione all'indietro.
 - **Forma a scalini ridotta:** zeri anche sopra i pivot, utile per leggere direttamente le soluzioni.
 
+<a id="indice-cap2-9"></a>
+
 ### 2.2.4 — Come evitare errori con Gauss
 
 - Scrivere accanto a ogni freccia la riga modificata: ad esempio $R_3\leftarrow R_3-2R_1$.
@@ -281,7 +327,11 @@ I pivot sono entrambi $1$ e unici non nulli nelle rispettive colonne.
 - Non confondere il **rango di $A$** con il **rango di $(A\mid\mathbf b)$**: la colonna finale può introdurre un pivot aggiuntivo.
 - Quando compare una riga $[0\ 0\ \cdots\ 0\mid c]$ con $c\ne0$, non serve continuare: il sistema è incompatibile.
 
+<a id="indice-cap2-10"></a>
+
 ## 2.3 — Teorema di Rouché–Capelli e risoluzione (pp. 50–55)
+
+<a id="indice-cap2-11"></a>
 
 ### 2.3.1 — Enunciato e significato del teorema
 
@@ -316,6 +366,8 @@ quando il sistema è compatibile.
 **Approfondimento — Perché la colonna finale conta.** La matrice $A$ dice quali combinazioni delle incognite sono possibili. La matrice completa richiede anche di raggiungere gli specifici termini noti. Se la colonna $\mathbf b$ aggiunge un pivot, si ottiene una richiesta impossibile del tipo $0=1$.
 
 **Attenzione:** la sola condizione $\operatorname{rg}(A)<n$ **non** garantisce infinite soluzioni: bisogna prima verificare la **compatibilità**.
+
+<a id="indice-cap2-12"></a>
 
 ### 2.3.2 — Esempio 21: sistema con soluzione unica (pp. 51–52)
 
@@ -384,6 +436,8 @@ $$
 $$
 
 È la stessa soluzione ottenuta senza scrivere il sistema a ogni passaggio.
+
+<a id="indice-cap2-13"></a>
 
 ### 2.3.3 — Esempio 22: infinite soluzioni e parametri (pp. 53–54)
 
@@ -465,6 +519,8 @@ $$
 
 Questo anticipa il Capitolo 4: una soluzione particolare più combinazioni lineari di soluzioni dell'omogeneo associato.
 
+<a id="indice-cap2-14"></a>
+
 ### 2.3.4 — Esempio 23: sistema incompatibile (pp. 53–54)
 
 Si consideri
@@ -511,6 +567,8 @@ $$
 
 **Errore frequente:** non ignorare le righe con tutti zeri **a sinistra**. Se il termine noto di quella riga è diverso da zero, la riga contiene proprio l'informazione decisiva.
 
+<a id="indice-cap2-15"></a>
+
 ### 2.3.5 — Scegliere e scrivere le variabili libere
 
 Quando i ranghi coincidono ma sono inferiori a $n$:
@@ -537,6 +595,8 @@ $$
 
 **Non c'è obbligo** di chiamare i parametri $s,t$: conta che siano indipendenti e che tutte le soluzioni siano rappresentate.
 
+<a id="indice-cap2-16"></a>
+
 ### 2.3.6 — Sistemi omogenei: un caso speciale
 
 Un sistema omogeneo si scrive $A\mathbf x=\mathbf0$.
@@ -548,6 +608,8 @@ Un sistema omogeneo si scrive $A\mathbf x=\mathbf0$.
 **Perché?** La colonna aggiunta è nulla e non può creare un pivot che rende il sistema incompatibile.
 
 **Conseguenza utile:** in un sistema omogeneo con **più incognite che equazioni**, cioè $n>m$, si ha necessariamente $\operatorname{rg}(A)\le m<n$. Quindi ci sono infinite soluzioni.
+
+<a id="indice-cap2-17"></a>
 
 ### 2.3.7 — Applicazione alla geometria (pp. 54–55)
 
@@ -578,9 +640,13 @@ $$
 
 **Piani:** una singola equazione cartesiana non banale in tre incognite ha normalmente $2$ variabili libere, e da esse si ricava la forma parametrica del piano.
 
+<a id="indice-cap2-18"></a>
+
 ## 2.4 — Esercizi ricapitolativi (pp. 56–61)
 
 La sezione 2.4 della dispensa contiene esercizi con sistemi lineari, le relative soluzioni e una serie di domande teoriche.
+
+<a id="indice-cap2-19"></a>
 
 ### Esercizio guidato — Sistema dipendente da un parametro
 
@@ -617,6 +683,8 @@ $$
 
 **Lezione generale:** con parametri, non si deve mai dividere per un'espressione come $k-2$ senza aver prima separato il caso in cui essa è uguale a zero.
 
+<a id="indice-cap2-20"></a>
+
 ### Esercizio guidato — Verifica di compatibilità immediata
 
 Per
@@ -630,6 +698,8 @@ $$
 
 sottraendo due volte la prima equazione dalla seconda si ottiene $0=1$: **nessuna soluzione**, qualunque sia il numero di variabili.
 
+<a id="indice-cap2-21"></a>
+
 ### Procedura completa da usare agli esercizi
 
 1. Scrivere $(A\mid\mathbf b)$ senza perdere nessun coefficiente o termine noto.
@@ -638,6 +708,8 @@ sottraendo due volte la prima equazione dalla seconda si ottiene $0=1$: **nessun
 4. Applicare Rouché–Capelli per classificare il sistema.
 5. Se compatibile, identificare le colonne senza pivot, introdurre i parametri e risolvere.
 6. Sostituire almeno una volta il risultato nelle equazioni iniziali per controllare errori aritmetici.
+
+<a id="indice-cap2-22"></a>
 
 ### Domande di ripasso per la teoria (p. 61)
 
@@ -651,6 +723,8 @@ sottraendo due volte la prima equazione dalla seconda si ottiene $0=1$: **nessun
 8. Come si enuncia il teorema di Rouché–Capelli?
 9. Da che cosa dipende il numero di variabili libere?
 10. Perché un sistema omogeneo è sempre compatibile?
+
+<a id="indice-cap2-23"></a>
 
 ## Formulario e collegamenti
 

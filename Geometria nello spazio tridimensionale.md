@@ -575,38 +575,326 @@ $$
 
 #### Distanza retta–retta
 
-- Se sono **incidenti**, la distanza è $0$.
-- Se sono **parallele**, basta scegliere un punto su una retta e calcolare la distanza dall'altra.
-- Se sono **sghembe**, cercare la minima distanza tra punti delle due rette.
-
-**Metodo 1 della dispensa:** parametrizzare $P(t)\in r$, $Q(s)\in r'$ e imporre
+**Definizione.** La distanza tra due rette $r$ e $r'$ nello spazio è la **minima distanza tra un punto di $r$ e un punto di $r'$**:
 
 $$
-\begin{cases}
-(Q(s)-P(t))\cdot\mathbf v=0,\\
-(Q(s)-P(t))\cdot\mathbf w=0.
+d(r,r')=\min_{\substack{P\in r\\Q\in r'}} d(P,Q).
+$$
+
+Prima di calcolarla bisogna riconoscere la posizione reciproca delle rette:
+
+1. **Rette incidenti:** hanno un punto in comune, perciò $d(r,r')=0$.
+2. **Rette parallele distinte:** scelto un punto qualsiasi $P\in r$, basta calcolare $d(P,r')$. Tale distanza è la stessa qualunque sia il punto scelto su $r$.
+3. **Rette sghembe:** non sono parallele e non si incontrano. Occorre trovare il segmento che le unisce e ha **lunghezza minima**: questo segmento è perpendicolare a entrambe le rette.
+
+Per le rette sghembe la dispensa (pp. 31–32) presenta **due metodi equivalenti**: quello dei due punti generici e quello del piano ausiliario.
+
+##### Metodo 1 — Segmento perpendicolare a entrambe le rette
+
+Siano note le equazioni parametriche:
+
+$$
+r:\begin{cases}
+x=a_1+tv_1\\
+y=a_2+tv_2\\
+z=a_3+tv_3
+\end{cases}
+\qquad
+r':\begin{cases}
+x=b_1+sw_1\\
+y=b_2+sw_2\\
+z=b_3+sw_3
 \end{cases}
 $$
 
-Le due condizioni identificano il segmento perpendicolare a **entrambe** le rette: risolto il sistema in $t,s$, si calcola $|P(t)-Q(s)|$.
+I rispettivi vettori direzionali sono $\mathbf v=(v_1,v_2,v_3)$ e $\mathbf w=(w_1,w_2,w_3)$. Indichiamo con $P(t)\in r$ e $Q(s)\in r'$ due punti generici. Usiamo **parametri diversi** ($t$ e $s$), perché i punti delle rette possono essere scelti indipendentemente.
 
-**Metodo 2:** cercare il piano che contiene una retta ed è parallelo all'altra, poi applicare la formula punto–piano.
-
-**Esempio 11 della dispensa (pp. 31–32).** Per
+Il vettore che li collega è $\overrightarrow{P(t)Q(s)}=Q(s)-P(t)$. Cerchiamo i parametri $t_0,s_0$ per cui il segmento è ortogonale a entrambe le direzioni. Siccome due vettori sono ortogonali quando il prodotto scalare è nullo, risolviamo:
 
 $$
-r:\begin{cases}x=1-t,\\y=-1+3t,\\z=-t,\end{cases}
+\boxed{
+\begin{cases}
+\overrightarrow{P(t)Q(s)}\cdot\mathbf v=0\\
+\overrightarrow{P(t)Q(s)}\cdot\mathbf w=0
+\end{cases}
+}
+$$
+
+Ottenuti $t_0,s_0$, i punti più vicini sono $H=P(t_0)$ e $H'=Q(s_0)$; dunque:
+
+$$
+\boxed{d(r,r')=\left|\,\overrightarrow{HH'}\,\right|
+=\sqrt{(x_{H'}-x_H)^2+(y_{H'}-y_H)^2+(z_{H'}-z_H)^2}.}
+$$
+
+**Interpretazione geometrica:** non basta prendere due punti qualsiasi sulle rette, perché la loro distanza non è necessariamente minima. Le due condizioni di ortogonalità individuano proprio gli estremi del segmento più corto.
+
+##### Esempio 11 della dispensa — Svolgimento completo con il metodo 1
+
+Consideriamo:
+
+$$
+r:\begin{cases}
+x=1-t\\
+y=-1+3t\\
+z=-t
+\end{cases}
 \qquad
-r':\begin{cases}x=2+s,\\y=s,\\z=1-s,\end{cases}
+r':\begin{cases}
+x=2+s\\
+y=s\\
+z=1-s
+\end{cases}
 $$
 
-le condizioni di ortogonalità danno $t=0$ e $s=-1/3$; perciò
+**1. Vettori direzionali e posizione reciproca.** Leggendo i coefficienti di $t$ e $s$:
 
 $$
-\boxed{d(r,r')=\frac{2\sqrt6}{3}}.
+\mathbf v=(-1,3,-1),\qquad \mathbf w=(1,1,-1).
 $$
 
-Il metodo del piano fornisce lo stesso valore usando $x+y+2z=0$ e il punto $(2,0,1)\in r'$.
+Non sono proporzionali, quindi le rette non sono parallele. Per verificare che non siano incidenti, uguagliamo le coordinate:
+
+$$
+\begin{cases}
+1-t=2+s\\
+-1+3t=s\\
+-t=1-s
+\end{cases}
+$$
+
+Dalle ultime due equazioni si ricava $t=1$, $s=2$, ma questi valori **non** soddisfano la prima: $0\ne4$. Le rette sono dunque **sghembe**.
+
+**2. Punti generici e vettore che li collega.**
+
+$$
+P(t)=(1-t,-1+3t,-t),\qquad Q(s)=(2+s,s,1-s).
+$$
+
+Sottraiamo le coordinate del punto iniziale da quelle del punto finale:
+
+$$
+\begin{aligned}
+\overrightarrow{P(t)Q(s)}
+&=Q(s)-P(t)\\
+&=(1+s+t,\ 1+s-3t,\ 1-s+t).
+\end{aligned}
+$$
+
+**3. Prima condizione di ortogonalità.** Il segmento cercato deve essere perpendicolare alla direzione $\mathbf v$ di $r$:
+
+$$
+\begin{aligned}
+0&=\overrightarrow{P(t)Q(s)}\cdot(-1,3,-1)\\
+&=-(1+s+t)+3(1+s-3t)-(1-s+t)\\
+&=3s-11t+1.
+\end{aligned}
+$$
+
+**4. Seconda condizione di ortogonalità.** Deve essere perpendicolare anche alla direzione $\mathbf w$ di $r'$:
+
+$$
+\begin{aligned}
+0&=\overrightarrow{P(t)Q(s)}\cdot(1,1,-1)\\
+&=(1+s+t)+(1+s-3t)-(1-s+t)\\
+&=3s-3t+1.
+\end{aligned}
+$$
+
+**5. Risolviamo il sistema nei parametri.**
+
+$$
+\begin{cases}
+3s-11t+1=0\\
+3s-3t+1=0
+\end{cases}
+$$
+
+Sottraendo la seconda equazione dalla prima:
+
+$$
+-8t=0\quad\Longrightarrow\quad t_0=0.
+$$
+
+Poi $3s+1=0$, quindi $s_0=-\frac13$.
+
+**6. Calcoliamo i due punti più vicini.**
+
+$$
+H=P(0)=(1,-1,0)
+$$
+
+$$
+H'=Q\left(-\frac13\right)=\left(\frac53,-\frac13,\frac43\right).
+$$
+
+Il vettore tra i due punti è:
+
+$$
+\overrightarrow{HH'}=H'-H
+=\left(\frac23,\frac23,\frac43\right).
+$$
+
+**7. Calcoliamo il suo modulo**, cioè la distanza fra le rette:
+
+$$
+\begin{aligned}
+d(r,r')&=\sqrt{\left(\frac23\right)^2+
+\left(\frac23\right)^2+\left(\frac43\right)^2}\\
+&=\sqrt{\frac{4+4+16}{9}}\\
+&=\boxed{\frac{2\sqrt6}{3}}.
+\end{aligned}
+$$
+
+##### Metodo 2 — Piano ausiliario parallelo all'altra retta
+
+In questo metodo **trasformiamo un problema retta–retta in un problema punto–piano**.
+
+Cerchiamo un piano $\pi$ che soddisfi contemporaneamente due condizioni:
+
+1. **Contenga tutta la prima retta $r$**: per garantirlo, scegliamo $\pi$ nel *fascio di piani di sostegno* di $r$.
+2. **Sia parallelo alla seconda retta $r'$**: per garantirlo, imponiamo che il vettore normale $\mathbf n$ del piano sia ortogonale al vettore direzionale $\mathbf w$ di $r'$.
+
+La seconda condizione si esprime con:
+
+$$
+\boxed{\mathbf n\cdot\mathbf w=0.}
+$$
+
+**Perché proprio il prodotto scalare nullo?** Il vettore normale è perpendicolare al piano. Se la direzione della seconda retta è perpendicolare alla normale, quella direzione è parallela al piano. **Non stiamo imponendo che la retta sia perpendicolare al piano:** stiamo imponendo esattamente il contrario, ossia che la sua direzione sia contenuta nelle direzioni del piano.
+
+Poiché le rette di partenza sono sghembe, $r'$ non è contenuta in questo piano. Quindi possiamo scegliere **un punto qualsiasi $Q\in r'$** e calcolare:
+
+$$
+\boxed{d(r,r')=d(Q,\pi).}
+$$
+
+La distanza punto–piano si calcola con la formula già vista:
+
+$$
+d(Q,\pi)=\frac{|ax_Q+by_Q+cz_Q+d|}{\sqrt{a^2+b^2+c^2}},
+\qquad \pi:ax+by+cz+d=0.
+$$
+
+**Perché funziona geometricamente?** Il piano passa per $r$ ed è parallelo a $r'$. La distanza perpendicolare dal piano a $r'$ misura esattamente la separazione minima fra le due rette: il segmento minimo ha una direzione perpendicolare sia a $r$ sia a $r'$.
+
+##### Esempio 11 della dispensa — Svolgimento completo con il metodo 2
+
+Riprendiamo:
+
+$$
+r:\begin{cases}
+x=1-t\\
+y=-1+3t\\
+z=-t
+\end{cases}
+\qquad
+r':\begin{cases}
+x=2+s\\
+y=s\\
+z=1-s
+\end{cases}
+$$
+
+**1. Trasformiamo $r$ in forma cartesiana.** Dalla terza equazione $z=-t$ ricaviamo $t=-z$. Sostituendo nelle altre:
+
+$$
+x=1+z\quad\Longrightarrow\quad x-z-1=0;
+$$
+
+$$
+y=-1-3z\quad\Longrightarrow\quad y+3z+1=0.
+$$
+
+Quindi $r$ è l'intersezione dei due piani:
+
+$$
+r:\begin{cases}
+x-z-1=0\\
+y+3z+1=0.
+\end{cases}
+$$
+
+**2. Costruiamo il fascio di piani che contiene $r$.** Tutti i piani del fascio hanno equazione:
+
+$$
+\lambda(x-z-1)+\mu(y+3z+1)=0,
+\qquad (\lambda,\mu)\ne(0,0).
+$$
+
+Sviluppando:
+
+$$
+\lambda x+\mu y+(3\mu-\lambda)z-\lambda+\mu=0.
+$$
+
+Confrontando con $ax+by+cz+d=0$, un vettore normale è:
+
+$$
+\boxed{\mathbf n=(\lambda,\mu,3\mu-\lambda).}
+$$
+
+**3. Imponiamo il parallelismo con $r'$.** Il vettore direzionale della seconda retta si legge dalle sue equazioni parametriche:
+
+$$
+\mathbf w=(1,1,-1).
+$$
+
+Il piano è parallelo a $r'$ se $\mathbf n$ e $\mathbf w$ sono ortogonali:
+
+$$
+\begin{aligned}
+0&=\mathbf n\cdot\mathbf w\\
+&=\lambda+\mu-(3\mu-\lambda)\\
+&=2\lambda-2\mu.
+\end{aligned}
+$$
+
+Pertanto $\lambda=\mu$. Scegliamo $\lambda=\mu=1$ (sono ammessi anche altri valori uguali e non nulli).
+
+**4. Ricaviamo l'equazione del piano cercato.**
+
+$$
+(x-z-1)+(y+3z+1)=0
+$$
+
+e dunque:
+
+$$
+\boxed{\pi:x+y+2z=0.}
+$$
+
+Abbiamo ora un piano che **contiene $r$** ed è **parallelo a $r'$**. Non potevamo prendere un piano qualsiasi del fascio: un altro piano contenente $r$ potrebbe incontrare $r'$, rendendo nulla la sua distanza da quella retta anche se $r$ e $r'$ sono sghembe.
+
+**5. Prendiamo un punto qualsiasi sulla seconda retta.** Scegliendo $s=0$:
+
+$$
+Q=(2,0,1)\in r'.
+$$
+
+**6. Calcoliamo la distanza di $Q$ da $\pi$.** Nell'equazione $x+y+2z=0$ abbiamo $a=1$, $b=1$, $c=2$, $d=0$:
+
+$$
+\begin{aligned}
+d(r,r')&=d(Q,\pi)\\
+&=\frac{|1\cdot2+1\cdot0+2\cdot1+0|}{\sqrt{1^2+1^2+2^2}}\\
+&=\frac4{\sqrt6}\\
+&=\boxed{\frac{2\sqrt6}{3}}.
+\end{aligned}
+$$
+
+Il risultato coincide con quello del metodo 1.
+
+##### Quale metodo usare?
+
+| Situazione | Procedimento |
+|---|---|
+| Rette incidenti | Distanza nulla |
+| Rette parallele | Distanza punto–retta |
+| Rette sghembe — metodo 1 | Due punti generici, due prodotti scalari nulli, distanza fra i punti trovati |
+| Rette sghembe — metodo 2 | Fascio di piani contenente $r$, condizione $\mathbf n\cdot\mathbf w=0$, distanza punto–piano |
+
+**Da ricordare:** nel **metodo 1** cerchiamo *due punti* che determinino un segmento perpendicolare a entrambe le rette; nel **metodo 2** cerchiamo *un piano* che contenga una retta e sia parallelo all'altra. Entrambi individuano la stessa distanza minima.
 
 <a name="indice-cap1-27"></a>
 

@@ -6,13 +6,55 @@
 
 > Gli argomenti, la sequenza delle sezioni e gli esempi contrassegnati come «della dispensa» seguono il Capitolo 1. I paragrafi «Approfondimento» e «Da ricordare» sviluppano i passaggi per facilitare lo studio. Le formule sono scritte in Markdown matematico compatibile con GitHub.
 
+## Indice
+
+- [1.1 — Segmenti orientati e vettori geometrici (pp. 5–18)](#indice-cap1-1)
+  - [1.1.1 — Sistema di riferimento cartesiano](#indice-cap1-2)
+  - [1.1.2 — Segmenti orientati, equivalenza, vettori](#indice-cap1-3)
+  - [1.1.3 — Operazioni di vettori geometrici (pp. 7–11)](#indice-cap1-4)
+    - [Somma: regola punta-coda](#indice-cap1-5)
+    - [Prodotto di un vettore per uno scalare](#indice-cap1-6)
+    - [Prodotto scalare](#indice-cap1-7)
+  - [1.1.4 — Proiezioni ortogonali (pp. 11–13)](#indice-cap1-8)
+  - [1.1.5 — Vettori e operazioni in coordinate (pp. 13–18)](#indice-cap1-9)
+    - [Coordinate a partire da due punti](#indice-cap1-10)
+    - [Operazioni coordinate per coordinate](#indice-cap1-11)
+- [1.2 — Rette e piani nello spazio (pp. 18–33)](#indice-cap1-12)
+  - [1.2.1 — Equazioni di un piano](#indice-cap1-13)
+    - [Forma cartesiana](#indice-cap1-14)
+    - [Forma parametrica](#indice-cap1-15)
+  - [1.2.2 — Equazioni di una retta (pp. 21–23)](#indice-cap1-16)
+  - [1.2.3 — Fascio di piani di sostegno una retta (p. 23)](#indice-cap1-17)
+  - [1.2.4 — Posizione reciproca di rette e piani (pp. 24–27)](#indice-cap1-18)
+    - [Due rette nello spazio](#indice-cap1-19)
+    - [Due piani](#indice-cap1-20)
+    - [Retta e piano](#indice-cap1-21)
+  - [1.2.5 — Distanze (pp. 27–33)](#indice-cap1-22)
+    - [Distanza punto–punto](#indice-cap1-23)
+    - [Distanza punto–piano](#indice-cap1-24)
+    - [Distanza punto–retta](#indice-cap1-25)
+    - [Distanza retta–retta](#indice-cap1-26)
+- [1.3 — Esercizi ricapitolativi (pp. 33–41)](#indice-cap1-27)
+  - [Schema operativo: scegliere il metodo giusto](#indice-cap1-28)
+  - [Esercizio guidato aggiuntivo — Piano per una retta e un punto](#indice-cap1-29)
+  - [Domande per il ripasso orale (p. 41)](#indice-cap1-30)
+- [Formulario essenziale](#indice-cap1-31)
+
+---
+
+<a id="indice-cap1-1"></a>
+
 ## 1.1 — Segmenti orientati e vettori geometrici (pp. 5–18)
+
+<a id="indice-cap1-2"></a>
 
 ### 1.1.1 — Sistema di riferimento cartesiano
 
 Nello spazio tridimensionale si fissa un'origine $O=(0,0,0)$ e si scelgono tre assi perpendicolari $x,y,z$, orientati secondo la **regola della mano destra** (figura 1.1). Un punto è descritto dalle sue coordinate $P=(x_P,y_P,z_P)$.
 
 **Attenzione:** un *punto* indica una posizione, mentre un *vettore geometrico* descrive uno spostamento (direzione, verso e modulo). Le coordinate possono sembrare le stesse, ma il significato non è identico.
+
+<a id="indice-cap1-3"></a>
 
 ### 1.1.2 — Segmenti orientati, equivalenza, vettori
 
@@ -31,7 +73,11 @@ Due segmenti orientati sono **equivalenti** se hanno contemporaneamente:
 
 **Approfondimento — Le tre parole da distinguere.** Due vettori possono avere la stessa direzione ma verso opposto; possono inoltre avere stessa direzione e verso ma moduli differenti. Per essere uguali servono **tutte e tre** le caratteristiche.
 
+<a id="indice-cap1-4"></a>
+
 ### 1.1.3 — Operazioni di vettori geometrici (pp. 7–11)
+
+<a id="indice-cap1-5"></a>
 
 #### Somma: regola punta-coda
 
@@ -51,6 +97,8 @@ Le quattro proprietà della somma sono:
 2. **Associatività:** $(\mathbf v+\mathbf w)+\mathbf u=\mathbf v+(\mathbf w+\mathbf u)$.
 3. **Elemento neutro:** $\mathbf v+\mathbf 0=\mathbf v$.
 4. **Opposto:** $\mathbf v+(-\mathbf v)=\mathbf 0$.
+
+<a id="indice-cap1-6"></a>
 
 #### Prodotto di un vettore per uno scalare
 
@@ -81,6 +129,8 @@ $$
 è un versore con **la stessa direzione e lo stesso verso** di $\mathbf v$.
 
 **Perché funziona?** Il suo modulo è $|\mathbf v|/|\mathbf v|=1$. Non si può normalizzare il vettore nullo: si dividerebbe per zero.
+
+<a id="indice-cap1-7"></a>
 
 #### Prodotto scalare
 
@@ -113,6 +163,8 @@ $$
 
 **Approfondimento — Segno del prodotto scalare:** è positivo se l'angolo è acuto, zero se è retto e negativo se è ottuso. Questo consente di capire il tipo di angolo senza disegnarlo.
 
+<a id="indice-cap1-8"></a>
+
 ### 1.1.4 — Proiezioni ortogonali (pp. 11–13)
 
 La **proiezione ortogonale** di $\mathbf v$ su un vettore non nullo $\mathbf w$ è la componente di $\mathbf v$ nella direzione di $\mathbf w$ (figura 1.8).
@@ -140,7 +192,11 @@ $$
 
 Il vettore **perpendicolare** a $\mathbf w$ che resta dopo la proiezione è $\mathbf v-\operatorname{proj}_{\mathbf w}(\mathbf v)=(0,2,0)$.
 
+<a id="indice-cap1-9"></a>
+
 ### 1.1.5 — Vettori e operazioni in coordinate (pp. 13–18)
+
+<a id="indice-cap1-10"></a>
 
 #### Coordinate a partire da due punti
 
@@ -161,6 +217,8 @@ $$
 $$
 
 **Proposizione 2.** Poiché i tre versori sono ortonormali, $v_1=\mathbf v\cdot\mathbf i$, $v_2=\mathbf v\cdot\mathbf j$, $v_3=\mathbf v\cdot\mathbf k$.
+
+<a id="indice-cap1-11"></a>
 
 #### Operazioni coordinate per coordinate
 
@@ -201,9 +259,15 @@ $$
 
 **Errore frequente:** il prodotto scalare non consiste nella somma delle coordinate: bisogna moltiplicare tra loro le componenti **corrispondenti**.
 
+<a id="indice-cap1-12"></a>
+
 ## 1.2 — Rette e piani nello spazio (pp. 18–33)
 
+<a id="indice-cap1-13"></a>
+
 ### 1.2.1 — Equazioni di un piano
+
+<a id="indice-cap1-14"></a>
 
 #### Forma cartesiana
 
@@ -231,6 +295,8 @@ $$
 $$
 
 **Non unicità:** moltiplicare tutti i coefficienti dell'equazione per uno scalare **non nullo** produce lo stesso piano. Per esempio $2x-3y-z-3=0$ e $-4x+6y+2z+6=0$ sono equivalenti.
+
+<a id="indice-cap1-15"></a>
 
 #### Forma parametrica
 
@@ -292,6 +358,8 @@ x=s,\\ y=t,\\ z=2s-3t-3.
 \end{cases}
 $$
 
+<a id="indice-cap1-16"></a>
+
 ### 1.2.2 — Equazioni di una retta (pp. 21–23)
 
 Una retta può essere descritta con un punto $A$ e un vettore direzionale $\mathbf v\ne\mathbf 0$:
@@ -346,6 +414,8 @@ $$
 
 **Da ricordare:** per la retta serve **un parametro** (una direzione), per il piano **due parametri** (due direzioni indipendenti).
 
+<a id="indice-cap1-17"></a>
+
 ### 1.2.3 — Fascio di piani di sostegno una retta (p. 23)
 
 Se $r$ è l'intersezione di $\pi_1:F(x,y,z)=0$ e $\pi_2:G(x,y,z)=0$, ogni piano del fascio che contiene $r$ è
@@ -376,7 +446,11 @@ $$
 \iff\boxed{-2x+y-3z-1=0}.
 $$
 
+<a id="indice-cap1-18"></a>
+
 ### 1.2.4 — Posizione reciproca di rette e piani (pp. 24–27)
+
+<a id="indice-cap1-19"></a>
 
 #### Due rette nello spazio
 
@@ -397,6 +471,8 @@ Siano $r:A+t\mathbf v$ e $r':B+s\mathbf w$.
 
 **Approfondimento importante:** due rette possono avere vettori direzionali ortogonali **senza incontrarsi**: in quel caso sono sghembe con direzioni ortogonali. Il solo prodotto scalare nullo non prova che abbiano un punto in comune (vedi Esempio 7, pp. 24–25).
 
+<a id="indice-cap1-20"></a>
+
 #### Due piani
 
 Per $\pi:ax+by+cz+d=0$ e $\pi':a'x+b'y+c'z+d'=0$, siano $\mathbf n=(a,b,c)$ e $\mathbf n'=(a',b',c')$.
@@ -406,6 +482,8 @@ Per $\pi:ax+by+cz+d=0$ e $\pi':a'x+b'y+c'z+d'=0$, siano $\mathbf n=(a,b,c)$ e $\
 - **Ortogonali:** $\mathbf n\cdot\mathbf n'=0$.
 
 **Esempio:** $x+y+z=1$ e $x-y=0$ hanno normali $(1,1,1)$ e $(1,-1,0)$; poiché il prodotto scalare è $0$, i piani sono ortogonali.
+
+<a id="indice-cap1-21"></a>
 
 #### Retta e piano
 
@@ -423,7 +501,11 @@ $$
 
 ponendo $y=t$ si ottiene $(x,y,z)=(-2t,t,t)$. Quindi $\mathbf v=(-2,1,1)$ e $\mathbf n=(1,1,1)$: $\mathbf v\cdot\mathbf n=0$. Il punto $O=(0,0,0)$ appartiene a $r$ ma non a $\pi$, dunque **retta e piano sono paralleli e disgiunti**.
 
+<a id="indice-cap1-22"></a>
+
 ### 1.2.5 — Distanze (pp. 27–33)
+
+<a id="indice-cap1-23"></a>
 
 #### Distanza punto–punto
 
@@ -434,6 +516,8 @@ $$
 $$
 
 È semplicemente il modulo di $\overrightarrow{AB}$.
+
+<a id="indice-cap1-24"></a>
 
 #### Distanza punto–piano
 
@@ -452,6 +536,8 @@ $$
 d(P,\pi)=\frac{|2+0+2|}{\sqrt{1+1+4}}
 =\frac4{\sqrt6}=\frac{2\sqrt6}{3}.
 $$
+
+<a id="indice-cap1-25"></a>
 
 #### Distanza punto–retta
 
@@ -484,6 +570,8 @@ Quindi $t=-1$, $H=(1,0,4)$ e
 $$
 \boxed{d(P,r)=\sqrt{0^2+(-2)^2+2^2}=2\sqrt2}.
 $$
+
+<a id="indice-cap1-26"></a>
 
 #### Distanza retta–retta
 
@@ -520,9 +608,13 @@ $$
 
 Il metodo del piano fornisce lo stesso valore usando $x+y+2z=0$ e il punto $(2,0,1)\in r'$.
 
+<a id="indice-cap1-27"></a>
+
 ## 1.3 — Esercizi ricapitolativi (pp. 33–41)
 
 La dispensa propone esercizi su **posizione reciproca**, **piani per una retta**, **rette perpendicolari** e **distanze**, con soluzioni e svolgimenti alle pp. 34–40.
+
+<a id="indice-cap1-28"></a>
 
 ### Schema operativo: scegliere il metodo giusto
 
@@ -537,6 +629,8 @@ La dispensa propone esercizi su **posizione reciproca**, **piani per una retta**
 | Distanza punto–piano | Leggere la normale | Formula del valore assoluto |
 | Distanza punto–retta | Cercare il piede $H$ | Ortogonalità o piano ausiliario |
 | Distanza rette sghembe | Due parametri e due prodotti scalari | Segmento minimo comune |
+
+<a id="indice-cap1-29"></a>
 
 ### Esercizio guidato aggiuntivo — Piano per una retta e un punto
 
@@ -567,6 +661,8 @@ $$
 
 **Controllo:** sostituendo $(1+t,2-t,t)$ si ottiene sempre $0$; sostituendo $P=(0,0,1)$ si ottiene $-3+3=0$.
 
+<a id="indice-cap1-30"></a>
+
 ### Domande per il ripasso orale (p. 41)
 
 1. Qual è la differenza fra un segmento orientato e un vettore geometrico?
@@ -577,6 +673,8 @@ $$
 6. Due rette con direzioni ortogonali devono incontrarsi? Perché?
 7. Che cosa rappresenta il vettore normale a un piano?
 8. Come si ottiene la distanza minima da un punto a una retta?
+
+<a id="indice-cap1-31"></a>
 
 ## Formulario essenziale
 

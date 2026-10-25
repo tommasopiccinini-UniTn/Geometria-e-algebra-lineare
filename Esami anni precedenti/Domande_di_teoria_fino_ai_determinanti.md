@@ -107,14 +107,14 @@ $$
 Su un versore $\mathbf{e}$, cioè $|\mathbf{e}|=1$:
 
 $$
-\operatorname{proj}_{\mathbf{e}}(\mathbf{v})
+\mathrm{proj}_{\mathbf{e}}(\mathbf{v})
 =(\mathbf{v}\cdot\mathbf{e})\mathbf{e}.
 $$
 
 Su un vettore **non nullo** $\mathbf{w}$:
 
 $$
-\operatorname{proj}_{\mathbf{w}}(\mathbf{v})
+\mathrm{proj}_{\mathbf{w}}(\mathbf{v})
 =\frac{\mathbf{v}\cdot\mathbf{w}}{\mathbf{w}\cdot\mathbf{w}}\,\mathbf{w}.
 $$
 
@@ -164,7 +164,7 @@ $$
 \boxed{
 A\mathbf{x}=\mathbf{b}\text{ è compatibile}
 \iff
-\operatorname{rg}(A)=\operatorname{rg}([A\mid\mathbf{b}]).
+\mathrm{rg}(A)=\mathrm{rg}([A\mid\mathbf{b}]).
 }
 $$
 
@@ -183,7 +183,7 @@ x+y+z=1,\\
 \end{cases}
 $$
 
-Qui $\operatorname{rg}(A)=1$ e $\operatorname{rg}([A\mid\mathbf{b}])=2$.
+Qui $\mathrm{rg}(A)=1$ e $\mathrm{rg}([A\mid\mathbf{b}])=2$.
 
 **Esempio compatibile con 3 equazioni e 2 incognite:**
 
@@ -233,7 +233,7 @@ Il **rango** è il numero di pivot di una forma a scalini. Per calcolare le solu
 
 **Collegamenti:** sistemi lineari, matrici e sottospazi; rilevante anche nelle crocette 2021–2022.
 
-Indichiamo con $U=\{\mathbf{x}:A\mathbf{x}=\mathbf{0}\}$. Se $\mathbf{x},\mathbf{y}\in U$ e $\lambda,\mu\in\mathbb{R}$, allora
+Indichiamo con $U=\lbrace\mathbf{x}:A\mathbf{x}=\mathbf{0}\rbrace$. Se $\mathbf{x},\mathbf{y}\in U$ e $\lambda,\mu\in\mathbb{R}$, allora
 
 $$
 A(\lambda\mathbf{x}+\mu\mathbf{y})
@@ -266,8 +266,7 @@ $$
 $$
 \begin{pmatrix}1&2\\0&1\end{pmatrix}
 \begin{pmatrix}2&0\\1&3\end{pmatrix}
-=
-\begin{pmatrix}4&6\\1&3\end{pmatrix}.
+= \begin{pmatrix}4&6\\1&3\end{pmatrix}.
 $$
 
 **Attenzione:** in generale $AB\neq BA$; il prodotto non è commutativo.
@@ -305,14 +304,14 @@ non è invertibile: la seconda riga è multipla della prima, quindi il rango è 
 Per $A\in M_n(\mathbb{R})$:
 
 $$
-A\text{ invertibile}\iff\operatorname{rg}(A)=n.
+A\text{ invertibile}\iff\mathrm{rg}(A)=n.
 $$
 
 Dopo il capitolo 5 il criterio equivalente diventa:
 
 $$
 A\text{ invertibile}
-\iff \operatorname{rg}(A)=n
+\iff \mathrm{rg}(A)=n
 \iff \det(A)\neq 0.
 $$
 
@@ -337,10 +336,10 @@ $$
 
 **Esempi di sottospazi di $\mathbb{R}^3$:**
 
-- Retta passante per l'origine: $U=\{(t,0,0):t\in\mathbb{R}\}$.
-- Piano passante per l'origine: $W=\{(s,t,0):s,t\in\mathbb{R}\}$.
+- Retta passante per l'origine: $U=\lbrace(t,0,0):t\in\mathbb{R}\rbrace$.
+- Piano passante per l'origine: $W=\lbrace(s,t,0):s,t\in\mathbb{R}\rbrace$.
 
-**Controesempio:** $Z=\{(x,y,z)\in\mathbb{R}^3:x+y+z=1\}$ non è un sottospazio, perché $(0,0,0)\notin Z$.
+**Controesempio:** $Z=\lbrace(x,y,z)\in\mathbb{R}^3:x+y+z=1\rbrace$ non è un sottospazio, perché $(0,0,0)\notin Z$.
 
 **Controllo rapido:** prima verifica se $\mathbf{0}$ appartiene all'insieme, poi la chiusura rispetto a $\lambda\mathbf{u}+\mu\mathbf{v}$. È un test necessario e sufficiente, se l'insieme non è vuoto.
 
@@ -358,22 +357,22 @@ $$
 Il **sottospazio generato** dai vettori è l'insieme di tutte le loro combinazioni lineari:
 
 $$
-\operatorname{Span}(\mathbf{v}_1,\ldots,\mathbf{v}_k)
-=\left\{\sum_{i=1}^{k}\lambda_i\mathbf{v}_i:
-\lambda_i\in\mathbb{R}\right\}.
+\mathrm{Span}(\mathbf{v}_1,\ldots,\mathbf{v}_k)
+=\lbrace\sum_{i=1}^{k}\lambda_i\mathbf{v}_i:
+\lambda_i\in\mathbb{R}\rbrace.
 $$
 
 Un insieme di vettori è un **sistema di generatori di $V$** se il suo Span coincide con $V$.
 
-**Esempio:** $\{(1,0),(0,1)\}$ genera $\mathbb{R}^2$, perché ogni $(x,y)$ si scrive $x(1,0)+y(0,1)$.
+**Esempio:** $\lbrace(1,0),(0,1)\rbrace$ genera $\mathbb{R}^2$, perché ogni $(x,y)$ si scrive $x(1,0)+y(0,1)$.
 
-**Criterio operativo in $\mathbb{R}^n$:** affiancare i vettori come **colonne** in una matrice $A$; generano $\mathbb{R}^n$ se e solo se $\operatorname{rg}(A)=n$.
+**Criterio operativo in $\mathbb{R}^n$:** affiancare i vettori come **colonne** in una matrice $A$; generano $\mathbb{R}^n$ se e solo se $\mathrm{rg}(A)=n$.
 
 ### D14. Definizione di insieme linearmente dipendente e indipendente, con esempi
 
 **Tracce:** [gennaio 2023](./GALgen23.pdf), [luglio 2023](./GALlug23.pdf), [provetta 2023](./GALprovetta23.pdf), [gennaio 2025](./GALgen25.pdf), [febbraio 2025](./GALfeb25.pdf), [giugno 2025](./GALgiu25.pdf), [settembre 2025](./GALset25.pdf), [giugno 2026](./GALgiu26.pdf).
 
-Un insieme $\{\mathbf{v}_1,\ldots,\mathbf{v}_k\}$ è **linearmente indipendente** se
+Un insieme $\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_k\rbrace$ è **linearmente indipendente** se
 
 $$
 \lambda_1\mathbf{v}_1+\cdots+\lambda_k\mathbf{v}_k=\mathbf{0}
@@ -385,14 +384,14 @@ $$
 
 **Esempi in $\mathbb{R}^3$:**
 
-- Indipendenti: $\{(1,0,0),(0,1,0)\}$.
-- Dipendenti: $\{(1,0,0),(0,1,0),(1,1,0)\}$, poiché il terzo è la somma dei primi due.
+- Indipendenti: $\lbrace(1,0,0),(0,1,0)\rbrace$.
+- Dipendenti: $\lbrace(1,0,0),(0,1,0),(1,1,0)\rbrace$, poiché il terzo è la somma dei primi due.
 
 **Criterio operativo:** costruita $A=[\mathbf{v}_1\ \cdots\ \mathbf{v}_k]$,
 
 $$
-\{\mathbf{v}_1,\ldots,\mathbf{v}_k\}\text{ indipendente}
-\iff \operatorname{rg}(A)=k.
+\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_k\rbrace\text{ indipendente}
+\iff \mathrm{rg}(A)=k.
 $$
 
 **Casi da riconoscere immediatamente:** la presenza del vettore nullo o di due vettori proporzionali rende l'insieme dipendente. Se $k>n$, $k$ vettori di $\mathbb{R}^n$ sono necessariamente dipendenti.
@@ -409,7 +408,7 @@ Una **base** di $V$ è un insieme di vettori che è **contemporaneamente**:
 **Esempio di insieme indipendente di $\mathbb{R}^3$ che non è una base:**
 
 $$
-\{(1,0,0),(0,1,0)\}.
+\lbrace(1,0,0),(0,1,0)\rbrace.
 $$
 
 Non genera i vettori con terza coordinata non nulla.
@@ -417,7 +416,7 @@ Non genera i vettori con terza coordinata non nulla.
 **Esempio di sistema di generatori di $\mathbb{R}^3$ che non è una base:**
 
 $$
-\{(1,0,0),(0,1,0),(0,0,1),(1,1,0)\}.
+\lbrace(1,0,0),(0,1,0),(0,0,1),(1,1,0)\rbrace.
 $$
 
 Genera tutto lo spazio, ma è dipendente.
@@ -425,12 +424,12 @@ Genera tutto lo spazio, ma è dipendente.
 **Base dello spazio delle matrici $2\times 2$:**
 
 $$
-\left\{
+\lbrace
 \begin{pmatrix}1&0\\0&0\end{pmatrix},
 \begin{pmatrix}0&1\\0&0\end{pmatrix},
 \begin{pmatrix}0&0\\1&0\end{pmatrix},
 \begin{pmatrix}0&0\\0&1\end{pmatrix}
-\right\}.
+\rbrace.
 $$
 
 Ogni matrice $2\times2$ è una combinazione lineare **unica** di queste quattro matrici.
@@ -553,12 +552,12 @@ Per una matrice $A$ **quadrata di ordine $n$**:
 $$
 \boxed{
 \det(A)\neq0
-\iff \operatorname{rg}(A)=n
+\iff \mathrm{rg}(A)=n
 \iff A\text{ è invertibile}.
 }
 $$
 
-Le negazioni sono equivalenti: $\det(A)=0$ se e solo se $\operatorname{rg}(A)<n$ se e solo se $A$ non è invertibile.
+Le negazioni sono equivalenti: $\det(A)=0$ se e solo se $\mathrm{rg}(A)<n$ se e solo se $A$ non è invertibile.
 
 **Applicazione ai sistemi:** se $\det(A)\neq0$, il sistema quadrato $A\mathbf{x}=\mathbf{b}$ ha **un'unica soluzione per ogni** $\mathbf{b}$.
 

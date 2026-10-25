@@ -80,7 +80,7 @@ Per vettori non nulli, con angolo $\theta$ fra loro:
 
 $$
 \mathbf{v}\cdot\mathbf{w}
-=|\mathbf{v}|\,|\mathbf{w}|\cos\theta.
+=|\mathbf{v}|\cdot|\mathbf{w}|\cdot\cos\theta.
 $$
 
 In una base cartesiana ortonormale, se $\mathbf{v}=(v_1,v_2,v_3)$ e $\mathbf{w}=(w_1,w_2,w_3)$:
@@ -115,7 +115,7 @@ Su un vettore **non nullo** $\mathbf{w}$:
 
 $$
 \mathrm{proj}_{\mathbf{w}}(\mathbf{v})
-=\frac{\mathbf{v}\cdot\mathbf{w}}{\mathbf{w}\cdot\mathbf{w}}\,\mathbf{w}.
+=\frac{\mathbf{v}\cdot\mathbf{w}}{\mathbf{w}\cdot\mathbf{w}}\cdot\mathbf{w}.
 $$
 
 **Esempio:** $\mathbf{v}=(3,4,0)$ e $\mathbf{w}=(1,0,0)$; la proiezione è $(3,0,0)$.
@@ -330,7 +330,7 @@ $$
 Sia $V$ uno spazio vettoriale reale. Un sottoinsieme **non vuoto** $U\subseteq V$ è un sottospazio se è chiuso rispetto a somma e prodotto per scalari; equivalentemente:
 
 $$
-\forall\,\mathbf{u},\mathbf{v}\in U,\ \forall\,\lambda,\mu\in\mathbb{R},
+\forall\;\mathbf{u},\mathbf{v}\in U,\ \forall\;\lambda,\mu\in\mathbb{R},
 \quad \lambda\mathbf{u}+\mu\mathbf{v}\in U.
 $$
 
@@ -606,7 +606,7 @@ $$
 Se $A$ è invertibile, la formula è
 
 $$
-A^{-1}=\frac{1}{\det(A)}\,C^{T},
+A^{-1}=\frac{1}{\det(A)}\cdot C^{T},
 $$
 
 dove $C$ è la matrice dei cofattori (la trasposta $C^T$ è detta anche **aggiunta classica**).
@@ -625,7 +625,7 @@ $$
 Il **prodotto vettoriale** $\mathbf{v}\times\mathbf{w}$ è ortogonale a entrambi i vettori; il verso è determinato dalla regola della mano destra e il modulo è
 
 $$
-|\mathbf{v}\times\mathbf{w}|=|\mathbf{v}|\,|\mathbf{w}|\sin\theta.
+|\mathbf{v}\times\mathbf{w}|=|\mathbf{v}|\cdot|\mathbf{w}|\cdot\sin\theta.
 $$
 
 L'area del **parallelogramma** è $|\mathbf{v}\times\mathbf{w}|$; quella del **triangolo** è la metà.

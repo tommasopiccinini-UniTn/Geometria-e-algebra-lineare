@@ -156,6 +156,15 @@ $$
 
 ### D6. Enunciare e spiegare il teorema di Rouché-Capelli
 
+**Enunciato del teorema di Rouché-Capelli.** Un sistema lineare $A\mathbf{x}=\mathbf{b}$ è **compatibile**, cioè ammette almeno una soluzione, **se e solo se** il rango della matrice dei coefficienti $A$ è uguale al rango della matrice completa $[A\mid\mathbf{b}]$.
+
+$$
+\boxed{
+A\mathbf{x}=\mathbf{b}\ \text{è compatibile}
+\iff \mathrm{rg}(A)=\mathrm{rg}([A\mid\mathbf{b}]).
+}
+$$
+
 **Tracce:** [gennaio 2023](./GALgen23.pdf), [luglio 2023](./GALlug23.pdf), [provetta 2023](./GALprovetta23.pdf), [febbraio 2024](./GALfeb24.pdf), [settembre 2024](./GALset24.pdf), [provetta 2024](./GALprovetta24.pdf).
 
 #### 1. Quali matrici confrontiamo?
@@ -331,6 +340,18 @@ $$
 **Perché è importante:** nelle provette chiedono spesso **enunciato + esempio** di sistema compatibile o incompatibile, non soltanto la definizione.
 
 ### D7. Che cos'è una matrice a scalini? E una matrice a scalini ridotta per righe?
+
+**Enunciato del metodo di Gauss (eliminazione per righe).** Ogni matrice può essere trasformata, mediante un **numero finito di operazioni elementari sulle righe**, in una **matrice a scalini**. Il numero di pivot ottenuti è il **rango della matrice** e non dipende dalla particolare sequenza di operazioni utilizzate.
+
+Se applichiamo queste operazioni alla **matrice completa di un sistema lineare** $[A\mid\mathbf{b}]$, otteniamo un sistema **equivalente a quello iniziale**, cioè con **lo stesso insieme delle soluzioni**.
+
+Le operazioni elementari ammesse sono:
+
+1. **Scambiare** due righe.
+2. **Moltiplicare** una riga per uno scalare **non nullo**.
+3. **Sommare** a una riga un multiplo di un'altra riga.
+
+**Distinzione:** l'eliminazione di **Gauss** porta la matrice in **forma a scalini**; proseguendo con la normalizzazione dei pivot e l'eliminazione anche **sopra** di essi, si ottiene la **forma a scalini ridotta per righe** (procedimento di **Gauss-Jordan**). Nel dispensario questo argomento è presentato come *algoritmo di Gauss-Jordan*, non come un teorema autonomo.
 
 **Tracce:** [febbraio 2023](./GALfeb23.pdf), [febbraio 2025](./GALfeb25.pdf).
 

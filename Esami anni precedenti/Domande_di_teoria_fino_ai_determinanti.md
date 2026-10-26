@@ -429,15 +429,17 @@ B =
 \end{pmatrix}.
 $$
 
-Calcoliamo gli elementi del prodotto, moltiplicando ogni riga di $A$ per ogni colonna di $B$:
+Calcoliamo i quattro elementi del prodotto moltiplicando ogni riga di $A$ per ogni colonna di $B$:
+
+- **Prima riga, prima colonna:** $1\cdot 2+2\cdot 1=4$.
+- **Prima riga, seconda colonna:** $1\cdot 0+2\cdot 3=6$.
+- **Seconda riga, prima colonna:** $0\cdot 2+1\cdot 1=1$.
+- **Seconda riga, seconda colonna:** $0\cdot 0+1\cdot 3=3$.
+
+Il risultato è dunque:
 
 $$
 AB =
-\begin{pmatrix}
-1\cdot 2 + 2\cdot 1 & 1\cdot 0 + 2\cdot 3 \\
-0\cdot 2 + 1\cdot 1 & 0\cdot 0 + 1\cdot 3
-\end{pmatrix}
-=
 \begin{pmatrix}
 4 & 6 \\
 1 & 3

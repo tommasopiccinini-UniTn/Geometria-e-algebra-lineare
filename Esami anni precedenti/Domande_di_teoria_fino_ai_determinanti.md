@@ -413,12 +413,35 @@ $$
 (AB)_{ij}=\sum_{k=1}^{n}a_{ik}b_{kj}.
 $$
 
-**Esempio:**
+**Esempio:** siano
 
 $$
-\begin{pmatrix}1&2\\0&1\end{pmatrix}
-\begin{pmatrix}2&0\\1&3\end{pmatrix}
-= \begin{pmatrix}4&6\\1&3\end{pmatrix}.
+A =
+\begin{pmatrix}
+1 & 2 \\
+0 & 1
+\end{pmatrix},
+\qquad
+B =
+\begin{pmatrix}
+2 & 0 \\
+1 & 3
+\end{pmatrix}.
+$$
+
+Calcoliamo gli elementi del prodotto, moltiplicando ogni riga di $A$ per ogni colonna di $B$:
+
+$$
+AB =
+\begin{pmatrix}
+1\cdot 2 + 2\cdot 1 & 1\cdot 0 + 2\cdot 3 \\
+0\cdot 2 + 1\cdot 1 & 0\cdot 0 + 1\cdot 3
+\end{pmatrix}
+=
+\begin{pmatrix}
+4 & 6 \\
+1 & 3
+\end{pmatrix}.
 $$
 
 **Attenzione:** in generale $AB\neq BA$; il prodotto non è commutativo.
@@ -438,13 +461,22 @@ Tale matrice è unica ed è indicata con $A^{-1}$.
 **Esempi:**
 
 $$
-A=\begin{pmatrix}1&2\\0&1\end{pmatrix},
+A=\begin{pmatrix}
+1 & 2 \\
+0 & 1
+\end{pmatrix},
 \qquad
-A^{-1}=\begin{pmatrix}1&-2\\0&1\end{pmatrix}.
+A^{-1}=\begin{pmatrix}
+1 & -2 \\
+0 & 1
+\end{pmatrix}.
 $$
 
 $$
-C=\begin{pmatrix}1&2\\2&4\end{pmatrix}
+C=\begin{pmatrix}
+1 & 2 \\
+2 & 4
+\end{pmatrix}
 $$
 
 non è invertibile: la seconda riga è multipla della prima, quindi il rango è 1 invece di 2.
@@ -577,10 +609,22 @@ Genera tutto lo spazio, ma è dipendente.
 
 $$
 \lbrace
-\begin{pmatrix}1&0\\0&0\end{pmatrix},
-\begin{pmatrix}0&1\\0&0\end{pmatrix},
-\begin{pmatrix}0&0\\1&0\end{pmatrix},
-\begin{pmatrix}0&0\\0&1\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix},
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix},
+\begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix},
+\begin{pmatrix}
+0 & 0 \\
+0 & 1
+\end{pmatrix}
 \rbrace.
 $$
 
@@ -601,7 +645,10 @@ Le due domande autonome effettivamente emerse con maggior chiarezza negli appell
 Il determinante è uno **scalare** associato a una matrice **quadrata**. Per
 
 $$
-A=\begin{pmatrix}a&b\\c&d\end{pmatrix}
+A=\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
 $$
 
 si ha
@@ -623,7 +670,10 @@ $$
 Sviluppando lungo la terza colonna, che contiene due zeri:
 
 $$
-\det(B)=4\det\begin{pmatrix}1&2\\0&3\end{pmatrix}
+\det(B)=4\det\begin{pmatrix}
+1 & 2 \\
+0 & 3
+\end{pmatrix}
 =4\cdot3=12.
 $$
 
@@ -668,15 +718,24 @@ $$
 **Mini esempio:**
 
 $$
-A=\begin{pmatrix}1&1\\0&2\end{pmatrix},
+A=\begin{pmatrix}
+1 & 1 \\
+0 & 2
+\end{pmatrix},
 \qquad
-B=\begin{pmatrix}3&0\\1&1\end{pmatrix}.
+B=\begin{pmatrix}
+3 & 0 \\
+1 & 1
+\end{pmatrix}.
 $$
 
 Qui $\det(A)=2$, $\det(B)=3$ e
 
 $$
-AB=\begin{pmatrix}4&1\\2&2\end{pmatrix},
+AB=\begin{pmatrix}
+4 & 1 \\
+2 & 2
+\end{pmatrix},
 \qquad
 \det(AB)=8-2=6=2\cdot3.
 $$
@@ -737,7 +796,10 @@ x-y=1.
 $$
 
 $$
-A=\begin{pmatrix}1&1\\1&-1\end{pmatrix},
+A=\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix},
 \quad \det(A)=-2.
 $$
 
@@ -763,11 +825,24 @@ $$
 
 dove $C$ è la matrice dei cofattori (la trasposta $C^T$ è detta anche **aggiunta classica**).
 
-Per $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ con $ad-bc\neq0$:
+Per una matrice
+
+$$
+A=
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+$$
+
+con $ad-bc\neq0$:
 
 $$
 A^{-1}=\frac{1}{ad-bc}
-\begin{pmatrix}d&-b\\-c&a\end{pmatrix}.
+\begin{pmatrix}
+d & -b \\
+-c & a
+\end{pmatrix}.
 $$
 
 ### D23. Definire prodotto vettoriale e prodotto misto, con aree e volumi

@@ -154,27 +154,66 @@ $$
 
 **Riferimento al dispensario:** capitolo 2, pp. 42–61.
 
-### D6. Enunciare il teorema di Rouché-Capelli
+### D6. Enunciare e spiegare il teorema di Rouché-Capelli
 
 **Tracce:** [gennaio 2023](./GALgen23.pdf), [luglio 2023](./GALlug23.pdf), [provetta 2023](./GALprovetta23.pdf), [febbraio 2024](./GALfeb24.pdf), [settembre 2024](./GALset24.pdf), [provetta 2024](./GALprovetta24.pdf).
 
-Considerato il sistema $A\mathbf{x}=\mathbf{b}$, con $A$ matrice dei coefficienti e $[A\mid\mathbf{b}]$ matrice completa:
+#### 1. Quali matrici confrontiamo?
+
+Consideriamo un sistema lineare di **$m$ equazioni in $n$ incognite**:
+
+$$
+A\mathbf{x}=\mathbf{b}.
+$$
+
+- **$A$ (matrice dei coefficienti):** contiene solo i coefficienti delle incognite e ha $m$ righe e $n$ colonne.
+- **$[A\mid\mathbf{b}]$ (matrice completa):** è la matrice $A$ a cui aggiungiamo **un'ultima colonna**, quella dei termini noti $\mathbf{b}$. Ha quindi $m$ righe e $n+1$ colonne.
+- **$\mathrm{rg}(A)$:** è il numero di colonne linearmente indipendenti di $A$ (equivalentemente, il numero di pivot dopo Gauss).
+- **$\mathrm{rg}([A\mid\mathbf{b}])$:** è il rango dopo aver aggiunto la colonna dei termini noti.
+
+**Il punto fondamentale:** chiedere che esista una soluzione equivale a chiedere che $\mathbf{b}$ si possa ottenere come **combinazione lineare delle colonne di $A$**. In simboli, scrivendo $A=[\mathbf{a}_1\ \cdots\ \mathbf{a}_n]$:
+
+$$
+x_1\mathbf{a}_1+\cdots+x_n\mathbf{a}_n=\mathbf{b}.
+$$
+
+Se $\mathbf{b}$ è già nello spazio generato dalle colonne di $A$, aggiungerla **non aumenta il rango** e il sistema è compatibile. Se non lo è, il rango della matrice completa **aumenta di 1** e il sistema è impossibile.
+
+#### 2. Teorema di Rouché-Capelli: prima la compatibilità
 
 $$
 \boxed{
-A\mathbf{x}=\mathbf{b}\text{ è compatibile}
+A\mathbf{x}=\mathbf{b}\ \text{è compatibile}
 \iff
 \mathrm{rg}(A)=\mathrm{rg}([A\mid\mathbf{b}]).
 }
 $$
 
-Quando è compatibile, se $A$ ha $n$ colonne e rango $r$, le soluzioni dipendono da $n-r$ parametri liberi.
+Questa è la condizione **necessaria e sufficiente** affinché il sistema ammetta *almeno una soluzione*.
 
-- Se $r=n$, la soluzione è unica.
-- Se $r<n$, ci sono infinite soluzioni.
-- Se i due ranghi sono diversi, non ci sono soluzioni.
+- Se $\mathrm{rg}(A)\neq\mathrm{rg}([A\mid\mathbf{b}])$, il sistema è **incompatibile**: **nessuna soluzione**.
+- Se $\mathrm{rg}(A)=\mathrm{rg}([A\mid\mathbf{b}])$, il sistema è **compatibile**: **almeno una soluzione**. Solo ora passiamo al secondo confronto.
 
-**Esempio incompatibile con 2 equazioni e 3 incognite:**
+**Attenzione:** in questo primo passaggio confrontiamo **due ranghi**. Non stiamo ancora confrontando il rango con il numero delle incognite.
+
+#### 3. Solo dopo: una soluzione oppure infinite?
+
+Supponiamo che i due ranghi siano **uguali** e poniamo $r=\mathrm{rg}(A)$ e $n=$ numero delle incognite (numero delle colonne di $A$):
+
+- Se **$r=n$**, il sistema ha **un'unica soluzione**.
+- Se **$r<n$**, il sistema ha **infinite soluzioni**, con **$n-r$ parametri liberi**.
+
+| Confronto fra i ranghi | Confronto con $n$ | Conclusione |
+|---|---|---|
+| $\mathrm{rg}(A)\neq\mathrm{rg}([A\mid\mathbf{b}])$ | Non serve | **Nessuna soluzione** |
+| $\mathrm{rg}(A)=\mathrm{rg}([A\mid\mathbf{b}])=n$ | Rango uguale a $n$ | **Una soluzione unica** |
+| $\mathrm{rg}(A)=\mathrm{rg}([A\mid\mathbf{b}])<n$ | Rango minore di $n$ | **Infinite soluzioni** |
+
+**Errore da evitare:** la condizione $\mathrm{rg}(A)<n$ **da sola non dice** se un sistema sia compatibile. Prima bisogna controllare il rango della matrice completa.
+
+#### 4. Esempio A — Incompatibile: i due ranghi sono diversi
+
+Sistema di **2 equazioni e 3 incognite**:
 
 $$
 \begin{cases}
@@ -183,9 +222,32 @@ x+y+z=1,\\
 \end{cases}
 $$
 
-Qui $\mathrm{rg}(A)=1$ e $\mathrm{rg}([A\mid\mathbf{b}])=2$.
+Le matrici sono:
 
-**Esempio compatibile con 3 equazioni e 2 incognite:**
+$$
+A=
+\begin{pmatrix}
+1&1&1\\
+2&2&2
+\end{pmatrix},
+\qquad
+[A\mid\mathbf{b}]=
+\begin{pmatrix}
+1&1&1&1\\
+2&2&2&3
+\end{pmatrix}.
+$$
+
+- In $A$ la seconda riga è il doppio della prima: **$\mathrm{rg}(A)=1$**.
+- Nella matrice completa la seconda riga **non** è il doppio della prima, perché $3\neq2\cdot1$: **$\mathrm{rg}([A\mid\mathbf{b}])=2$**.
+
+Quindi il sistema è **incompatibile**. Infatti la prima equazione, moltiplicata per 2, darebbe $2x+2y+2z=2$, in contraddizione con la seconda.
+
+Qui $n=3$ e $\mathrm{rg}(A)=1<3$, **ma non ci sono infinite soluzioni**: il sistema è impossibile perché **i due ranghi non coincidono**.
+
+#### 5. Esempio B — Compatibile con un'unica soluzione
+
+Sistema di **3 equazioni e 2 incognite**:
 
 $$
 \begin{cases}
@@ -195,9 +257,78 @@ x-y=0,\\
 \end{cases}
 $$
 
-Il sistema ha soluzione $(x,y)=(1/2,1/2)$ e i ranghi sono entrambi 2.
+$$
+A=
+\begin{pmatrix}
+1&1\\
+1&-1\\
+2&0
+\end{pmatrix},
+\qquad
+[A\mid\mathbf{b}]=
+\begin{pmatrix}
+1&1&1\\
+1&-1&0\\
+2&0&1
+\end{pmatrix}.
+$$
 
-**Perché è importante:** nelle provette le domande chiedono spesso **enunciato + esempio costruito ad hoc**, non solo la definizione di compatibilità.
+Le prime due righe di $A$ sono indipendenti e la terza equazione è la somma delle prime due. Si ha quindi
+
+$$
+\mathrm{rg}(A)=\mathrm{rg}([A\mid\mathbf{b}])=2=n.
+$$
+
+Il sistema è **compatibile** e ha **un'unica soluzione**:
+
+$$
+(x,y)=\left(\frac12,\frac12\right).
+$$
+
+#### 6. Esempio C — Compatibile con infinite soluzioni
+
+Sistema di **2 equazioni e 2 incognite**:
+
+$$
+\begin{cases}
+x+y=3,\\
+2x+2y=6.
+\end{cases}
+$$
+
+$$
+A=
+\begin{pmatrix}
+1&1\\
+2&2
+\end{pmatrix},
+\qquad
+[A\mid\mathbf{b}]=
+\begin{pmatrix}
+1&1&3\\
+2&2&6
+\end{pmatrix}.
+$$
+
+La seconda riga è il doppio della prima **in entrambe le matrici**; quindi
+
+$$
+\mathrm{rg}(A)=\mathrm{rg}([A\mid\mathbf{b}])=1<2=n.
+$$
+
+Il sistema è **compatibile** ma ha **infinite soluzioni**. C'è $n-r=2-1=1$ parametro libero; per esempio:
+
+$$
+(x,y)=(t,3-t),\qquad t\in\mathbb{R}.
+$$
+
+#### 7. Schema da ricordare all'esame
+
+**Prima domanda: esistono soluzioni?** Confronta $\mathrm{rg}(A)$ con $\mathrm{rg}([A\mid\mathbf{b}])$.
+
+**Seconda domanda (solo se esistono): quante soluzioni?** Confronta il rango comune con il numero di incognite $n$.
+
+**Perché è importante:** nelle provette chiedono spesso **enunciato + esempio** di sistema compatibile o incompatibile, non soltanto la definizione.
 
 ### D7. Che cos'è una matrice a scalini? E una matrice a scalini ridotta per righe?
 

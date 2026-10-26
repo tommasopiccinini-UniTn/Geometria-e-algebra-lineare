@@ -485,7 +485,7 @@ non è invertibile: la seconda riga è multipla della prima, quindi il rango è 
 
 **Tracce:** [febbraio 2023](./GALfeb23.pdf), [febbraio 2025](./GALfeb25.pdf). Il criterio con il determinante è approfondito nel capitolo 5.
 
-Per $A\in M_n(\mathbb{R})$:
+Per $A\in M_n(\mathbb{R})$, **$n$ è l'ordine della matrice**: poiché $A$ è quadrata, ha **$n$ righe e $n$ colonne**. Quindi $\mathrm{rg}(A)=n$ significa che la matrice ha **rango massimo**, pari sia al numero di righe sia al numero di colonne. Il criterio di invertibilità qui vale per **matrici quadrate**:
 
 $$
 A\text{ invertibile}\iff\mathrm{rg}(A)=n.

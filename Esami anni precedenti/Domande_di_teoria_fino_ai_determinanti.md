@@ -531,12 +531,13 @@ $$
 
 **Tracce:** [gennaio 2023](./GALgen23.pdf), [gennaio 2025](./GALgen25.pdf); anche [intermedia novembre 2018](./GeoTLC_intermedia_novembre_2018.pdf).
 
-Dati $\mathbf{v}_1,\ldots,\mathbf{v}_k\in V$, una **combinazione lineare** è un vettore
+**Definizione.** Dati i vettori $\mathbf{v}_1,\ldots,\mathbf{v}_k\in V$, una **combinazione lineare di questi vettori** è **un vettore ottenuto sommando multipli scalari dei vettori assegnati**. Scelti gli scalari $\lambda_1,\ldots,\lambda_k\in\mathbb{R}$, il vettore risultante è
 
 $$
-\lambda_1\mathbf{v}_1+\cdots+\lambda_k\mathbf{v}_k,
-\quad \lambda_i\in\mathbb{R}.
+\mathbf{v}=\lambda_1\mathbf{v}_1+\lambda_2\mathbf{v}_2+\cdots+\lambda_k\mathbf{v}_k.
 $$
+
+**Attenzione:** non basta dire che una combinazione lineare «è un vettore»: bisogna specificare **come si ottiene e da quali vettori**.
 
 Il **sottospazio generato** dai vettori è l'insieme di tutte le loro combinazioni lineari:
 

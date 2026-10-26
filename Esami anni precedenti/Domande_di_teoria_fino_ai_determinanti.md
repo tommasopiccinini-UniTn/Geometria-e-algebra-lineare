@@ -557,29 +557,62 @@ Un insieme di vettori è un **sistema di generatori di $V$** se il suo Span coin
 
 **Tracce:** [gennaio 2023](./GALgen23.pdf), [luglio 2023](./GALlug23.pdf), [provetta 2023](./GALprovetta23.pdf), [gennaio 2025](./GALgen25.pdf), [febbraio 2025](./GALfeb25.pdf), [giugno 2025](./GALgiu25.pdf), [settembre 2025](./GALset25.pdf), [giugno 2026](./GALgiu26.pdf).
 
-Un insieme $\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_k\rbrace$ è **linearmente indipendente** se
+#### Che cosa significa «linearmente indipendenti»?
+
+Dei vettori sono **linearmente indipendenti** quando **nessuno di essi può essere ottenuto facendo una combinazione lineare degli altri**. In altre parole, nessun vettore è ricavabile dagli altri.
+
+La definizione precisa è questa: se moltiplichiamo ciascun vettore per un numero e sommiamo i risultati, **l'unico modo per ottenere il vettore nullo è usare tutti coefficienti uguali a zero**.
+
+**Esempio:** in $\mathbb{R}^2$ consideriamo i vettori
 
 $$
-\lambda_1\mathbf{v}_1+\cdots+\lambda_k\mathbf{v}_k=\mathbf{0}
-\quad\Longrightarrow\quad
-\lambda_1=\cdots=\lambda_k=0.
+v_1=(1,0),\qquad v_2=(0,1).
 $$
 
-È **linearmente dipendente** se esiste una relazione nulla con coefficienti **non tutti nulli**.
-
-**Esempi in $\mathbb{R}^3$:**
-
-- Indipendenti: $\lbrace(1,0,0),(0,1,0)\rbrace$.
-- Dipendenti: $\lbrace(1,0,0),(0,1,0),(1,1,0)\rbrace$, poiché il terzo è la somma dei primi due.
-
-**Criterio operativo:** costruita $A=[\mathbf{v}_1\ \cdots\ \mathbf{v}_k]$,
+Se scriviamo una combinazione lineare uguale al vettore nullo,
 
 $$
-\lbrace\mathbf{v}_1,\ldots,\mathbf{v}_k\rbrace\text{ indipendente}
-\iff \mathrm{rg}(A)=k.
+a(1,0)+b(0,1)=(0,0),
 $$
 
-**Casi da riconoscere immediatamente:** la presenza del vettore nullo o di due vettori proporzionali rende l'insieme dipendente. Se $k>n$, $k$ vettori di $\mathbb{R}^n$ sono necessariamente dipendenti.
+otteniamo $(a,b)=(0,0)$. Quindi **entrambi i coefficienti devono essere zero** e i due vettori sono **linearmente indipendenti**.
+
+#### Che cosa significa «linearmente dipendenti»?
+
+Dei vettori sono **linearmente dipendenti** quando **almeno uno di essi può essere ottenuto come combinazione lineare degli altri**.
+
+In modo equivalente, possiamo ottenere il **vettore nullo anche usando coefficienti che non sono tutti zero**.
+
+**Esempio:** in $\mathbb{R}^2$ prendiamo
+
+$$
+v_1=(1,0),\qquad v_2=(0,1),\qquad v_3=(1,1).
+$$
+
+Il terzo vettore è la somma dei primi due: $v_3=v_1+v_2$. Perciò possiamo scrivere
+
+$$
+1\cdot v_1+1\cdot v_2-1\cdot v_3=(0,0).
+$$
+
+Abbiamo ottenuto il vettore nullo **senza usare tutti coefficienti zero**: i tre vettori sono quindi **linearmente dipendenti**.
+
+#### Come riconoscerli con una matrice?
+
+Se abbiamo **$k$ vettori di $\mathbb{R}^n$**, li disponiamo come **colonne** di una matrice $A$. La matrice avrà **$n$ righe** (una per ogni componente dei vettori) e **$k$ colonne** (una per ogni vettore).
+
+- Se il **rango di $A$ è uguale a $k$**, tutti i $k$ vettori sono **linearmente indipendenti**.
+- Se il **rango di $A$ è minore di $k$**, i vettori sono **linearmente dipendenti**.
+
+Il rango indica il **numero massimo di colonne linearmente indipendenti** della matrice.
+
+#### Casi da riconoscere subito
+
+- Se tra i vettori compare il **vettore nullo**, l'insieme è linearmente dipendente.
+- Se **un vettore è multiplo di un altro**, l'insieme è linearmente dipendente.
+- Se abbiamo **più vettori che componenti** (per esempio, tre vettori di $\mathbb{R}^2$), sono necessariamente linearmente dipendenti.
+
+**Da ricordare:** *indipendenti* significa che nessun vettore si ricava dagli altri; *dipendenti* significa che almeno uno si ricava dagli altri.
 
 ### D15. Dare la definizione di base e distinguere base, indipendenza e generatori
 

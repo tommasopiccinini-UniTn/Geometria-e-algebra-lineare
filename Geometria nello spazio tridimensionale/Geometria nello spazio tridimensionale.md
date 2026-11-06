@@ -2,7 +2,7 @@
 
 **Riferimento:** Elisa Postinghel, *Geometria e Algebra Lineare*, Capitolo 1, pp. 5–41 della dispensa (pp. 6–42 del PDF).  
 **Scopo:** definizioni, proprietà, procedure ed esempi ragionati per preparare teoria ed esercizi.  
-**Collegamento:** [Capitolo 2 — Sistemi lineari](Sistemi%20lineari.md).
+**Collegamento:** [Capitolo 2 — Sistemi lineari](../Sistemi%20lineari/Sistemi%20lineari.md).
 
 > Gli argomenti, la sequenza delle sezioni e gli esempi contrassegnati come «della dispensa» seguono il Capitolo 1. I paragrafi «Approfondimento» e «Da ricordare» sviluppano i passaggi per facilitare lo studio. Le formule sono scritte in Markdown matematico compatibile con GitHub.
 

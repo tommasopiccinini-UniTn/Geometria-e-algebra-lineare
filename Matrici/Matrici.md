@@ -2,8 +2,8 @@
 
 **Riferimento:** Elisa Postinghel, *Geometria e Algebra Lineare*, Capitolo 3, pp. 62–85 della dispensa (pp. 63–86 del PDF).  
 **Obiettivo:** saper operare con le matrici, riconoscere quelle invertibili, calcolarne l'inversa e descrivere le soluzioni dei sistemi lineari.  
-**Prerequisito:** [Capitolo 2 — Sistemi lineari](Sistemi%20lineari.md).  
-**Collegamento:** [Capitolo 4 — Spazi vettoriali](Spazi%20vettoriali.md).
+**Prerequisito:** [Capitolo 2 — Sistemi lineari](../Sistemi%20lineari/Sistemi%20lineari.md).  
+**Collegamento:** [Capitolo 4 — Spazi vettoriali](../Spazi%20vettoriali/Spazi%20vettoriali.md).
 
 > Il file segue le sezioni 3.1–3.4 della dispensa. I paragrafi di approfondimento esplicitano i calcoli e collegano i risultati agli esercizi. Alcuni refusi tipografici della dispensa sono segnalati quando cambiano il risultato matematico.
 

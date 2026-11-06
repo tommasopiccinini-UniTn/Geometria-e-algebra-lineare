@@ -2,8 +2,8 @@
 
 **Riferimento:** Elisa Postinghel, *Geometria e Algebra Lineare*, Capitolo 2, pp. 42–61 della dispensa (pp. 43–62 del PDF).  
 **Obiettivo:** comprendere le soluzioni dei sistemi lineari, imparare l'eliminazione di Gauss–Jordan e usare correttamente il teorema di Rouché–Capelli.  
-**Prerequisito utile:** [Capitolo 1 — Geometria nello spazio tridimensionale](Geometria%20nello%20spazio%20tridimensionale.md).  
-**Capitolo successivo:** [Capitolo 3 — Matrici](Matrici.md).
+**Prerequisito utile:** [Capitolo 1 — Geometria nello spazio tridimensionale](../Geometria%20nello%20spazio%20tridimensionale/Geometria%20nello%20spazio%20tridimensionale.md).  
+**Capitolo successivo:** [Capitolo 3 — Matrici](../Matrici/Matrici.md).
 
 > Struttura e numerazione seguono la dispensa. Le spiegazioni «Approfondimento», le verifiche e gli schemi sono aggiunti per rendere espliciti i passaggi che negli esercizi si sottintendono.
 

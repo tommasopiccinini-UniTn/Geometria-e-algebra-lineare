@@ -377,11 +377,11 @@ $$
 
 **1. Un solo vettore non nullo:** il suo Span è la **retta passante per l'origine** nella direzione del vettore.
 
-![Schema: lo Span di un vettore non nullo è una retta passante per l'origine](immagini/span_retta.svg)
+![Schema: lo Span di un vettore non nullo è una retta passante per l'origine](../immagini/span_retta.svg)
 
 **2. Due vettori linearmente indipendenti in $\mathbb{R}^2$:** il loro Span è **l'intero piano $\mathbb{R}^2$**.
 
-![Schema: due vettori indipendenti generano tutto il piano](immagini/span_piano.svg)
+![Schema: due vettori indipendenti generano tutto il piano](../immagini/span_piano.svg)
 
 **Collegamento con le matrici.** Se $A$ ha per colonne i vettori $v_1,\ldots,v_k$, allora
 
@@ -1023,7 +1023,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 
 ### Esercizio 14 — Testo e svolgimento manoscritto (Samsung Notes)
 
-![Esercizio 14 — testo originale e svolgimento manoscritto completo](immagini/Esercizio_14.png)
+![Esercizio 14 — testo originale e svolgimento manoscritto completo](../immagini/Esercizio_14.png)
 
 *Immagine estratta dal file Samsung Notes: comprende il testo dell'esercizio e tutti i passaggi dello svolgimento manoscritto.*
 
@@ -1032,7 +1032,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 
 ### Esercizio 15 — Testo e svolgimento manoscritto
 
-![Esercizio 15 — testo originale e svolgimento manoscritto completo](immagini/Esercizio_15.png)
+![Esercizio 15 — testo originale e svolgimento manoscritto completo](../immagini/Esercizio_15.png)
 
 *Immagine ritagliata dal PDF degli esercizi: comprende il testo dell'Esercizio 15 e lo svolgimento fino alla conclusione del punto 2.*
 
@@ -1041,7 +1041,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 
 ### Esercizio 16 — Testo e svolgimento manoscritto
 
-![Esercizio 16 — testo e svolgimento manoscritto completo](immagini/Esercizio_16.png)
+![Esercizio 16 — testo e svolgimento manoscritto completo](../immagini/Esercizio_16.png)
 
 *Immagine ritagliata dal PDF degli esercizi: contiene il testo e lo svolgimento dei punti 1 e 2, inclusi i casi per il parametro $k$.*
 
@@ -1049,7 +1049,7 @@ Per $k=4$ risulta inoltre $v=(4,4,2,0)=u_1+u_2$.
 
 ### Esercizio 17 — Testo e svolgimento manoscritto
 
-![Esercizio 17 — testo e svolgimento manoscritto](immagini/Esercizio_17.png)
+![Esercizio 17 — testo e svolgimento manoscritto](../immagini/Esercizio_17.png)
 
 *Immagine ritagliata dal PDF degli esercizi: comprende il testo dell'Esercizio 17, la riduzione per righe e la condizione finale su $k$.*
 
